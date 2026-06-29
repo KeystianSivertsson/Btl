@@ -9,6 +9,17 @@ const webpush = require('web-push');
 
 const app = express();
 app.use(express.json({ limit: '20mb' }));
+
+// Redirect HTTP → HTTPS (only when HTTPS server is running)
+app.use((req, res, next) => {
+  if (req.protocol === 'http' && req.headers.host) {
+    const httpsPort = process.env.HTTPS_PORT || 3443;
+    const host = req.headers.host.split(':')[0];
+    return res.redirect(301, `https://${host}:${httpsPort}${req.url}`);
+  }
+  next();
+});
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');

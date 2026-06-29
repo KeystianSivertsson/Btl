@@ -189,7 +189,7 @@ const um = StyleSheet.create({
 // ─── Profile modal ───────────────────────────────────────────────────────────
 const AVATARER = ['😀','😎','🧑‍💻','👷','🧰','🔧','📦','🏗️','🪟','🏠','⭐','🦊','🐺','🦁','🐻','🐼','🤖','👾'];
 
-function ProfilModal({ user, token, onStang, onUppdatera }) {
+function ProfilModal({ user, token, onStang, onUppdatera, prenumereraPush }) {
   const [fliken, setFliken] = useState('avatar');
   const [valdAvatar, setValdAvatar] = useState(user.avatar || '😀');
   const [gammalt, setGammalt] = useState('');
@@ -197,6 +197,26 @@ function ProfilModal({ user, token, onStang, onUppdatera }) {
   const [bekrafta, setBekrafta] = useState('');
   const [meddelande, setMeddelande] = useState('');
   const [fel, setFel] = useState('');
+  const [notisStatus, setNotisStatus] = useState(() => {
+    if (typeof Notification === 'undefined') return 'ej-stödd';
+    return Notification.permission;
+  });
+
+  const aktiveraNotisar = async () => {
+    setFel(''); setMeddelande('');
+    if (!window.isSecureContext) {
+      setFel('Kräver HTTPS — gå till https://' + window.location.hostname + ':3443');
+      return;
+    }
+    try {
+      await prenumereraPush(token);
+      setNotisStatus(Notification.permission);
+      if (Notification.permission === 'granted') setMeddelande('Notiser aktiverade!');
+      else setFel('Notisbehörighet nekades');
+    } catch (e) {
+      setFel('Fel: ' + e.message);
+    }
+  };
 
   const sparaAvatar = async () => {
     setFel(''); setMeddelande('');
@@ -241,9 +261,11 @@ function ProfilModal({ user, token, onStang, onUppdatera }) {
           </View>
 
           <View style={pm.flikar}>
-            {['avatar','lösenord'].map(f => (
+            {['avatar','lösenord','notiser'].map(f => (
               <TouchableOpacity key={f} style={[pm.flik, fliken===f && pm.flikAktiv]} onPress={() => { setFliken(f); setFel(''); setMeddelande(''); }}>
-                <Text style={[pm.flikText, fliken===f && pm.flikTextAktiv]}>{f === 'avatar' ? '🖼 Avatar' : '🔒 Lösenord'}</Text>
+                <Text style={[pm.flikText, fliken===f && pm.flikTextAktiv]}>
+                  {f === 'avatar' ? '🖼 Avatar' : f === 'lösenord' ? '🔒 Lösenord' : '🔔 Notiser'}
+                </Text>
               </TouchableOpacity>
             ))}
           </View>
@@ -279,6 +301,32 @@ function ProfilModal({ user, token, onStang, onUppdatera }) {
               </TouchableOpacity>
             </View>
           )}
+
+          {fliken === 'notiser' && (
+            <View style={{ paddingTop: 8 }}>
+              <View style={pm.notisInfoRad}>
+                <Text style={pm.notisLabel}>Protokoll:</Text>
+                <Text style={pm.notisVarde}>{typeof window !== 'undefined' ? window.location.protocol : '–'}</Text>
+              </View>
+              <View style={pm.notisInfoRad}>
+                <Text style={pm.notisLabel}>Behörighet:</Text>
+                <Text style={[pm.notisVarde, notisStatus === 'granted' && { color: '#16a34a' }, notisStatus === 'denied' && { color: '#ef4444' }]}>
+                  {notisStatus === 'granted' ? '✓ Tillåten' : notisStatus === 'denied' ? '✗ Nekad' : notisStatus === 'ej-stödd' ? 'Stöds ej' : 'Ej vald'}
+                </Text>
+              </View>
+              {notisStatus === 'denied' && (
+                <Text style={pm.notisHjälp}>Notiser är blockerade i webbläsaren. Gå till Chrome-inställningar → Webbplatsinställningar → Notiser och tillåt denna sida.</Text>
+              )}
+              {notisStatus !== 'granted' && notisStatus !== 'denied' && (
+                <TouchableOpacity style={pm.sparaKnapp} onPress={aktiveraNotisar}>
+                  <Text style={pm.sparaText}>🔔 Aktivera notiser</Text>
+                </TouchableOpacity>
+              )}
+              {notisStatus === 'granted' && (
+                <Text style={{ color: '#16a34a', textAlign: 'center', marginTop: 8 }}>Notiser är aktiverade ✓</Text>
+              )}
+            </View>
+          )}
         </View>
       </View>
     </Modal>
@@ -311,6 +359,10 @@ const pm = StyleSheet.create({
   input: { backgroundColor: '#f8f9fa', borderWidth: 1, borderColor: '#e0e0e0', borderRadius: 8, padding: 12, fontSize: 14, color: '#333', marginBottom: 10 },
   sparaKnapp: { backgroundColor: '#2563eb', borderRadius: 8, padding: 13, alignItems: 'center' },
   sparaText: { color: '#fff', fontWeight: '700', fontSize: 14 },
+  notisInfoRad: { flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 8, borderBottomWidth: 1, borderBottomColor: '#f0f0f0' },
+  notisLabel: { color: '#888', fontSize: 14 },
+  notisVarde: { fontSize: 14, fontWeight: '600', color: '#1a2235' },
+  notisHjälp: { color: '#888', fontSize: 12, marginTop: 12, lineHeight: 18 },
 });
 
 // ─── Chat panel ───────────────────────────────────────────────────────────────
@@ -978,7 +1030,7 @@ export default function App() {
       {visaChat && <ChatPanel user={inloggad} onStang={() => setVisaChat(false)} meddelanden={meddelanden} online={onlineUsers} wsRef={wsRef} />}
       {!visaChat && <ChatBubble senasteMeddelande={chatBubble} antal={olastaAntal} onPress={() => setVisaChat(true)} />}
 
-      {visaProfil && <ProfilModal user={inloggad} token={token} onStang={() => setVisaProfil(false)} onUppdatera={(u) => setInloggad(u)} />}
+      {visaProfil && <ProfilModal user={inloggad} token={token} onStang={() => setVisaProfil(false)} onUppdatera={(u) => setInloggad(u)} prenumereraPush={prenumereraPush} />}
       {visaAnvandare && <AnvandarHantering token={token} onStang={() => setVisaAnvandare(false)} />}
 
       {/* Produkt modal */}
