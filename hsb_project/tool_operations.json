@@ -1,0 +1,2557 @@
+﻿[
+    {
+        "label":  "hsbConsole",
+        "group":  "GENERAL",
+        "command":  "c^chsb_console"
+    },
+    {
+        "label":  "hsbSettings",
+        "group":  "GENERAL",
+        "command":  "c^chsb_settings"
+    },
+    {
+        "label":  "hsbFilter",
+        "group":  "GENERAL",
+        "command":  "c^chsb_filter"
+    },
+    {
+        "label":  "hsbToolmanager",
+        "group":  "GENERAL",
+        "command":  "c^c^phsb_toolmanager"
+    },
+    {
+        "label":  "Tsl select",
+        "group":  "GENERAL",
+        "command":  "c^chsb_macroselectonly"
+    },
+    {
+        "label":  "Tsl manager",
+        "group":  "GENERAL",
+        "command":  "c^chsb_macroselect"
+    },
+    {
+        "label":  "Graphical Tsl definition",
+        "group":  "GENERAL",
+        "command":  "c^chsb_createmetalpart"
+    },
+    {
+        "label":  "\u003c-Tsl share",
+        "group":  "GENERAL",
+        "command":  "c^chsb_tslShare"
+    },
+    {
+        "label":  "Re-number Elements",
+        "group":  "GENERAL",
+        "command":  "C^Chsb_wallnumber"
+    },
+    {
+        "label":  "Lock Elements",
+        "group":  "GENERAL",
+        "command":  "c^chsb_sebv_lock"
+    },
+    {
+        "label":  "Unlock Elements",
+        "group":  "GENERAL",
+        "command":  "c^chsb_sebv_unlock"
+    },
+    {
+        "label":  "Generate Construction",
+        "group":  "GENERAL",
+        "command":  "C^CHSB_GENERATECONSTRUCTION"
+    },
+    {
+        "label":  "Delete Construction",
+        "group":  "GENERAL",
+        "command":  "C^Chsb_sebv_erase"
+    },
+    {
+        "label":  "Define Construction Repair",
+        "group":  "GENERAL",
+        "command":  "c^c^phsb_conRepairDefine"
+    },
+    {
+        "label":  "Add Beams For Construction Repair",
+        "group":  "GENERAL",
+        "command":  "c^c^phsb_conRepairAddBeams"
+    },
+    {
+        "label":  "Insert Construction Repair",
+        "group":  "GENERAL",
+        "command":  "c^c^phsb_conRepairInsert"
+    },
+    {
+        "label":  "Update Element DXA Files",
+        "group":  "GENERAL",
+        "command":  "c^chsb_SEBV_STORE3D"
+    },
+    {
+        "label":  "Store 3D By Element",
+        "group":  "GENERAL",
+        "command":  "c^chsb_SEBV_STORE3D_ByElement"
+    },
+    {
+        "label":  "Store 3D New",
+        "group":  "GENERAL",
+        "command":  "c^chsb_STORE3D"
+    },
+    {
+        "label":  "\u003c-Import hsbCAD9 Layouts",
+        "group":  "GENERAL",
+        "command":  "c^chsb_readdxi"
+    },
+    {
+        "label":  "Extrusion Profile Manager",
+        "group":  "GENERAL",
+        "command":  "c^c^phsb_extrusionprofiles"
+    },
+    {
+        "label":  "\u003c-Create Extrusion Profile",
+        "group":  "GENERAL",
+        "command":  "c^c^phsb_extrusionprofileframe"
+    },
+    {
+        "label":  "\u003c-Curved Style Manager",
+        "group":  "GENERAL",
+        "command":  "c^c^phsb_spantedit"
+    },
+    {
+        "label":  "Add Icons",
+        "group":  "ROOF",
+        "command":  "c^chsb_rooficon"
+    },
+    {
+        "label":  "Groups Icons",
+        "group":  "ROOF",
+        "command":  "c^cHSB_ROOFGROUPICONS"
+    },
+    {
+        "label":  "Generate Planes",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_dakmakeone"
+    },
+    {
+        "label":  "Draw Plane",
+        "group":  "ROOF",
+        "command":  "c^chsb_defineroofplane"
+    },
+    {
+        "label":  "Copy Roof Plane Down",
+        "group":  "ROOF",
+        "command":  "C^C^pHSB_ROOFCOPYDOWN"
+    },
+    {
+        "label":  "Merge Roof Planes",
+        "group":  "ROOF",
+        "command":  "c^cHSB_MERGEROOFS"
+    },
+    {
+        "label":  "Subtract from Plane",
+        "group":  "ROOF",
+        "command":  "c^chsb_roofsubstractarea"
+    },
+    {
+        "label":  "Add to Plane",
+        "group":  "ROOF",
+        "command":  "c^chsb_roofaddarea"
+    },
+    {
+        "label":  "Create floor under roof",
+        "group":  "ROOF",
+        "command":  "c^chsb_rooffloorslice"
+    },
+    {
+        "label":  "Assign Profile",
+        "group":  "ROOF",
+        "command":  "C^Chsb_roofassignprofile"
+    },
+    {
+        "label":  "Adjust Icon Slope",
+        "group":  "ROOF",
+        "command":  "c^cHSB_ROOF_ADJUSTICONSLOPE"
+    },
+    {
+        "label":  "Define Ridge Line",
+        "group":  "ROOF",
+        "command":  "c^cHSB_ROOF_DEFINERIDGELINE"
+    },
+    {
+        "label":  "Rooficon 1point",
+        "group":  "ROOF",
+        "command":  "c^chsb_rooficon1point"
+    },
+    {
+        "label":  "Rooficon 3points",
+        "group":  "ROOF",
+        "command":  "c^chsb_rooficon3points"
+    },
+    {
+        "label":  "Project Polyline in Roof",
+        "group":  "ROOF",
+        "command":  "c^c^pHSB_PROJECTPOLYLINE"
+    },
+    {
+        "label":  "Stretch edge to other roof",
+        "group":  "ROOF",
+        "command":  "c^c^pHSB_ROOF_STRETCHEDGE"
+    },
+    {
+        "label":  "Dormer Roof",
+        "group":  "ROOF",
+        "command":  "c^chsb_dormer"
+    },
+    {
+        "label":  "Create a Dormer Wall",
+        "group":  "ROOF",
+        "command":  "c^cHSB_WALLDORMER"
+    },
+    {
+        "label":  "Solid to Roof",
+        "group":  "ROOF",
+        "command":  "c^cHSB_ROOFCONVERTSOLID"
+    },
+    {
+        "label":  "Convert from/to ADT Roof",
+        "group":  "ROOF",
+        "command":  "c^chsb_convert2roofplanes"
+    },
+    {
+        "label":  "Add Section",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_wizard"
+    },
+    {
+        "label":  "Add Plate Beam from Section",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_plate"
+    },
+    {
+        "label":  "Add section window",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_section_window"
+    },
+    {
+        "label":  "Add Section Fixed Lath",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_fixedlath"
+    },
+    {
+        "label":  "Add plate beam",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_addplatebeam"
+    },
+    {
+        "label":  "Add Roof Window",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_window"
+    },
+    {
+        "label":  "Add laths",
+        "group":  "ROOF",
+        "command":  "c^chsb_laths"
+    },
+    {
+        "label":  "\u003c-Link Section with Plane",
+        "group":  "ROOF",
+        "command":  "c^chsb_roof_linkroof"
+    },
+    {
+        "label":  "Visual Timber",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_visualtimber"
+    },
+    {
+        "label":  "Use Construction Macros",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_smacro"
+    },
+    {
+        "label":  "Post and Beam",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_jpconstruct"
+    },
+    {
+        "label":  "Beam",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_beamnew"
+    },
+    {
+        "label":  "Rafter",
+        "group":  "TIMBER",
+        "command":  "c^c^pHSB_RAFTER"
+    },
+    {
+        "label":  "Valley-Hip Rafter",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_hipandvalley"
+    },
+    {
+        "label":  "Valleyboard",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_valleyboard"
+    },
+    {
+        "label":  "Sloping Rafter",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_slopingrafter"
+    },
+    {
+        "label":  "Hidden rafter",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_hiddenrafter"
+    },
+    {
+        "label":  "Dormer Plate",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_kebotek"
+    },
+    {
+        "label":  "Top Plate",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_topplate"
+    },
+    {
+        "label":  "Mid Plate",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_midplate"
+    },
+    {
+        "label":  "Ridge",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_ridge"
+    },
+    {
+        "label":  "Post",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_beamnewpost"
+    },
+    {
+        "label":  "Brace",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_brace"
+    },
+    {
+        "label":  "Joint Purlin",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_jointpurlin"
+    },
+    {
+        "label":  "Collar tie",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_zangtek"
+    },
+    {
+        "label":  "Beams around opening",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_auswechslung"
+    },
+    {
+        "label":  "Project Polyline",
+        "group":  "TIMBER",
+        "command":  "c^c^pHSB_PROJECTPOLYLINE"
+    },
+    {
+        "label":  "Roofplane add and edit Beams",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_roofplane"
+    },
+    {
+        "label":  "Align Rafters on different Roofplanes",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_alignrafters"
+    },
+    {
+        "label":  "\u003c-Flush Rafters with Hip or Valley Rafter",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_flushrafterswithhipandvalley"
+    },
+    {
+        "label":  "Draw Sheet",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_sheeting"
+    },
+    {
+        "label":  "Convert from 3D Solid",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_convertacistobeam"
+    },
+    {
+        "label":  "Convert to 3D Solid",
+        "group":  "TIMBER",
+        "command":  "c^c^phsb_convertbeamtoacis"
+    },
+    {
+        "label":  "Import structural member",
+        "group":  "TIMBER",
+        "command":  "C^C^pHSB_IMPORTSTRUCTURALMEMBER"
+    },
+    {
+        "label":  "Cut Beam",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_beamcut"
+    },
+    {
+        "label":  "Stretch Beam",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_beamstretch"
+    },
+    {
+        "label":  "Stretch to Beam",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_contact"
+    },
+    {
+        "label":  "Stretch to corner configuration",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_corner"
+    },
+    {
+        "label":  "Stretch to multiple beams",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_multiplecontact"
+    },
+    {
+        "label":  "Split",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_beamsplit"
+    },
+    {
+        "label":  "Numerous Split",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_multisplit"
+    },
+    {
+        "label":  "Join",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_joinbeams"
+    },
+    {
+        "label":  "Change Beam Size",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_change_section"
+    },
+    {
+        "label":  "hsbUCS",
+        "group":  "EDIT",
+        "command":  "c^chsb_ucs"
+    },
+    {
+        "label":  "Map Texture",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_maptexture"
+    },
+    {
+        "label":  "Integrate Toolings",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_linktools"
+    },
+    {
+        "label":  "ReCalc Beams/Items",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_recalc"
+    },
+    {
+        "label":  "Visual Tools",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_multi"
+    },
+    {
+        "label":  "Last Visual Tool",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_lasttoolfunction"
+    },
+    {
+        "label":  "Tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_tenon"
+    },
+    {
+        "label":  "End tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_zapfstoss"
+    },
+    {
+        "label":  "Housed Tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_housedtenon"
+    },
+    {
+        "label":  "Shoulder Tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_shouldertenon"
+    },
+    {
+        "label":  "Locked Shoulder Tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_lockedshouldertenon"
+    },
+    {
+        "label":  "Kingpost Tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_kingposttenon"
+    },
+    {
+        "label":  "Tusk Tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_tusktenon"
+    },
+    {
+        "label":  "\u003c-Parallel Housing",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_parallelhousing"
+    },
+    {
+        "label":  "Dovetail Tenon",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_dovetail"
+    },
+    {
+        "label":  "End dovetail",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_schwalbstoss"
+    },
+    {
+        "label":  "Dovetail at Beam End",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_dovetailmitre"
+    },
+    {
+        "label":  "Dovesugi",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_dovesugi"
+    },
+    {
+        "label":  "Log-Dovetail",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_logdovetail"
+    },
+    {
+        "label":  "\u003c-Housed Dovetail",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_houseddovetail"
+    },
+    {
+        "label":  "Girt - Brace Shoulder",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_versatz"
+    },
+    {
+        "label":  "Corner half Lap Joint",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_firstblatt"
+    },
+    {
+        "label":  "Through half Lap Joint",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_lapjoint"
+    },
+    {
+        "label":  "Bridal Joint",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_bridaljoint"
+    },
+    {
+        "label":  "Neda",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_neda"
+    },
+    {
+        "label":  "Infinite Housing",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_infinitehousing"
+    },
+    {
+        "label":  "\u003c-Mitre Joint",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_mitre"
+    },
+    {
+        "label":  "Scarf Joint",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_scarf"
+    },
+    {
+        "label":  "Japanese Scarf",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_scarfjapan"
+    },
+    {
+        "label":  "Okkake",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_okkake"
+    },
+    {
+        "label":  "\u003c-Kamatsugi",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_kamatsugi"
+    },
+    {
+        "label":  "Head",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_kopf"
+    },
+    {
+        "label":  "End Chamfer",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_kopf2"
+    },
+    {
+        "label":  "Convex - Concave Profile",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_profile"
+    },
+    {
+        "label":  "Complex Profile",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_profilecomplex"
+    },
+    {
+        "label":  "\u003c-Free Profile",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_freeprofile"
+    },
+    {
+        "label":  "Tube",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_freedrill"
+    },
+    {
+        "label":  "Drill in One Beam",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_surfacedrill"
+    },
+    {
+        "label":  "Cross Drilling",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_crossdrill"
+    },
+    {
+        "label":  "Peg Holes",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_pegs"
+    },
+    {
+        "label":  "Drilling for Braces",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_bracedrill"
+    },
+    {
+        "label":  "\u003c-Drilling for T-Connection",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_tdrill"
+    },
+    {
+        "label":  "Slot",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_slot"
+    },
+    {
+        "label":  "Arc",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_arc"
+    },
+    {
+        "label":  "Double Cut",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_doublecut"
+    },
+    {
+        "label":  "Cross Marking",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_crossmarking"
+    },
+    {
+        "label":  "Planing",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_hobel"
+    },
+    {
+        "label":  "\u003c-Special Mill",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_specialmill"
+    },
+    {
+        "label":  "Split Sheeting",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_sheetingsplit"
+    },
+    {
+        "label":  "Substract Sheeting",
+        "group":  "EDIT",
+        "command":  "c^c^phsb_sheetingsubtract"
+    },
+    {
+        "label":  "Add Sheeting",
+        "group":  "EDIT",
+        "command":  "C^C^Phsb_sheetingadd"
+    },
+    {
+        "label":  "Join Sheeting",
+        "group":  "EDIT",
+        "command":  "C^C^Phsb_sheetingjoin"
+    },
+    {
+        "label":  "Set reference for Machining",
+        "group":  "EDIT",
+        "command":  "c^c^pHSB_REFMACHINE"
+    },
+    {
+        "label":  "Set beam name",
+        "group":  "EDIT",
+        "command":  "c^c^pHSB_SETNAME"
+    },
+    {
+        "label":  "Add Metalpart",
+        "group":  "EDIT",
+        "command":  "c^chsb_metalpart_add"
+    },
+    {
+        "label":  "Metalpart Style Manager",
+        "group":  "EDIT",
+        "command":  "c^chsb_metalpart_stylemanager"
+    },
+    {
+        "label":  "Collection Edit Style",
+        "group":  "EDIT",
+        "command":  "c^chsb_colent_editstyle"
+    },
+    {
+        "label":  "\u003c-Add Ecs Marker",
+        "group":  "EDIT",
+        "command":  "c^chsb_colent_add_ecsmarker"
+    },
+    {
+        "label":  "Add Fastener",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_add"
+    },
+    {
+        "label":  "Anchor to guidline",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_anchorto"
+    },
+    {
+        "label":  "Flip",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_flip"
+    },
+    {
+        "label":  "Link to geometry",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_linkgeo"
+    },
+    {
+        "label":  "Reset geometry",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_resetgeo"
+    },
+    {
+        "label":  "Edit style",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_editstyle"
+    },
+    {
+        "label":  "Bespoke",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_styleaddbespoke"
+    },
+    {
+        "label":  "Update ruleset and graphics",
+        "group":  "EDIT",
+        "command":  "c^chsb_fa_importgraphicsruleset"
+    },
+    {
+        "label":  "Check Construction",
+        "group":  "UTILS",
+        "command":  "c^c^pHSB_CHECKCONSTRUCTION"
+    },
+    {
+        "label":  "Compare Bodies",
+        "group":  "UTILS",
+        "command":  "c^c^pHSB_COMPAREBODIES"
+    },
+    {
+        "label":  "Identify Room Area",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_makeroom"
+    },
+    {
+        "label":  "Layer Off",
+        "group":  "UTILS",
+        "command":  "c^chsb_layeroff"
+    },
+    {
+        "label":  "Layer On",
+        "group":  "UTILS",
+        "command":  "c^chsb_layeron"
+    },
+    {
+        "label":  "Move By Layer",
+        "group":  "UTILS",
+        "command":  "c^chsb_layermove"
+    },
+    {
+        "label":  "Delete By Layer",
+        "group":  "UTILS",
+        "command":  "c^chsb_layerdelete"
+    },
+    {
+        "label":  "\u003c-Copy By Layer",
+        "group":  "UTILS",
+        "command":  "c^chsb_layercopy"
+    },
+    {
+        "label":  "Object Off",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_hideobjects"
+    },
+    {
+        "label":  "Object On",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_showobjects"
+    },
+    {
+        "label":  "Hide Toolings",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_hidetooling"
+    },
+    {
+        "label":  "Unhide Toolings",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_showtooling"
+    },
+    {
+        "label":  "Show only selected Objects",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_showonlyselected"
+    },
+    {
+        "label":  "Unhide tools for beam",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_unhideToolsFor"
+    },
+    {
+        "label":  "\u003c-Unhide beams for tool",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_unhideBeamsFor"
+    },
+    {
+        "label":  "Export",
+        "group":  "UTILS",
+        "command":  "c^cHSB_ANMODEXPORT"
+    },
+    {
+        "label":  "Generate 1D analysis",
+        "group":  "UTILS",
+        "command":  "c^chsb_structure"
+    },
+    {
+        "label":  "Add support",
+        "group":  "UTILS",
+        "command":  "c^chsb_structure_support"
+    },
+    {
+        "label":  "\u003c-Add load",
+        "group":  "UTILS",
+        "command":  "c^chsb_structure_load"
+    },
+    {
+        "label":  "Create Section Area",
+        "group":  "UTILS",
+        "command":  "c^chsb_sebv_profile"
+    },
+    {
+        "label":  "Generate Section",
+        "group":  "UTILS",
+        "command":  "c^chsb_sebv_cut"
+    },
+    {
+        "label":  "Generate Exploded Projection",
+        "group":  "UTILS",
+        "command":  "c^chsb_sebv_profview"
+    },
+    {
+        "label":  "\u003c-Generate 3 Projections",
+        "group":  "UTILS",
+        "command":  "c^chsb_sebv_3pview"
+    },
+    {
+        "label":  "Dimension free",
+        "group":  "UTILS",
+        "command":  "c^chsb_dimensioncreate"
+    },
+    {
+        "label":  "Add points",
+        "group":  "UTILS",
+        "command":  "c^chsb_dimensionaddpoint"
+    },
+    {
+        "label":  "Delete points",
+        "group":  "UTILS",
+        "command":  "c^chsb_dimensiondeletepoint"
+    },
+    {
+        "label":  "Reference point",
+        "group":  "UTILS",
+        "command":  "c^chsb_dimensionrefpoint"
+    },
+    {
+        "label":  "Add curve",
+        "group":  "UTILS",
+        "command":  "c^chsb_dimensionaddcurve"
+    },
+    {
+        "label":  "Remove curve",
+        "group":  "UTILS",
+        "command":  "c^chsb_dimensionremovecurve"
+    },
+    {
+        "label":  "\u003c-Dimension polyline",
+        "group":  "UTILS",
+        "command":  "c^chsb_dimensionpolyline"
+    },
+    {
+        "label":  "Draw Cartesian Grid",
+        "group":  "UTILS",
+        "command":  "c^chsb_grid"
+    },
+    {
+        "label":  "Draw Polar Grid",
+        "group":  "UTILS",
+        "command":  "c^chsb_gridpolar"
+    },
+    {
+        "label":  "Edit Grid Spacing",
+        "group":  "UTILS",
+        "command":  "c^chsb_grideditspacing"
+    },
+    {
+        "label":  "Lock Grid",
+        "group":  "UTILS",
+        "command":  "c^chsb_gridlock"
+    },
+    {
+        "label":  "Unlock Grid",
+        "group":  "UTILS",
+        "command":  "c^chsb_gridunlock"
+    },
+    {
+        "label":  "Hide Grid",
+        "group":  "UTILS",
+        "command":  "c^chsb_gridhide"
+    },
+    {
+        "label":  "\u003c-View Grid",
+        "group":  "UTILS",
+        "command":  "c^chsb_gridview"
+    },
+    {
+        "label":  "Check and repair installation",
+        "group":  "UTILS",
+        "command":  "c^c^phsb_diagnostics"
+    },
+    {
+        "label":  "Apply Numbering",
+        "group":  "OUTPUT",
+        "command":  "c^c^phsb_assignposnum"
+    },
+    {
+        "label":  "Toggle Numbering on/off",
+        "group":  "OUTPUT",
+        "command":  "c^c^phsb_posnumvisible"
+    },
+    {
+        "label":  "Delete Numbers",
+        "group":  "OUTPUT",
+        "command":  "c^c^phsb_releaseposnum"
+    },
+    {
+        "label":  "Search Number Position",
+        "group":  "OUTPUT",
+        "command":  "c^c^phsb_searchposnum"
+    },
+    {
+        "label":  "Position Number Viewer",
+        "group":  "OUTPUT",
+        "command":  "C^C^Phsb_posnumViewer"
+    },
+    {
+        "label":  "Edit Responsibility property",
+        "group":  "OUTPUT",
+        "command":  "C^C^Phsb_responsibility"
+    },
+    {
+        "label":  "Deliverable Container Manager",
+        "group":  "OUTPUT",
+        "command":  "c^cHSB_SETDELIVERABLECONTAINER"
+    },
+    {
+        "label":  "Viewport-Settings",
+        "group":  "OUTPUT",
+        "command":  "c^chsb_viewportsettings"
+    },
+    {
+        "label":  "Automatic Layout Plotting",
+        "group":  "OUTPUT",
+        "command":  "c^chsb_viewportautoplot"
+    },
+    {
+        "label":  "Shop drawing add multipage",
+        "group":  "OUTPUT",
+        "command":  "c^c^phsb_shopdraw_addmultipage"
+    },
+    {
+        "label":  "Batch plot plot-viewports",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_SHOPDRAW_PLOTVIEWPORT_BATCHPLOT"
+    },
+    {
+        "label":  "Batch plot multipages",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_MULTIPAGE_PLOT"
+    },
+    {
+        "label":  "Shop drawing stylemanager",
+        "group":  "OUTPUT",
+        "command":  "c^c^phsb_shopdraw_stylemanager"
+    },
+    {
+        "label":  "\u003c-Shop drawing add new view",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_SHOPDRAW_ADDVIEWPLACEHOLDER"
+    },
+    {
+        "label":  "Shop Drawing 2 Beam Panel",
+        "group":  "OUTPUT",
+        "command":  "C^C^Phsb_shopdrawing"
+    },
+    {
+        "label":  "Shop Drawing in Paper Space",
+        "group":  "OUTPUT",
+        "command":  "C^C^Phsb_shopdrawinginpaperspace"
+    },
+    {
+        "label":  "Shop Drawing of Metal Parts",
+        "group":  "OUTPUT",
+        "command":  "C^C^PHSB_SHOPDRAW_METALPART"
+    },
+    {
+        "label":  "Batch plot Beam Shop Drawings with Title Block",
+        "group":  "OUTPUT",
+        "command":  "C^C^PHSB_SHOPDRAWINGPLOTPS"
+    },
+    {
+        "label":  "\u003c-Batch plot Panel Shop Drawings with Title Block",
+        "group":  "OUTPUT",
+        "command":  "C^C^PHSB_SHOPDRAWINGPLOT"
+    },
+    {
+        "label":  "Database export",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_EXPORTTODATABASE"
+    },
+    {
+        "label":  "Excel export",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_EXPORTTOEXCEL"
+    },
+    {
+        "label":  "VRML Export",
+        "group":  "OUTPUT",
+        "command":  "c^c^phsb_vrmlout"
+    },
+    {
+        "label":  "SDS export",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_EXPORTSDS"
+    },
+    {
+        "label":  "\u003c-CeDXM export",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_EXPORTCEDXM"
+    },
+    {
+        "label":  "\u003c-CeDXM import",
+        "group":  "OUTPUT",
+        "command":  "c^c^pHSB_IMPORTCEDXM"
+    },
+    {
+        "label":  "Automatically Add Nails on Beams",
+        "group":  "CAM",
+        "command":  "c^chsb_addnaillines"
+    },
+    {
+        "label":  "Automatically Add Nails on Laths",
+        "group":  "CAM",
+        "command":  "c^chsb_addnaillinesonlaths"
+    },
+    {
+        "label":  "Add Nailing within Viewport",
+        "group":  "CAM",
+        "command":  "c^chsb_addelementnailline"
+    },
+    {
+        "label":  "Add No Nailing Zone",
+        "group":  "CAM",
+        "command":  "c^chsb_addelementnonail"
+    },
+    {
+        "label":  "Erase Nailing",
+        "group":  "CAM",
+        "command":  "c^cHSB_ERASENAILLINES"
+    },
+    {
+        "label":  "Add Marker",
+        "group":  "CAM",
+        "command":  "c^chsb_addelementmarker"
+    },
+    {
+        "label":  "Add Drill",
+        "group":  "CAM",
+        "command":  "c^chsb_addelementdrill"
+    },
+    {
+        "label":  "Add Milling",
+        "group":  "CAM",
+        "command":  "c^chsb_addelementmill"
+    },
+    {
+        "label":  "Add Sawing",
+        "group":  "CAM",
+        "command":  "c^chsb_addelementsaw"
+    },
+    {
+        "label":  "Create Module",
+        "group":  "CAM",
+        "command":  "c^cHSB_setmodule"
+    },
+    {
+        "label":  "Remove Module",
+        "group":  "CAM",
+        "command":  "c^cHSB_clearmodule"
+    },
+    {
+        "label":  "Create MultiWall Manufacturing Drawing",
+        "group":  "CAM",
+        "command":  "C^Chsb_multielementbuild"
+    },
+    {
+        "label":  "Define Subassembly",
+        "group":  "CAM",
+        "command":  "c^c^phsb_SubAssemblyDefine"
+    },
+    {
+        "label":  "Insert Subassemblies",
+        "group":  "CAM",
+        "command":  "c^c^phsb_SubAssemblyInsert"
+    },
+    {
+        "label":  "\u003c-Remove Subassemblies",
+        "group":  "CAM",
+        "command":  "c^c^phsb_SubAssemblyRemove"
+    },
+    {
+        "label":  "Create Blank panel",
+        "group":  "CAM",
+        "command":  "c^cHSB_BLANKPANEL"
+    },
+    {
+        "label":  "Create child panel",
+        "group":  "CAM",
+        "command":  "c^cHSB_PANELINSTANCE"
+    },
+    {
+        "label":  "Flip Panels",
+        "group":  "CAM",
+        "command":  "c^cHSB_FLIPPANEL"
+    },
+    {
+        "label":  "Number panels",
+        "group":  "CAM",
+        "command":  "c^cHSB_PANELNUMBERING"
+    },
+    {
+        "label":  "Nest Panels",
+        "group":  "CAM",
+        "command":  "c^cHSB_CALLNESTER"
+    },
+    {
+        "label":  "Align child panel",
+        "group":  "CAM",
+        "command":  "c^cHSB_PANELALIGNCHILD"
+    },
+    {
+        "label":  "Manual CNC operation",
+        "group":  "CAM",
+        "command":  "c^cHSB_PANELCNCOPERATION"
+    },
+    {
+        "label":  "Hundegger PBA",
+        "group":  "CAM",
+        "command":  "c^cHSB_HUNDEGGERPBA"
+    },
+    {
+        "label":  "\u003c-Export Sips to Weinmann Wup-File",
+        "group":  "CAM",
+        "command":  "c^cHSB_WEINMANNSIPS"
+    },
+    {
+        "label":  "Hundegger",
+        "group":  "CAM",
+        "command":  "c^c^phsb_hundegger"
+    },
+    {
+        "label":  "BTL",
+        "group":  "CAM",
+        "command":  "c^c^phsb_btl"
+    },
+    {
+        "label":  "\u003c-Export Beams to Weinmann WUP File",
+        "group":  "CAM",
+        "command":  "C^C^pHSB_WBZ"
+    },
+    {
+        "label":  "Machine",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_machine"
+    },
+    {
+        "label":  "Place beam",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_placebeam"
+    },
+    {
+        "label":  "Generate tool path",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_generate"
+    },
+    {
+        "label":  "Simulation",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_sim"
+    },
+    {
+        "label":  "Path",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_PATH"
+    },
+    {
+        "label":  "Convert polyline",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_CONVERTPOLYTOPATH"
+    },
+    {
+        "label":  "Convert elementtools",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_EC"
+    },
+    {
+        "label":  "Hundegger PBA",
+        "group":  "CAM",
+        "command":  "c^c_hsb_cnc_pba"
+    },
+    {
+        "label":  "Grecon",
+        "group":  "CAM",
+        "command":  "c^c_hsb_grecon"
+    },
+    {
+        "label":  "\u003c-Ledinek",
+        "group":  "CAM",
+        "command":  "c^c_hsb_ledinek"
+    },
+    {
+        "label":  "OptiSaw HM",
+        "group":  "CAM",
+        "command":  "c^c^phsb_ExportOptiSawHM"
+    },
+    {
+        "label":  "OptiMaster HM",
+        "group":  "CAM",
+        "command":  "c^c^phsb_ExportOptiMasterHM"
+    },
+    {
+        "label":  "Cnc exporter",
+        "group":  "CAM",
+        "command":  "c^c^phsb_CncExporter"
+    },
+    {
+        "label":  "\u003c-Multi element composer",
+        "group":  "CAM",
+        "command":  "c^c^phsb_MultiElementComposer"
+    },
+    {
+        "label":  "Place Walls",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_WALLSF"
+    },
+    {
+        "label":  "Position Openings",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_opening"
+    },
+    {
+        "label":  "Apply ADT to HSB Update",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_adt2hsb"
+    },
+    {
+        "label":  "Add hsbData to ADT-wall",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_ADDHSBDATA"
+    },
+    {
+        "label":  "Add hsbData to ADT-opening",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_ADDHSBDATAOPENING"
+    },
+    {
+        "label":  "Adjust Wall Intersections",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_ADJUSTWALLINTERSECTION"
+    },
+    {
+        "label":  "Flip the Wall Arrow",
+        "group":  "WALL",
+        "command":  "c^cHSB_WALLFLIPARROW"
+    },
+    {
+        "label":  "Split Wall Length",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_WALLSPLIT"
+    },
+    {
+        "label":  "Split Wall Height",
+        "group":  "WALL",
+        "command":  "c^cHSB_DIVIDEFLOORS"
+    },
+    {
+        "label":  "Set the Wall Roofline",
+        "group":  "WALL",
+        "command":  "c^cHSB_WALLROOFLINE"
+    },
+    {
+        "label":  "ReSet the Wall Roofline",
+        "group":  "WALL",
+        "command":  "c^c_HSB_WALLRESETROOFLINE"
+    },
+    {
+        "label":  "Hide the Wall Model",
+        "group":  "WALL",
+        "command":  "c^c_HSB_HIDEWALLMODEL"
+    },
+    {
+        "label":  "Show the Wall Model",
+        "group":  "WALL",
+        "command":  "c^c_HSB_SHOWWALLMODEL"
+    },
+    {
+        "label":  "Create an Element Group",
+        "group":  "WALL",
+        "command":  "c^c_HSB_MAKEELEMENTGROUPFORELEMENT"
+    },
+    {
+        "label":  "Wall Detail Wizard",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DETAILWIZARD"
+    },
+    {
+        "label":  "Wall Detail Builder",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_WALLDETAILBUILDER"
+    },
+    {
+        "label":  "Import Detail Builder",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_ImportDetailBuilder"
+    },
+    {
+        "label":  "Open Wall Detail Interface",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_OPEN"
+    },
+    {
+        "label":  "Create Wall type",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_INPUT"
+    },
+    {
+        "label":  "Sheeting around Opening",
+        "group":  "WALL",
+        "command":  "C^C^PHSB_WindowsSheeting"
+    },
+    {
+        "label":  "Detail code table",
+        "group":  "WALL",
+        "command":  "C^C^PHSB_DetailCodeExe"
+    },
+    {
+        "label":  "Create Sheet",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_PLDE_PLAAT_DEF"
+    },
+    {
+        "label":  "Create Beam",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_BALK"
+    },
+    {
+        "label":  "Extrusion profile",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_Det_extprofile"
+    },
+    {
+        "label":  "Extra Sheet",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_PLAAT"
+    },
+    {
+        "label":  "TSL",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_TSL"
+    },
+    {
+        "label":  "Set Limit",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_MES"
+    },
+    {
+        "label":  "Saw",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_SAGE"
+    },
+    {
+        "label":  "Milling Element",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_FREES"
+    },
+    {
+        "label":  "Drill",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_BOOR"
+    },
+    {
+        "label":  "Milling Beam",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_BLATT"
+    },
+    {
+        "label":  "Cut",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_CUT"
+    },
+    {
+        "label":  "Horz. Blocking",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_KLOS"
+    },
+    {
+        "label":  "Link Entities to Wall Outline",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_makelink"
+    },
+    {
+        "label":  "Reset Detail to Default value",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_RESET"
+    },
+    {
+        "label":  "Update Details in DWG",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_MAKE"
+    },
+    {
+        "label":  "Update wall with new description",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_WALLUPDATESFDESCRIPTION"
+    },
+    {
+        "label":  "\u003c-Save Detail Changes",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_save"
+    },
+    {
+        "label":  "Insert Custom Detail on Wall End",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_test2"
+    },
+    {
+        "label":  "Insert Custom Detail on Wall Top/Bottom",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_DET_locbo"
+    },
+    {
+        "label":  "Control Point for the Distribution of Studs",
+        "group":  "WALL",
+        "command":  "c^c^pHSB_HULP_insertelement"
+    },
+    {
+        "label":  "Open Wall Detail Interface",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_OPEN"
+    },
+    {
+        "label":  "Create Wall type",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_INPUT"
+    },
+    {
+        "label":  "Sheeting around Opening",
+        "group":  "DET",
+        "command":  "C^C^PHSB_WindowsSheeting"
+    },
+    {
+        "label":  "Detail code table",
+        "group":  "DET",
+        "command":  "C^C^PHSB_DetailCodeExe"
+    },
+    {
+        "label":  "Import Detail Builder",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_ImportDetailBuilder"
+    },
+    {
+        "label":  "Create Sheet",
+        "group":  "DET",
+        "command":  "c^c^pHSB_PLDE_PLAAT_DEF"
+    },
+    {
+        "label":  "Create Beam",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_BALK"
+    },
+    {
+        "label":  "Extrusion profile",
+        "group":  "DET",
+        "command":  "c^c^pHSB_Det_extprofile"
+    },
+    {
+        "label":  "Extra Sheet",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_PLAAT"
+    },
+    {
+        "label":  "TSL",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_TSL"
+    },
+    {
+        "label":  "Set Limit",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_MES"
+    },
+    {
+        "label":  "Saw",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_SAGE"
+    },
+    {
+        "label":  "Milling Element",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_FREES"
+    },
+    {
+        "label":  "Drill",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_BOOR"
+    },
+    {
+        "label":  "Milling Beam",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_BLATT"
+    },
+    {
+        "label":  "Cut",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_CUT"
+    },
+    {
+        "label":  "Horz. Blocking",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_KLOS"
+    },
+    {
+        "label":  "Link Entities to Wall Outline",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_makelink"
+    },
+    {
+        "label":  "Reset Detail to Default value",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_RESET"
+    },
+    {
+        "label":  "Update Details in DWG",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_MAKE"
+    },
+    {
+        "label":  "Save Detail Changes",
+        "group":  "DET",
+        "command":  "c^c^pHSB_DET_save"
+    },
+    {
+        "label":  "Create option definition",
+        "group":  "OPTIONS",
+        "command":  "C^C^phsb_opt_definitions"
+    },
+    {
+        "label":  "Create option rules",
+        "group":  "OPTIONS",
+        "command":  "C^C^phsb_opt_rules"
+    },
+    {
+        "label":  "Set options",
+        "group":  "OPTIONS",
+        "command":  "C^C^phsb_opt_setoptions"
+    },
+    {
+        "label":  "Delete options",
+        "group":  "OPTIONS",
+        "command":  "C^C^phsb_opt_del"
+    },
+    {
+        "label":  "Show option graph",
+        "group":  "OPTIONS",
+        "command":  "C^C^phsb_opt_graph"
+    },
+    {
+        "label":  "Lisp Read Construction",
+        "group":  "OPTIONS",
+        "command":  "C^C^phsb_opt_makeconstruction"
+    },
+    {
+        "label":  "Store construction",
+        "group":  "OPTIONS",
+        "command":  "C^C^phsb_store3dforoptions"
+    },
+    {
+        "label":  "Settings",
+        "group":  "BOOKPLOTTER",
+        "command":  "C^C^pHsb_Bp_Settings"
+    },
+    {
+        "label":  "Publish",
+        "group":  "BOOKPLOTTER",
+        "command":  "C^C^pHsb_Bp_Publish"
+    },
+    {
+        "label":  "Insert Page",
+        "group":  "BOOKPLOTTER",
+        "command":  "C^C^pHsb_Bp_InsertPage"
+    },
+    {
+        "label":  "Edit Page",
+        "group":  "BOOKPLOTTER",
+        "command":  "C^C^pHsb_Bp_EditPage"
+    },
+    {
+        "label":  "Viewer",
+        "group":  "BOOKPLOTTER",
+        "command":  "C^C^pHsb_Bp_Viewer"
+    },
+    {
+        "label":  "Design Chapters",
+        "group":  "BOOKPLOTTER",
+        "command":  "C^C^pHsb_Bp_DesignChapters"
+    },
+    {
+        "label":  "Design Books",
+        "group":  "BOOKPLOTTER",
+        "command":  "C^C^pHsb_Bp_DesignBooks"
+    },
+    {
+        "label":  "Define Floor Panel Area",
+        "group":  "ELEMENT",
+        "command":  "c^chsb_defineroofplane"
+    },
+    {
+        "label":  "Divide Element",
+        "group":  "ELEMENT",
+        "command":  "c^c^phsb_dak_multi"
+    },
+    {
+        "label":  "Add to Element",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_ROOFELEMADDAREA"
+    },
+    {
+        "label":  "Subtract from Element",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_ROOFELEMSUBTRACTAREA"
+    },
+    {
+        "label":  "Split edge",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_SPLITROOFELEMENT"
+    },
+    {
+        "label":  "Split element",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_SPLITELEMENT"
+    },
+    {
+        "label":  "Join elements",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_JOINELEMENT"
+    },
+    {
+        "label":  "Assign Roof Element Parameters",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_SETELEMENTDESCRIPTIONROOF"
+    },
+    {
+        "label":  "Assign Floor Element Parameters",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_SETELEMENTDESCRIPTIONFLOOR"
+    },
+    {
+        "label":  "Assign edge detail",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_SETELEMENTEDGEDETAIL"
+    },
+    {
+        "label":  "Set Beam to Element",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_SETBEAMSTOELEMENT"
+    },
+    {
+        "label":  "Support",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_MAKEELEMENTSUPPORT"
+    },
+    {
+        "label":  "Create Openings in Roof",
+        "group":  "ELEMENT",
+        "command":  "C^C^PHSB_MAKEOPENINGROOF"
+    },
+    {
+        "label":  "Create Openings in Floor",
+        "group":  "ELEMENT",
+        "command":  "C^C^PHSB_MAKEOPENINGFLOOR"
+    },
+    {
+        "label":  "Section from beside",
+        "group":  "ELEMENT",
+        "command":  "c^c^phsb_paneel_invoer_zij"
+    },
+    {
+        "label":  "Distribution of tilelath",
+        "group":  "ELEMENT",
+        "command":  "c^c^pHSB_DAKP5"
+    },
+    {
+        "label":  "DSP open",
+        "group":  "ELEMENT",
+        "command":  "c^c^phsb_dspstartpage"
+    },
+    {
+        "label":  "Place Walls",
+        "group":  "PANEL",
+        "command":  "c^c^pHSB_WALLPANEL"
+    },
+    {
+        "label":  "Attach Wall Definition",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELADDWALLDATA"
+    },
+    {
+        "label":  "Attach Opening override",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELADDOPENINGDATA"
+    },
+    {
+        "label":  "Attach roof definition",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELADDROOFDATA"
+    },
+    {
+        "label":  "Re-number Elements",
+        "group":  "PANEL",
+        "command":  "C^Chsb_wallnumber"
+    },
+    {
+        "label":  "Edit wall Definition",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELEDITWALL"
+    },
+    {
+        "label":  "Edit Opening Definition",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELEDITOPENING"
+    },
+    {
+        "label":  "Edit roof definition",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELEDITROOF"
+    },
+    {
+        "label":  "Adjust Wall Intersections",
+        "group":  "PANEL",
+        "command":  "c^c^pHSB_ADJUSTWALLINTERSECTION"
+    },
+    {
+        "label":  "Split Wall Height",
+        "group":  "PANEL",
+        "command":  "c^cHSB_DIVIDEFLOORS"
+    },
+    {
+        "label":  "Set the Wall Roofline",
+        "group":  "PANEL",
+        "command":  "c^cHSB_WALLROOFLINE"
+    },
+    {
+        "label":  "ReSet the Wall Roofline",
+        "group":  "PANEL",
+        "command":  "c^c_HSB_WALLRESETROOFLINE"
+    },
+    {
+        "label":  "Define split Location",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELSPLITLOCATION"
+    },
+    {
+        "label":  "Define TSL split Location",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELTSLSPLITLOCATION"
+    },
+    {
+        "label":  "Create panel",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANEL"
+    },
+    {
+        "label":  "Delete Construction",
+        "group":  "PANEL",
+        "command":  "C^Chsb_sebv_erase"
+    },
+    {
+        "label":  "Number panels",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELNUMBERING"
+    },
+    {
+        "label":  "Spline",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELSPLINE"
+    },
+    {
+        "label":  "Panel stop",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELSTOP"
+    },
+    {
+        "label":  "Roof perimeter lumber",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELROOFPERIMETER"
+    },
+    {
+        "label":  "Roof lumber install",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELROOFLI"
+    },
+    {
+        "label":  "Panel structural beam",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELSTRUCTURALBEAM"
+    },
+    {
+        "label":  "Add wirechase",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELWIRECHASE"
+    },
+    {
+        "label":  "Add Split segment",
+        "group":  "PANEL",
+        "command":  "C^CHSB_PANELADDSPLITSEGMENT"
+    },
+    {
+        "label":  "Cut panel",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELCUT"
+    },
+    {
+        "label":  "Stretch panel",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELSTRETCH"
+    },
+    {
+        "label":  "Split",
+        "group":  "PANEL",
+        "command":  "c^cHSB_SPLITPANEL"
+    },
+    {
+        "label":  "[Join",
+        "group":  "PANEL",
+        "command":  "c^cHSB_JOINPANEL"
+    },
+    {
+        "label":  "Mitre edges",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELMITREEDGES"
+    },
+    {
+        "label":  "Edit vertices and bevels",
+        "group":  "PANEL",
+        "command":  "c^cHSB_EDITPANEL"
+    },
+    {
+        "label":  "Add opening",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELADDOPENING"
+    },
+    {
+        "label":  "Remove opening",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELREMOVEOPENING"
+    },
+    {
+        "label":  "Switch axis",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELSWITCHAXIS"
+    },
+    {
+        "label":  "Shop Drawing",
+        "group":  "PANEL",
+        "command":  "c^cHSB_SHOPDRAWING"
+    },
+    {
+        "label":  "Plot Shop Drawing",
+        "group":  "PANEL",
+        "command":  "c^cHSB_SHOPDRAWINGPLOT"
+    },
+    {
+        "label":  "Panel element drawing",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANELELEMENTDRAWING"
+    },
+    {
+        "label":  "Convert from solid",
+        "group":  "PANEL",
+        "command":  "c^cHSB_PANEL_SOLIDCONVERT"
+    },
+    {
+        "label":  "Generate 3d Model",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_MAKEWALL"
+    },
+    {
+        "label":  "Delete Construction",
+        "group":  "LOG",
+        "command":  "C^Chsb_sebv_erase"
+    },
+    {
+        "label":  "Draw Wall",
+        "group":  "LOG",
+        "command":  "c^cHSB_WALLLOG"
+    },
+    {
+        "label":  "Add hsbData",
+        "group":  "LOG",
+        "command":  "c^c^pHSB_ADDHSBDATA"
+    },
+    {
+        "label":  "Log split Wall",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_SPLITWALL"
+    },
+    {
+        "label":  "Set Wall Number",
+        "group":  "LOG",
+        "command":  "c^cHSB_WALLNUMBER"
+    },
+    {
+        "label":  "Adjust Wall Intersections",
+        "group":  "LOG",
+        "command":  "c^c^pHSB_ADJUSTWALLINTERSECTION"
+    },
+    {
+        "label":  "Set Height of first Log",
+        "group":  "LOG",
+        "command":  "c^cHSB_HEIGHTFIRSTLOG"
+    },
+    {
+        "label":  "Log Wall Definitions",
+        "group":  "LOG",
+        "command":  "c^chsb_logwalldefinitions"
+    },
+    {
+        "label":  "Shed Wizard",
+        "group":  "LOG",
+        "command":  "c^c^pHSB_LOGSHEDWIZARD"
+    },
+    {
+        "label":  "Draw Opening",
+        "group":  "LOG",
+        "command":  "c^chsb_openinglog"
+    },
+    {
+        "label":  "Add hsbData Opening",
+        "group":  "LOG",
+        "command":  "c^c^pHSB_ADDHSBDATAOPENING"
+    },
+    {
+        "label":  "Cut out Opening",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOGOPENING"
+    },
+    {
+        "label":  "Through Bolt",
+        "group":  "LOG",
+        "command":  "c^c^pHSB_LOG_THROUGHBOLT"
+    },
+    {
+        "label":  "Lag Bolts",
+        "group":  "LOG",
+        "command":  "c^c^pHSB_LOG_LAGBOLT"
+    },
+    {
+        "label":  "Standard Connection",
+        "group":  "LOG",
+        "command":  "c^cHSB_WALLSTANDARDLOGCONNECTION"
+    },
+    {
+        "label":  "Housed notch",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_HOUSEDNOTCH"
+    },
+    {
+        "label":  "Dove Connection",
+        "group":  "LOG",
+        "command":  "c^cHSB_WALLDOVELOGCONNECTION"
+    },
+    {
+        "label":  "Saddle Notch",
+        "group":  "LOG",
+        "command":  "c^cHSB_SADDLENOTCH"
+    },
+    {
+        "label":  "Diagonal Notch",
+        "group":  "LOG",
+        "command":  "c^cHSB_WALLDIAGONALLOGCONNECTION"
+    },
+    {
+        "label":  "Log spline Connection",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_SPLINE"
+    },
+    {
+        "label":  "Dove Connection Traditional",
+        "group":  "LOG",
+        "command":  "c^cHsb_LogDovetailTraditional"
+    },
+    {
+        "label":  "Log course based Numbering",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_NUMBERING"
+    },
+    {
+        "label":  "Wall Shop Drawing",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_SHOPDRAWING"
+    },
+    {
+        "label":  "Optimize log lengths",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOGOPTIMIZE"
+    },
+    {
+        "label":  "Attach sweep profile",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_ATTACHSWEEPPROFILE"
+    },
+    {
+        "label":  "Define sweep profile",
+        "group":  "LOG",
+        "command":  "c^cHSB_LOG_DEFINESWEEPPROFILE"
+    },
+    {
+        "label":  "Set the Wall Roofline",
+        "group":  "LOG",
+        "command":  "c^cHSB_WALLROOFLINE"
+    },
+    {
+        "label":  "ReSet the Wall Roofline",
+        "group":  "LOG",
+        "command":  "c^c_HSB_WALLRESETROOFLINE"
+    },
+    {
+        "label":  "Add curved Beam",
+        "group":  "GLULAM",
+        "command":  "c^c^phsb_newspant"
+    },
+    {
+        "label":  "Convert to curved Beam",
+        "group":  "GLULAM",
+        "command":  "c^c^phsb_makespant"
+    },
+    {
+        "label":  "Curved Style Manager",
+        "group":  "GLULAM",
+        "command":  "c^c^phsb_spantedit"
+    },
+    {
+        "label":  "Add 2D Projection",
+        "group":  "GLULAM",
+        "command":  "c^c^phsb_spantdesc"
+    },
+    {
+        "label":  "Add presses",
+        "group":  "GLULAM",
+        "command":  "c^c^phsb_addpressb"
+    },
+    {
+        "label":  "Correct presses",
+        "group":  "GLULAM",
+        "command":  "c^c^pHSB_PRESSBCORRECT"
+    },
+    {
+        "label":  "Number presses",
+        "group":  "GLULAM",
+        "command":  "c^c^pHSB_PRESSBNUMBER"
+    },
+    {
+        "label":  "Adjust lams to presses",
+        "group":  "GLULAM",
+        "command":  "c^c^pHSB_CORRECTLAMLENGTHSFORPRESSB"
+    },
+    {
+        "label":  "Add Deformation Curves",
+        "group":  "GLULAM",
+        "command":  "c^c^pHSB_DEFINELOADDEFORMATIONCURVES"
+    },
+    {
+        "label":  "Generate Deformed Glulam",
+        "group":  "GLULAM",
+        "command":  "c^c^pHSB_GENERATELOADDEFORMATIONGLULAM"
+    },
+    {
+        "label":  "Add Dimension",
+        "group":  "GLULAM",
+        "command":  "c^c^phsb_spantdim1"
+    },
+    {
+        "label":  "Collection add",
+        "group":  "TRUSS",
+        "command":  "c^chsb_colent_add"
+    },
+    {
+        "label":  "Collection Style Manager",
+        "group":  "TRUSS",
+        "command":  "c^chsb_colent_stylemanager"
+    },
+    {
+        "label":  "Collection Edit Style",
+        "group":  "TRUSS",
+        "command":  "c^chsb_colent_editstyle"
+    },
+    {
+        "label":  "Add Ecs Marker",
+        "group":  "TRUSS",
+        "command":  "c^chsb_colent_add_ecsmarker"
+    },
+    {
+        "label":  "Add Truss",
+        "group":  "TRUSS",
+        "command":  "c^chsb_truss2_add"
+    },
+    {
+        "label":  "Truss Style Manager",
+        "group":  "TRUSS",
+        "command":  "c^chsb_truss2_stylemanager"
+    },
+    {
+        "label":  "Generate Truss",
+        "group":  "TRUSS",
+        "command":  "c^chsb_truss_make"
+    },
+    {
+        "label":  "Add break Point",
+        "group":  "TRUSS",
+        "command":  "c^chsb_truss_breakpoint"
+    },
+    {
+        "label":  "Add Truss Beams",
+        "group":  "TRUSS",
+        "command":  "c^chsb_truss_addbeams"
+    },
+    {
+        "label":  "Erase Truss Beams",
+        "group":  "TRUSS",
+        "command":  "c^chsb_truss_erasebeams"
+    },
+    {
+        "label":  "Set Truss Relations",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_SETTRUSSRELATIONS"
+    },
+    {
+        "label":  "Append Beams to Truss",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_APPENDBEAMS"
+    },
+    {
+        "label":  "Insert Beams from Parent",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_COPYBEAMS"
+    },
+    {
+        "label":  "Set UCS in Truss",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_UCS"
+    },
+    {
+        "label":  "Truss Numbering",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_NUMBERING"
+    },
+    {
+        "label":  "Truss Elevation",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_ELEVATION"
+    },
+    {
+        "label":  "Truss CNC",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_EXPORT"
+    },
+    {
+        "label":  "Help",
+        "group":  "TRUSS",
+        "command":  "c^cHSB_TRUSS_HELP"
+    },
+    {
+        "label":  "Attach data to wall/slab",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_add"
+    },
+    {
+        "label":  "Renumber entities",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_renumber"
+    },
+    {
+        "label":  "Modify corner layout",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_setcornerlayout"
+    },
+    {
+        "label":  "System style manager",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_stylemanager"
+    },
+    {
+        "label":  "Material style manager",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_materialstylemanager"
+    },
+    {
+        "label":  "Edit material style",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_editstyle"
+    },
+    {
+        "label":  "Recalculate",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_recalc"
+    },
+    {
+        "label":  "Insert shopdrawing",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_addshopdraw"
+    },
+    {
+        "label":  "Focus shopdrawing",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_shopdraw_plotviewport_focus"
+    },
+    {
+        "label":  "Auto Plot shopdrawing",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_shopdraw_plotviewport_batchplot"
+    },
+    {
+        "label":  "Insert slab-wall link",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_addslabwalllink"
+    },
+    {
+        "label":  "Insert Wall-Wall link",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_addwallwalllink"
+    },
+    {
+        "label":  "Split Wall Length",
+        "group":  "SISMO",
+        "command":  "c^c^pHSB_WALLSPLIT"
+    },
+    {
+        "label":  "Split Wall Height",
+        "group":  "SISMO",
+        "command":  "c^cHSB_DIVIDEFLOORS"
+    },
+    {
+        "label":  "Export to db",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_developableassembly_exporttodb"
+    },
+    {
+        "label":  "Help",
+        "group":  "SISMO",
+        "command":  "c^c^phsb_helpsismo"
+    },
+    {
+        "label":  "Database export",
+        "group":  "SISMO",
+        "command":  "c^c^pHSB_EXPORTTODATABASE"
+    },
+    {
+        "label":  "Open",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dspstartpage"
+    },
+    {
+        "label":  "Make",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_makelisp"
+    },
+    {
+        "label":  "Update/Check Detail",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_begin"
+    },
+    {
+        "label":  "Delete Details",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dsp_lijst"
+    },
+    {
+        "label":  "Insertion point",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_insptn"
+    },
+    {
+        "label":  "Set Variable Values",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_var"
+    },
+    {
+        "label":  "Relative Variable",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_relvar"
+    },
+    {
+        "label":  "Place Points",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_cart"
+    },
+    {
+        "label":  "Polar",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_polar"
+    },
+    {
+        "label":  "Midpoint",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_mid"
+    },
+    {
+        "label":  "Intersection",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_inters"
+    },
+    {
+        "label":  "Perpendicular",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_perp"
+    },
+    {
+        "label":  "Dependency",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_dep"
+    },
+    {
+        "label":  "Rename",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_rename"
+    },
+    {
+        "label":  "Edit",
+        "group":  "HSBDSP",
+        "command":  "c^c^phsb_dog_edit"
+    },
+    {
+        "label":  "Section",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_normal"
+    },
+    {
+        "label":  "profiel-Hide",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_profielH"
+    },
+    {
+        "label":  "Set Blocking Pieces",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_profielo"
+    },
+    {
+        "label":  "Catalogue profiel",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_profielC"
+    },
+    {
+        "label":  "Set Stop for Joists/Rafters",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_edge"
+    },
+    {
+        "label":  "Ladders",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_klos"
+    },
+    {
+        "label":  "Extra Timber",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_extrabalk"
+    },
+    {
+        "label":  "Beam/Rafter",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_spant"
+    },
+    {
+        "label":  "Beam/Rafter(piece)",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_spantstuk"
+    },
+    {
+        "label":  "Set No Timber Area",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_nospant"
+    },
+    {
+        "label":  "Drilling in Timber",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_boring"
+    },
+    {
+        "label":  "Drilling next to timber",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_boringnaast"
+    },
+    {
+        "label":  "Place Text",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_text"
+    },
+    {
+        "label":  "Piece of sheetings",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_strook"
+    },
+    {
+        "label":  "extra Spoor",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^pdog-object-extraSpoor"
+    },
+    {
+        "label":  "Milling",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_blatt"
+    },
+    {
+        "label":  "Set Edge Stop Type 0",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_c0"
+    },
+    {
+        "label":  "Set Edge Stop Type 1",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_c1"
+    },
+    {
+        "label":  "Set Reference Point",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_ref"
+    },
+    {
+        "label":  "Distribution starting point",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_as"
+    },
+    {
+        "label":  "Measurement starting point",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_maat"
+    },
+    {
+        "label":  "Cut sheeting ( zone)",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_plaatsnijden"
+    },
+    {
+        "label":  "Place Zone Stop",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_zone"
+    },
+    {
+        "label":  "Endpoint of Piece of sheetings",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_strookeinde"
+    },
+    {
+        "label":  "Endpoint of counterbattens",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_plaat2"
+    },
+    {
+        "label":  "Extra counterbatten",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_tengel"
+    },
+    {
+        "label":  "Endpoint of tilelaths",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_plaat3"
+    },
+    {
+        "label":  "Endpoint of insulation",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_isolatie"
+    },
+    {
+        "label":  "Position angled tilelath",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_schuin"
+    },
+    {
+        "label":  "TSL",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^pdog-object-TSL"
+    },
+    {
+        "label":  "cnc",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_cnc"
+    },
+    {
+        "label":  "cnc-cutter",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_cnccutter"
+    },
+    {
+        "label":  "Position Perimeter",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_omtrek"
+    },
+    {
+        "label":  "Cut",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_cut"
+    },
+    {
+        "label":  "Weinmann Saw",
+        "group":  "HSBDSPROOF",
+        "command":  "c^c^phsb_dog_object_wmsage"
+    }
+]

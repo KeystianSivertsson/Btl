@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+npm-debug.log*
+.env
+.env.local
+
+# Build output
+dist/
+build/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+*.suo
+*.user
+
+# Certificates
+certs/*.pem
+certs/*.key
+certs/*.crt
+
+# Logs
+*.log
+logs/
+
+# AutoCAD compiled
+*.mnr

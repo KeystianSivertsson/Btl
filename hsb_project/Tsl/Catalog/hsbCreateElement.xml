@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HSB_TSLCATALOG>
+  <HSB_ENTRY>
+    <HSB_NAME>_LastInserted</HSB_NAME>
+    <PROPSTRING nVersion="1" nIndex="0" strName="Building Group" strValue="BarlinaDN" strDesc="Building Group" nEnumIndex="-1" nLineNr="0" />
+    <PROPSTRING nVersion="1" nIndex="1" strName="Storey Group" strValue="01" strDesc="Storey Group" nEnumIndex="-1" nLineNr="0" />
+    <PROPSTRING nVersion="1" nIndex="3" strName="Element Group" strValue="No" strDesc="Element Group" nEnumIndex="-1" nLineNr="0" />
+    <PROPSTRING nVersion="1" nIndex="4" strName="Reference Plane" strValue="&lt;Default&gt;" strDesc="Reference Plane" nEnumIndex="0" nLineNr="0" />
+    <PROPSTRING nVersion="1" nIndex="5" strName="Contour Mode" strValue="&lt;Default&gt;" strDesc="Contour Mode" nEnumIndex="0" nLineNr="0" />
+    <PROPSTRING nVersion="1" nIndex="2" strName="Add Exclusively" strValue="Yes" strDesc="Add Exclusively" nEnumIndex="1" nLineNr="0" />
+    <PROPSTRING nVersion="1" nIndex="6" strName="Turn off new element" strValue="No" strDesc="Turn off new element" nEnumIndex="0" nLineNr="0" />
+    <PROPSTRING nVersion="1" nIndex="7" strName="Plugin TSLs" strValue="" strDesc="Plugin TSLs" nEnumIndex="-1" nLineNr="0" />
+    <PROPDOUBLE nVersion="1" nIndex="0" strName="Blowup + Shrink Value" dValue="0" nUnitType="0" strDesc="Blowup + Shrink Value" nEnumIndex="-1" nLineNr="0" />
+  </HSB_ENTRY>
+</HSB_TSLCATALOG>

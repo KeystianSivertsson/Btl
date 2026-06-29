@@ -1,0 +1,200 @@
+const express = require('express');
+const { WebSocketServer } = require('ws');
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+
+const app = express();
+app.use(express.json());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
+  if (req.method === 'OPTIONS') return res.sendStatus(200);
+  next();
+});
+
+const DATA_DIR = path.join(__dirname, 'data');
+const USERS_FILE = path.join(DATA_DIR, 'users.json');
+const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
+const TOKENS_FILE = path.join(DATA_DIR, 'tokens.json');
+
+const readJSON = (file, fallback) => {
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
+  catch { return fallback; }
+};
+const writeJSON = (file, data) => fs.writeFileSync(file, JSON.stringify(data, null, 2));
+
+const hash = (pw) => crypto.createHash('sha256').update(pw).digest('hex');
+
+// Init default admin user
+if (!fs.existsSync(USERS_FILE)) {
+  writeJSON(USERS_FILE, [
+    { id: '1', username: 'admin', password: hash('admin123'), role: 'admin', namn: 'Administratör' }
+  ]);
+}
+if (!fs.existsSync(MESSAGES_FILE)) writeJSON(MESSAGES_FILE, []);
+if (!fs.existsSync(TOKENS_FILE)) writeJSON(TOKENS_FILE, {});
+
+// Auth middleware — accepts header OR query param (for iframe/PDF)
+const authMiddleware = (req, res, next) => {
+  const token = req.headers.authorization?.replace('Bearer ', '') || req.query.token;
+  const tokens = readJSON(TOKENS_FILE, {});
+  if (!token || !tokens[token]) return res.status(401).json({ error: 'Ej inloggad' });
+  req.user = tokens[token];
+  next();
+};
+
+// --- AUTH ---
+app.post('/api/login', (req, res) => {
+  const { username, password } = req.body;
+  const users = readJSON(USERS_FILE, []);
+  const user = users.find(u => u.username === username && u.password === hash(password));
+  if (!user) return res.status(401).json({ error: 'Fel användarnamn eller lösenord' });
+  const token = crypto.randomBytes(32).toString('hex');
+  const tokens = readJSON(TOKENS_FILE, {});
+  tokens[token] = { id: user.id, username: user.username, roll: user.role, namn: user.namn, avatar: user.avatar || null };
+  writeJSON(TOKENS_FILE, tokens);
+  res.json({ token, user: { id: user.id, username: user.username, roll: user.role, namn: user.namn, avatar: user.avatar || null } });
+});
+
+app.post('/api/logout', authMiddleware, (req, res) => {
+  const token = req.headers.authorization?.replace('Bearer ', '');
+  const tokens = readJSON(TOKENS_FILE, {});
+  delete tokens[token];
+  writeJSON(TOKENS_FILE, tokens);
+  res.json({ ok: true });
+});
+
+app.get('/api/me', authMiddleware, (req, res) => res.json(req.user));
+
+// --- USERS (admin only) ---
+app.get('/api/users', authMiddleware, (req, res) => {
+  if (req.user.roll !== 'admin') return res.status(403).json({ error: 'Ej behörighet' });
+  const users = readJSON(USERS_FILE, []);
+  res.json(users.map(u => ({ id: u.id, username: u.username, roll: u.role, namn: u.namn })));
+});
+
+app.post('/api/users', authMiddleware, (req, res) => {
+  if (req.user.roll !== 'admin') return res.status(403).json({ error: 'Ej behörighet' });
+  const { username, password, roll, namn } = req.body;
+  if (!username || !password) return res.status(400).json({ error: 'Användarnamn och lösenord krävs' });
+  const users = readJSON(USERS_FILE, []);
+  if (users.find(u => u.username === username)) return res.status(400).json({ error: 'Användarnamn finns redan' });
+  const newUser = { id: Date.now().toString(), username, password: hash(password), role: roll || 'user', namn: namn || username };
+  users.push(newUser);
+  writeJSON(USERS_FILE, users);
+  res.json({ id: newUser.id, username: newUser.username, roll: newUser.role, namn: newUser.namn });
+});
+
+app.delete('/api/users/:id', authMiddleware, (req, res) => {
+  if (req.user.roll !== 'admin') return res.status(403).json({ error: 'Ej behörighet' });
+  const users = readJSON(USERS_FILE, []);
+  const kvar = users.filter(u => u.id !== req.params.id);
+  if (kvar.length === users.length) return res.status(404).json({ error: 'Hittades ej' });
+  writeJSON(USERS_FILE, kvar);
+  res.json({ ok: true });
+});
+
+// --- PROFIL ---
+app.patch('/api/me/password', authMiddleware, (req, res) => {
+  const { nyttLosen, gammaltLosen } = req.body;
+  if (!nyttLosen || !gammaltLosen) return res.status(400).json({ error: 'Fyll i båda fälten' });
+  const users = readJSON(USERS_FILE, []);
+  const idx = users.findIndex(u => u.id === req.user.id);
+  if (idx === -1) return res.status(404).json({ error: 'Användare ej hittad' });
+  if (users[idx].password !== hash(gammaltLosen)) return res.status(401).json({ error: 'Fel nuvarande lösenord' });
+  users[idx].password = hash(nyttLosen);
+  writeJSON(USERS_FILE, users);
+  res.json({ ok: true });
+});
+
+app.patch('/api/me/avatar', authMiddleware, (req, res) => {
+  const { avatar } = req.body;
+  if (!avatar) return res.status(400).json({ error: 'Avatar saknas' });
+  const users = readJSON(USERS_FILE, []);
+  const idx = users.findIndex(u => u.id === req.user.id);
+  if (idx === -1) return res.status(404).json({ error: 'Användare ej hittad' });
+  users[idx].avatar = avatar;
+  writeJSON(USERS_FILE, users);
+  const tokens = readJSON(TOKENS_FILE, {});
+  Object.keys(tokens).forEach(t => { if (tokens[t].id === req.user.id) tokens[t].avatar = avatar; });
+  writeJSON(TOKENS_FILE, tokens);
+  res.json({ ok: true, avatar });
+});
+
+// --- CHAT ---
+app.get('/api/messages', authMiddleware, (req, res) => {
+  const messages = readJSON(MESSAGES_FILE, []);
+  res.json(messages.slice(-100));
+});
+
+// --- PDF ---
+app.get('/api/pdf/:fil', authMiddleware, (req, res) => {
+  const fil = path.basename(req.params.fil);
+  const filePath = path.join(DATA_DIR, fil);
+  if (!fs.existsSync(filePath)) return res.status(404).json({ error: 'Fil hittades ej' });
+  res.setHeader('Content-Type', 'application/pdf');
+  res.sendFile(filePath);
+});
+
+// --- WebSocket (chat) ---
+const CERT_DIR = path.join(__dirname, 'certs');
+const harCert = fs.existsSync(path.join(CERT_DIR, 'cert.pem'));
+const server = harCert
+  ? https.createServer({ key: fs.readFileSync(path.join(CERT_DIR, 'key.pem')), cert: fs.readFileSync(path.join(CERT_DIR, 'cert.pem')) }, app)
+  : http.createServer(app);
+const wss = new WebSocketServer({ server, path: '/ws' });
+const clients = new Map();
+
+wss.on('connection', (ws, req) => {
+  const url = new URL(req.url, 'http://localhost');
+  const token = url.searchParams.get('token');
+  const tokens = readJSON(TOKENS_FILE, {});
+  const user = tokens[token];
+  if (!user) { ws.close(4001, 'Ej autentiserad'); return; }
+
+  clients.set(ws, user);
+  broadcastOnline();
+
+  ws.on('message', (data) => {
+    try {
+      const msg = JSON.parse(data);
+      if (msg.type === 'chat') {
+        const message = {
+          id: Date.now().toString(),
+          user: user.namn,
+          username: user.username,
+          text: msg.text,
+          tid: new Date().toISOString(),
+        };
+        const messages = readJSON(MESSAGES_FILE, []);
+        messages.push(message);
+        if (messages.length > 500) messages.splice(0, messages.length - 500);
+        writeJSON(MESSAGES_FILE, messages);
+        broadcast({ type: 'message', message });
+      }
+    } catch {}
+  });
+
+  ws.on('close', () => {
+    clients.delete(ws);
+    broadcastOnline();
+  });
+});
+
+function broadcast(data) {
+  const json = JSON.stringify(data);
+  clients.forEach((_, ws) => { if (ws.readyState === 1) ws.send(json); });
+}
+
+function broadcastOnline() {
+  const online = [...clients.values()].map(u => u.namn);
+  broadcast({ type: 'online', users: online });
+}
+
+const PORT = process.env.PORT || 3001;
+const PROTOCOL = harCert ? 'https' : 'http';
+server.listen(PORT, '0.0.0.0', () => console.log(`Server kör på ${PROTOCOL}://localhost:${PORT}`));
