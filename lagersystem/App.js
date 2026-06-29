@@ -11,8 +11,15 @@ import * as FileSystem from 'expo-file-system';
 import { utils, write } from 'xlsx';
 
 const API = typeof window !== 'undefined'
-  ? `https://${window.location.hostname}:3001`
-  : 'https://localhost:3001';
+  ? `http://${window.location.hostname}:3001`
+  : 'http://localhost:3001';
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+  const raw = atob(base64);
+  return new Uint8Array([...raw].map(c => c.charCodeAt(0)));
+}
 const STORAGE_KEY = 'lagersystem_produkter';
 const TOKEN_KEY = 'lagersystem_token';
 const FLIKAR = ['Alla produkter', 'Schueco ASE 60', 'Schueco ASS 32', 'Osorterat'];
@@ -319,7 +326,7 @@ function ChatPanel({ token, user, onStang }) {
       .then(r => r.json()).then(setMeddelanden).catch(() => {});
 
     if (Platform.OS === 'web') {
-      const ws = new WebSocket(`wss://${window.location.hostname}:3001/ws?token=${token}`);
+      const ws = new WebSocket(`ws://${window.location.hostname}:3001/ws?token=${token}`);
       wsRef.current = ws;
       ws.onmessage = (e) => {
         const data = JSON.parse(e.data);
@@ -447,13 +454,33 @@ export default function App() {
     if (sparadToken) {
       try {
         const res = await fetch(`${API}/api/me`, { headers: { Authorization: `Bearer ${sparadToken}` } });
-        if (res.ok) { const user = await res.json(); setInloggad(user); setToken(sparadToken); }
+        if (res.ok) { const user = await res.json(); setInloggad(user); setToken(sparadToken); prenumereraPush(sparadToken); }
       } catch {}
     }
     setKollarSession(false);
   };
 
-  const loggaIn = (user, tok) => { setInloggad(user); setToken(tok); };
+  const loggaIn = (user, tok) => { setInloggad(user); setToken(tok); prenumereraPush(tok); };
+
+  const prenumereraPush = async (tok) => {
+    if (Platform.OS !== 'web' || !('serviceWorker' in navigator) || !('PushManager' in window)) return;
+    try {
+      const perm = await Notification.requestPermission();
+      if (perm !== 'granted') return;
+      const reg = await navigator.serviceWorker.ready;
+      const keyRes = await fetch(`${API}/api/push/vapidkey`);
+      const { publicKey } = await keyRes.json();
+      const sub = await reg.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(publicKey),
+      });
+      await fetch(`${API}/api/push/subscribe`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${tok}` },
+        body: JSON.stringify(sub),
+      });
+    } catch (e) { console.warn('Push-prenumeration misslyckades:', e); }
+  };
 
   const loggaUt = async () => {
     try { await fetch(`${API}/api/logout`, { method: 'POST', headers: { Authorization: `Bearer ${token}` } }); } catch {}

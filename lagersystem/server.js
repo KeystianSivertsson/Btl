@@ -5,9 +5,10 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const webpush = require('web-push');
 
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: '20mb' }));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
@@ -20,6 +21,19 @@ const DATA_DIR = path.join(__dirname, 'data');
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
 const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
 const TOKENS_FILE = path.join(DATA_DIR, 'tokens.json');
+const VAPID_FILE = path.join(DATA_DIR, 'vapid.json');
+const PUSH_SUBS_FILE = path.join(DATA_DIR, 'push_subs.json');
+
+// VAPID keys — generate once, reuse
+let vapidKeys;
+if (fs.existsSync(VAPID_FILE)) {
+  vapidKeys = JSON.parse(fs.readFileSync(VAPID_FILE, 'utf8'));
+} else {
+  vapidKeys = webpush.generateVAPIDKeys();
+  fs.writeFileSync(VAPID_FILE, JSON.stringify(vapidKeys));
+}
+webpush.setVapidDetails('mailto:admin@nordiskauterum.se', vapidKeys.publicKey, vapidKeys.privateKey);
+const { convertStepTextToBtl } = require('./step2btlIntegration');
 
 const readJSON = (file, fallback) => {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
@@ -125,10 +139,54 @@ app.patch('/api/me/avatar', authMiddleware, (req, res) => {
   res.json({ ok: true, avatar });
 });
 
+// --- PUSH NOTIFICATIONS ---
+app.get('/api/push/vapidkey', (req, res) => {
+  res.json({ publicKey: vapidKeys.publicKey });
+});
+
+app.post('/api/push/subscribe', authMiddleware, (req, res) => {
+  const sub = req.body;
+  if (!sub || !sub.endpoint) return res.status(400).json({ error: 'Ogiltig prenumeration' });
+  const subs = readJSON(PUSH_SUBS_FILE, {});
+  subs[req.user.username] = sub;
+  writeJSON(PUSH_SUBS_FILE, subs);
+  res.json({ ok: true });
+});
+
+app.delete('/api/push/subscribe', authMiddleware, (req, res) => {
+  const subs = readJSON(PUSH_SUBS_FILE, {});
+  delete subs[req.user.username];
+  writeJSON(PUSH_SUBS_FILE, subs);
+  res.json({ ok: true });
+});
+
 // --- CHAT ---
 app.get('/api/messages', authMiddleware, (req, res) => {
   const messages = readJSON(MESSAGES_FILE, []);
   res.json(messages.slice(-100));
+});
+
+app.post('/api/convert-step', authMiddleware, (req, res) => {
+  const { filename, content } = req.body || {};
+  if (!content || typeof content !== 'string') {
+    return res.status(400).json({ error: 'STEP content is required' });
+  }
+  try {
+    const btl = convertStepTextToBtl(content, filename || 'model.step');
+    res.json({ btl, filename: (filename || 'model.step').replace(/\.[^.]+$/, '.btl') });
+  } catch (err) {
+    console.error('STEP conversion error:', err);
+    res.status(500).json({ error: 'Conversion failed', details: err.message });
+  }
+});
+
+// --- Static web app ---
+app.use(express.static(path.join(__dirname, 'dist')));
+app.get(/(.*)/, (req, res, next) => {
+  if (req.path.startsWith('/api/')) return next();
+  const indexPath = path.join(__dirname, 'dist', 'index.html');
+  if (fs.existsSync(indexPath)) res.sendFile(indexPath);
+  else res.status(404).send('Bygg appen först: npx expo export --platform web');
 });
 
 // --- PDF ---
@@ -141,11 +199,7 @@ app.get('/api/pdf/:fil', authMiddleware, (req, res) => {
 });
 
 // --- WebSocket (chat) ---
-const CERT_DIR = path.join(__dirname, 'certs');
-const harCert = fs.existsSync(path.join(CERT_DIR, 'cert.pem'));
-const server = harCert
-  ? https.createServer({ key: fs.readFileSync(path.join(CERT_DIR, 'key.pem')), cert: fs.readFileSync(path.join(CERT_DIR, 'cert.pem')) }, app)
-  : http.createServer(app);
+const server = http.createServer(app);
 const wss = new WebSocketServer({ server, path: '/ws' });
 const clients = new Map();
 
@@ -175,6 +229,7 @@ wss.on('connection', (ws, req) => {
         if (messages.length > 500) messages.splice(0, messages.length - 500);
         writeJSON(MESSAGES_FILE, messages);
         broadcast({ type: 'message', message });
+        pushChatNotification(message, user.username);
       }
     } catch {}
   });
@@ -190,11 +245,30 @@ function broadcast(data) {
   clients.forEach((_, ws) => { if (ws.readyState === 1) ws.send(json); });
 }
 
+function pushChatNotification(message, senderUsername) {
+  const subs = readJSON(PUSH_SUBS_FILE, {});
+  const onlineUsers = new Set([...clients.values()].map(u => u.username));
+  Object.entries(subs).forEach(([username, sub]) => {
+    if (username === senderUsername) return;
+    if (onlineUsers.has(username)) return; // redan i chatten, behöver ingen push
+    const payload = JSON.stringify({
+      title: `💬 ${message.user}`,
+      body: message.text,
+      url: '/',
+    });
+    webpush.sendNotification(sub, payload).catch(() => {
+      // Ta bort ogiltiga prenumerationer
+      const subs2 = readJSON(PUSH_SUBS_FILE, {});
+      delete subs2[username];
+      writeJSON(PUSH_SUBS_FILE, subs2);
+    });
+  });
+}
+
 function broadcastOnline() {
   const online = [...clients.values()].map(u => u.namn);
   broadcast({ type: 'online', users: online });
 }
 
 const PORT = process.env.PORT || 3001;
-const PROTOCOL = harCert ? 'https' : 'http';
-server.listen(PORT, '0.0.0.0', () => console.log(`Server kör på ${PROTOCOL}://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`Server kör på http://localhost:${PORT}`));

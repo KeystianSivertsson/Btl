@@ -33,6 +33,12 @@ yarn-error.*
 # local env files
 .env*.local
 
+# runtime data / secrets
+data/tokens.json
+data/messages.json
+data/vapid.json
+data/push_subs.json
+
 # typescript
 *.tsbuildinfo
 
