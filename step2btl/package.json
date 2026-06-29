@@ -1,0 +1,9 @@
+{
+  "name": "step2btl",
+  "version": "0.1.0",
+  "description": "Simple STEP -> BTL converter (prototype)",
+  "bin": {
+    "step2btl": "./bin/step2btl.js"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-expo-app@latest lagersystem --template blank)",
+      "Bash(cp \"C:/Users/KrystianSivertsson/Pictures/loga_NordiskaUterum.jpg\" \"K:/Claude Projekt-Krystian Sivertsson/lagersystem/assets/logo.jpg\")"
+    ]
+  }
+}

@@ -1,0 +1,1821 @@
+***MENUGROUP=hsbMENU
+
+
+***POPGENERAL
+ID_Hsb_General [hsbGeneral]
+[hsbConsole]^c^chsb_console
+[hsbSettings]^c^chsb_settings
+[hsbFilter]^c^chsb_filter
+[--]
+[hsbToolmanager]^c^c^phsb_toolmanager
+[--]
+[->Tsl]
+[Tsl select]^c^chsb_macroselectonly
+[Tsl manager]^c^chsb_macroselect
+[Graphical Tsl definition]^c^chsb_createmetalpart
+[<-Tsl share]^c^chsb_tslShare
+[--]
+[->Elements]
+[Re-number Elements]^C^Chsb_wallnumber
+[Lock Elements]^c^chsb_sebv_lock
+[Unlock Elements]^c^chsb_sebv_unlock
+[--]
+[Generate Construction]^C^CHSB_GENERATECONSTRUCTION
+[Delete Construction]^C^Chsb_sebv_erase
+[--]
+[Define Construction Repair]^c^c^phsb_conRepairDefine
+[Add Beams For Construction Repair]^c^c^phsb_conRepairAddBeams
+[Insert Construction Repair]^c^c^phsb_conRepairInsert
+[--]
+[Update Element DXA Files]^c^chsb_SEBV_STORE3D
+[Store 3D By Element]^c^chsb_SEBV_STORE3D_ByElement
+[Store 3D New]^c^chsb_STORE3D
+[--]
+[<-Import hsbCAD9 Layouts]^c^chsb_readdxi
+[->Extrusion Profiles]
+[Extrusion Profile Manager]^c^c^phsb_extrusionprofiles
+[<-Create Extrusion Profile]^c^c^phsb_extrusionprofileframe
+[->Curved timber]
+[<-Curved Style Manager]^c^c^phsb_spantedit
+
+
+***POPROOF
+ID_Hsb_Roof [hsbPlanes]
+[Add Icons]^c^chsb_rooficon
+[Groups Icons]^c^cHSB_ROOFGROUPICONS
+[Generate Planes]^c^chsb_roof_dakmakeone
+[Draw Plane]^c^chsb_defineroofplane
+[Copy Roof Plane Down]^C^C^pHSB_ROOFCOPYDOWN
+[--]
+[Merge Roof Planes]^c^cHSB_MERGEROOFS
+[Subtract from Plane]^c^chsb_roofsubstractarea
+[Add to Plane]^c^chsb_roofaddarea
+[Create floor under roof]^c^chsb_rooffloorslice
+[Assign Profile]^C^Chsb_roofassignprofile
+[Adjust Icon Slope]^c^cHSB_ROOF_ADJUSTICONSLOPE
+[Define Ridge Line]^c^cHSB_ROOF_DEFINERIDGELINE
+[Rooficon 1point]^c^chsb_rooficon1point
+[Rooficon 3points]^c^chsb_rooficon3points
+[Project Polyline in Roof]^c^c^pHSB_PROJECTPOLYLINE
+[Stretch edge to other roof]^c^c^pHSB_ROOF_STRETCHEDGE
+[--]
+[Dormer Roof]^c^chsb_dormer
+[Create a Dormer Wall]^c^cHSB_WALLDORMER
+[--]
+[Solid to Roof]^c^cHSB_ROOFCONVERTSOLID
+[Convert from/to ADT Roof]^c^chsb_convert2roofplanes
+[--]
+[->Section Wizard]
+[Add Section]^c^chsb_roof_wizard
+[Add Plate Beam from Section]^c^chsb_roof_plate
+[Add section window]^c^chsb_roof_section_window
+[Add Section Fixed Lath]^c^chsb_roof_fixedlath
+[--]
+[Add plate beam]^c^chsb_roof_addplatebeam
+[Add Roof Window]^c^chsb_roof_window
+[Add laths]^c^chsb_laths
+[<-Link Section with Plane]^c^chsb_roof_linkroof
+
+
+
+
+***POPTIMBER
+ID_Hsb_Timber [hsbTimber]
+[Visual Timber]^c^c^phsb_visualtimber
+[Use Construction Macros]^c^c^phsb_smacro
+[Post and Beam]^c^c^phsb_jpconstruct
+[--]
+[Beam]^c^c^phsb_beamnew
+[--]
+[Rafter]^c^c^pHSB_RAFTER
+[Valley-Hip Rafter]^c^c^phsb_hipandvalley
+[Valleyboard]^c^c^phsb_valleyboard
+[Sloping Rafter]^c^c^phsb_slopingrafter
+[Hidden rafter]^c^c^phsb_hiddenrafter
+[Dormer Plate]^c^c^phsb_kebotek
+[Top Plate]^c^c^phsb_topplate
+[Mid Plate]^c^c^phsb_midplate
+[Ridge]^c^c^phsb_ridge
+[Post]^c^c^phsb_beamnewpost
+[Brace]^c^c^phsb_brace
+[Joint Purlin]^c^c^phsb_jointpurlin
+[Collar tie]^c^c^phsb_zangtek
+[--]
+[Beams around opening]^c^c^phsb_auswechslung
+[--]
+[->Roof Utilities]
+[Project Polyline]^c^c^pHSB_PROJECTPOLYLINE
+[Roofplane add and edit Beams]^c^c^phsb_roofplane
+[Align Rafters on different Roofplanes]^c^c^phsb_alignrafters
+[<-Flush Rafters with Hip or Valley Rafter]^c^c^phsb_flushrafterswithhipandvalley
+[--]
+[Draw Sheet]^c^c^phsb_sheeting
+[--]
+[Convert from 3D Solid]^c^c^phsb_convertacistobeam
+[Convert to 3D Solid]^c^c^phsb_convertbeamtoacis
+[Import structural member]^C^C^pHSB_IMPORTSTRUCTURALMEMBER
+
+
+
+
+***POPEDIT
+ID_Hsb_Edit [hsbEdit]
+[Cut Beam]^c^c^phsb_beamcut
+[Stretch Beam]^c^c^phsb_beamstretch
+[Stretch to Beam]^c^c^phsb_contact
+[Stretch to corner configuration]^c^c^phsb_corner
+[Stretch to multiple beams]^c^c^phsb_multiplecontact
+[Split]^c^c^phsb_beamsplit
+[Numerous Split]^c^c^phsb_multisplit
+[Join]^c^c^phsb_joinbeams
+[Change Beam Size]^c^c^phsb_change_section
+[--]
+[hsbUCS]^c^chsb_ucs
+[--]
+[Map Texture]^c^c^phsb_maptexture
+[--]
+[Integrate Toolings]^c^c^phsb_linktools
+[ReCalc Beams/Items]^c^c^phsb_recalc
+[--]
+[Visual Tools]^c^c^phsb_multi
+[Last Visual Tool]^c^c^phsb_lasttoolfunction
+[->Edit Beams]
+[->Tenon]
+[Tenon]^c^c^phsb_tenon
+[End tenon]^c^c^phsb_zapfstoss
+[Housed Tenon]^c^c^phsb_housedtenon
+[Shoulder Tenon]^c^c^phsb_shouldertenon
+[Locked Shoulder Tenon]^c^c^phsb_lockedshouldertenon
+[Kingpost Tenon]^c^c^phsb_kingposttenon
+[Tusk Tenon]^c^c^phsb_tusktenon
+[<-Parallel Housing]^c^c^phsb_parallelhousing
+[->Schwalbenzapfen]
+[Dovetail Tenon]^c^c^phsb_dovetail
+[End dovetail]^c^c^phsb_schwalbstoss
+[Dovetail at Beam End]^c^c^phsb_dovetailmitre
+[Dovesugi]^c^c^phsb_dovesugi
+[Log-Dovetail]^c^c^phsb_logdovetail
+[<-Housed Dovetail]^c^c^phsb_houseddovetail
+[Girt - Brace Shoulder]^c^c^phsb_versatz
+[->Laps and Mitres]
+[Corner half Lap Joint]^c^c^phsb_firstblatt
+[Through half Lap Joint]^c^c^phsb_lapjoint
+[Bridal Joint]^c^c^phsb_bridaljoint
+[Neda]^c^c^phsb_neda
+[Infinite Housing]^c^c^phsb_infinitehousing
+[<-Mitre Joint]^c^c^phsb_mitre
+[->Joinery in Length]
+[Scarf Joint]^c^c^phsb_scarf
+[Japanese Scarf]^c^c^phsb_scarfjapan
+[Okkake]^c^c^phsb_okkake
+[<-Kamatsugi]^c^c^phsb_kamatsugi
+[->End profiles]
+[Head]^c^c^phsb_kopf
+[End Chamfer]^c^c^phsb_kopf2
+[Convex - Concave Profile]^c^c^phsb_profile
+[Complex Profile]^c^c^phsb_profilecomplex
+[<-Free Profile]^c^c^phsb_freeprofile
+[->Drillings]
+[Tube]^c^c^phsb_freedrill
+[Drill in One Beam]^c^c^phsb_surfacedrill
+[Cross Drilling]^c^c^phsb_crossdrill
+[Peg Holes]^c^c^phsb_pegs
+[Drilling for Braces]^c^c^phsb_bracedrill
+[<-Drilling for T-Connection]^c^c^phsb_tdrill
+[Slot]^c^c^phsb_slot
+[Arc]^c^c^phsb_arc
+[Double Cut]^c^c^phsb_doublecut
+[Cross Marking]^c^c^phsb_crossmarking
+[Planing]^c^c^phsb_hobel
+[<-Special Mill]^c^c^phsb_specialmill
+[--]
+[Split Sheeting]^c^c^phsb_sheetingsplit
+[Substract Sheeting]^c^c^phsb_sheetingsubtract
+[Add Sheeting]^C^C^Phsb_sheetingadd
+[Join Sheeting]^C^C^Phsb_sheetingjoin
+[--]
+[Set reference for Machining]^c^c^pHSB_REFMACHINE
+[Set beam name]^c^c^pHSB_SETNAME
+[--]
+[->Metalparts]
+[Add Metalpart]^c^chsb_metalpart_add
+[Metalpart Style Manager]^c^chsb_metalpart_stylemanager
+[Collection Edit Style]^c^chsb_colent_editstyle
+[<-Add Ecs Marker]^c^chsb_colent_add_ecsmarker
+[->Fastener]
+[Add Fastener]^c^chsb_fa_add
+[Anchor to guidline]^c^chsb_fa_anchorto
+[Flip]^c^chsb_fa_flip
+[Link to geometry]^c^chsb_fa_linkgeo
+[Reset geometry]^c^chsb_fa_resetgeo
+[Edit style]^c^chsb_fa_editstyle
+[Bespoke]^c^chsb_fa_styleaddbespoke
+[Update ruleset and graphics]^c^chsb_fa_importgraphicsruleset
+
+
+
+
+***POPUTILS
+ID_Hsb_Utils [hsbUtils]
+[Check Construction]^c^c^pHSB_CHECKCONSTRUCTION
+[Compare Bodies]^c^c^pHSB_COMPAREBODIES
+[Identify Room Area]^c^c^phsb_makeroom
+[--]
+[->Layers]
+[Layer Off]^c^chsb_layeroff
+[Layer On]^c^chsb_layeron
+[Move By Layer]^c^chsb_layermove
+[Delete By Layer]^c^chsb_layerdelete
+[<-Copy By Layer]^c^chsb_layercopy
+[--]
+[->Objects]
+[Object Off]^c^c^phsb_hideobjects
+[Object On]^c^c^phsb_showobjects
+[Hide Toolings]^c^c^phsb_hidetooling
+[Unhide Toolings]^c^c^phsb_showtooling
+[Show only selected Objects]^c^c^phsb_showonlyselected
+[Unhide tools for beam]^c^c^phsb_unhideToolsFor
+[<-Unhide beams for tool]^c^c^phsb_unhideBeamsFor
+[--]
+[->Structural model]
+[Export]^c^cHSB_ANMODEXPORT
+[--]
+[Generate 1D analysis]^c^chsb_structure
+[Add support]^c^chsb_structure_support
+[<-Add load]^c^chsb_structure_load
+[--]
+[->Section]
+[Create Section Area]^c^chsb_sebv_profile
+[Generate Section]^c^chsb_sebv_cut
+[Generate Exploded Projection]^c^chsb_sebv_profview
+[<-Generate 3 Projections]^c^chsb_sebv_3pview
+[--]
+[->Dimension]
+[Dimension free]^c^chsb_dimensioncreate
+[Add points]^c^chsb_dimensionaddpoint
+[Delete points]^c^chsb_dimensiondeletepoint
+[Reference point]^c^chsb_dimensionrefpoint
+[Add curve]^c^chsb_dimensionaddcurve
+[Remove curve]^c^chsb_dimensionremovecurve
+[<-Dimension polyline]^c^chsb_dimensionpolyline
+[--]
+[->Grid]
+[Draw Cartesian Grid]^c^chsb_grid
+[Draw Polar Grid]^c^chsb_gridpolar
+[Edit Grid Spacing]^c^chsb_grideditspacing
+[Lock Grid]^c^chsb_gridlock
+[Unlock Grid]^c^chsb_gridunlock
+[Hide Grid]^c^chsb_gridhide
+[<-View Grid]^c^chsb_gridview
+[--]
+[Check and repair installation]^c^c^phsb_diagnostics
+
+
+
+***POPOUTPUT
+ID_Hsb_Output [hsbInOutput]
+[Apply Numbering]^c^c^phsb_assignposnum
+[Toggle Numbering on/off]^c^c^phsb_posnumvisible
+[Delete Numbers]^c^c^phsb_releaseposnum
+[Search Number Position]^c^c^phsb_searchposnum
+[Position Number Viewer]^C^C^Phsb_posnumViewer
+[--]
+[Edit Responsibility property]^C^C^Phsb_responsibility
+[--]
+[Deliverable Container Manager]^c^cHSB_SETDELIVERABLECONTAINER
+[Viewport-Settings]^c^chsb_viewportsettings
+[Automatic Layout Plotting]^c^chsb_viewportautoplot
+[--]
+[->New Shop Drawings]
+[Shop drawing add multipage]^c^c^phsb_shopdraw_addmultipage
+[Batch plot plot-viewports]^c^c^pHSB_SHOPDRAW_PLOTVIEWPORT_BATCHPLOT
+[Batch plot multipages]^c^c^pHSB_MULTIPAGE_PLOT
+[Shop drawing stylemanager]^c^c^phsb_shopdraw_stylemanager
+[<-Shop drawing add new view]^c^c^pHSB_SHOPDRAW_ADDVIEWPLACEHOLDER
+[->Shop Drawings]
+[Shop Drawing 2 Beam Panel]^C^C^Phsb_shopdrawing
+[Shop Drawing in Paper Space]^C^C^Phsb_shopdrawinginpaperspace
+[Shop Drawing of Metal Parts]^C^C^PHSB_SHOPDRAW_METALPART
+[Batch plot Beam Shop Drawings with Title Block]^C^C^PHSB_SHOPDRAWINGPLOTPS
+[<-Batch plot Panel Shop Drawings with Title Block]^C^C^PHSB_SHOPDRAWINGPLOT
+
+[->Export]
+[Database export]^c^c^pHSB_EXPORTTODATABASE
+[Excel export]^c^c^pHSB_EXPORTTOEXCEL
+[VRML Export]^c^c^phsb_vrmlout
+[SDS export]^c^c^pHSB_EXPORTSDS
+[<-CeDXM export]^c^c^pHSB_EXPORTCEDXM
+[->Import]
+[<-CeDXM import]^c^c^pHSB_IMPORTCEDXM
+
+
+
+***POPCAM
+ID_Hsb_CAM [hsbCam]
+[->Element Machining]
+[Automatically Add Nails on Beams]^c^chsb_addnaillines
+[Automatically Add Nails on Laths]^c^chsb_addnaillinesonlaths
+[Add Nailing within Viewport]^c^chsb_addelementnailline
+[Add No Nailing Zone]^c^chsb_addelementnonail
+[Erase Nailing]^c^cHSB_ERASENAILLINES
+[Add Marker]^c^chsb_addelementmarker
+[Add Drill]^c^chsb_addelementdrill
+[Add Milling]^c^chsb_addelementmill
+[Add Sawing]^c^chsb_addelementsaw
+[--]
+[Create Module]^c^cHSB_setmodule
+[Remove Module]^c^cHSB_clearmodule
+[--]
+[Create MultiWall Manufacturing Drawing]^C^Chsb_multielementbuild
+[--]
+[Define Subassembly]^c^c^phsb_SubAssemblyDefine
+[Insert Subassemblies]^c^c^phsb_SubAssemblyInsert
+[<-Remove Subassemblies]^c^c^phsb_SubAssemblyRemove
+[->Panel Machining]
+[Create Blank panel]^c^cHSB_BLANKPANEL
+[Create child panel]^c^cHSB_PANELINSTANCE
+[Flip Panels]^c^cHSB_FLIPPANEL
+[Number panels]^c^cHSB_PANELNUMBERING
+[Nest Panels]^c^cHSB_CALLNESTER
+[Align child panel]^c^cHSB_PANELALIGNCHILD
+[Manual CNC operation]^c^cHSB_PANELCNCOPERATION
+[Hundegger PBA]^c^cHSB_HUNDEGGERPBA
+[<-Export Sips to Weinmann Wup-File]^c^cHSB_WEINMANNSIPS
+[->Beam Machining]
+[Hundegger]^c^c^phsb_hundegger
+[BTL]^c^c^phsb_btl
+[<-Export Beams to Weinmann WUP File]^C^C^pHSB_WBZ
+[->CNC Preprocessor]
+[Machine]^c^c_hsb_cnc_machine
+[Place beam]^c^c_hsb_cnc_placebeam
+[Generate tool path]^c^c_hsb_cnc_generate
+[Simulation]^c^c_hsb_cnc_sim
+[Path]^c^c_hsb_cnc_PATH
+[Convert polyline]^c^c_hsb_cnc_CONVERTPOLYTOPATH
+[Convert elementtools]^c^c_hsb_cnc_EC
+[Hundegger PBA]^c^c_hsb_cnc_pba
+[Grecon]^c^c_hsb_grecon
+[<-Ledinek]^c^c_hsb_ledinek
+[->Element Export]
+[OptiSaw HM]^c^c^phsb_ExportOptiSawHM
+[OptiMaster HM]^c^c^phsb_ExportOptiMasterHM
+[Cnc exporter]^c^c^phsb_CncExporter
+[<-Multi element composer]^c^c^phsb_MultiElementComposer
+
+
+
+***POPWALL
+ID_Hsb_Wall [hsbWall]
+[Place Walls]^c^c^pHSB_WALLSF
+[Position Openings]^c^c^pHSB_opening
+[--]
+[Apply ADT to HSB Update]^c^c^pHSB_adt2hsb
+[Add hsbData to ADT-wall]^c^c^pHSB_ADDHSBDATA
+[Add hsbData to ADT-opening]^c^c^pHSB_ADDHSBDATAOPENING
+[--]
+[Adjust Wall Intersections]^c^c^pHSB_ADJUSTWALLINTERSECTION
+[Flip the Wall Arrow]^c^cHSB_WALLFLIPARROW
+[--]
+[Split Wall Length]^c^c^pHSB_WALLSPLIT
+[Split Wall Height]^c^cHSB_DIVIDEFLOORS
+[--]
+[Set the Wall Roofline]^c^cHSB_WALLROOFLINE
+[ReSet the Wall Roofline]^c^c_HSB_WALLRESETROOFLINE
+[--]
+[Hide the Wall Model]^c^c_HSB_HIDEWALLMODEL
+[Show the Wall Model]^c^c_HSB_SHOWWALLMODEL
+[Create an Element Group]^c^c_HSB_MAKEELEMENTGROUPFORELEMENT
+[--]
+[->hsbWall Details]
+[Wall Detail Wizard]^c^c^pHSB_DETAILWIZARD
+[Wall Detail Builder]^c^c^pHSB_WALLDETAILBUILDER
+[Import Detail Builder]^c^c^pHSB_DET_ImportDetailBuilder
+[Open Wall Detail Interface]^c^c^pHSB_DET_OPEN
+[Create Wall type]^c^c^pHSB_DET_INPUT
+[Sheeting around Opening]^C^C^PHSB_WindowsSheeting
+[Detail code table]^C^C^PHSB_DetailCodeExe
+[--]
+[Create Sheet]^c^c^pHSB_PLDE_PLAAT_DEF
+[Create Beam]^c^c^pHSB_DET_BALK
+[Extrusion profile]^c^c^pHSB_Det_extprofile
+[Extra Sheet]^c^c^pHSB_DET_PLAAT
+[TSL]^c^c^pHSB_DET_TSL
+[--]
+[Set Limit]^c^c^pHSB_DET_MES
+[--]
+[Saw]^c^c^pHSB_DET_SAGE
+[Milling Element]^c^c^pHSB_DET_FREES
+[Drill]^c^c^pHSB_DET_BOOR
+[Milling Beam]^c^c^pHSB_DET_BLATT
+[Cut]^c^c^pHSB_DET_CUT
+[Horz. Blocking]^c^c^pHSB_DET_KLOS
+[--]
+[Link Entities to Wall Outline]^c^c^pHSB_DET_makelink
+[Reset Detail to Default value]^c^c^pHSB_DET_RESET
+[--]
+[Update Details in DWG]^c^c^pHSB_DET_MAKE
+[Update wall with new description]^c^c^pHSB_WALLUPDATESFDESCRIPTION
+[--]
+[<-Save Detail Changes]^c^c^pHSB_DET_save
+[--]
+[Insert Custom Detail on Wall End]^c^c^pHSB_DET_test2
+[Insert Custom Detail on Wall Top/Bottom]^c^c^pHSB_DET_locbo
+[Control Point for the Distribution of Studs]^c^c^pHSB_HULP_insertelement
+
+
+
+***POPDET
+ID_Hsb_Details [hsbWall Details]
+[Open Wall Detail Interface]^c^c^pHSB_DET_OPEN
+[Create Wall type]^c^c^pHSB_DET_INPUT
+[Sheeting around Opening]^C^C^PHSB_WindowsSheeting
+[Detail code table]^C^C^PHSB_DetailCodeExe
+[Import Detail Builder]^c^c^pHSB_DET_ImportDetailBuilder
+[--]
+[Create Sheet]^c^c^pHSB_PLDE_PLAAT_DEF
+[Create Beam]^c^c^pHSB_DET_BALK
+[Extrusion profile]^c^c^pHSB_Det_extprofile
+[Extra Sheet]^c^c^pHSB_DET_PLAAT
+[TSL]^c^c^pHSB_DET_TSL
+[--]
+[Set Limit]^c^c^pHSB_DET_MES
+[--]
+[Saw]^c^c^pHSB_DET_SAGE
+[Milling Element]^c^c^pHSB_DET_FREES
+[Drill]^c^c^pHSB_DET_BOOR
+[Milling Beam]^c^c^pHSB_DET_BLATT
+[Cut]^c^c^pHSB_DET_CUT
+[Horz. Blocking]^c^c^pHSB_DET_KLOS
+[--]
+[Link Entities to Wall Outline]^c^c^pHSB_DET_makelink
+[Reset Detail to Default value]^c^c^pHSB_DET_RESET
+[--]
+[Update Details in DWG]^c^c^pHSB_DET_MAKE
+[--]
+[Save Detail Changes]^c^c^pHSB_DET_save
+
+
+
+***POPOPTIONS
+ID_Hsb_Options [hsbOptions]
+[Create option definition]^C^C^phsb_opt_definitions
+[Create option rules]^C^C^phsb_opt_rules
+[Set options]^C^C^phsb_opt_setoptions
+[Delete options]^C^C^phsb_opt_del
+[Show option graph]^C^C^phsb_opt_graph
+[Lisp Read Construction]^C^C^phsb_opt_makeconstruction
+[Store construction]^C^C^phsb_store3dforoptions
+
+
+***POPBOOKPLOTTER
+ID_Hsb_BookPlotter [hsbBookPlotter]
+[Settings]^C^C^pHsb_Bp_Settings
+[Publish]^C^C^pHsb_Bp_Publish
+[Insert Page]^C^C^pHsb_Bp_InsertPage
+[Edit Page]^C^C^pHsb_Bp_EditPage
+[Viewer]^C^C^pHsb_Bp_Viewer
+[Design Chapters]^C^C^pHsb_Bp_DesignChapters
+[Design Books]^C^C^pHsb_Bp_DesignBooks
+
+
+
+
+***POPELEMENT
+ID_Hsb_Element [hsbElement]
+[Define Floor Panel Area]^c^chsb_defineroofplane
+[--]
+[Divide Element]^c^c^phsb_dak_multi
+[Add to Element]^c^c^pHSB_ROOFELEMADDAREA
+[Subtract from Element]^c^c^pHSB_ROOFELEMSUBTRACTAREA
+[Split edge]^c^c^pHSB_SPLITROOFELEMENT
+[Split element]^c^c^pHSB_SPLITELEMENT
+[Join elements]^c^c^pHSB_JOINELEMENT
+[--]
+[Assign Roof Element Parameters]^c^c^pHSB_SETELEMENTDESCRIPTIONROOF
+[Assign Floor Element Parameters]^c^c^pHSB_SETELEMENTDESCRIPTIONFLOOR
+[Assign edge detail]^c^c^pHSB_SETELEMENTEDGEDETAIL
+[Set Beam to Element]^c^c^pHSB_SETBEAMSTOELEMENT
+[--]
+[Support]^c^c^pHSB_MAKEELEMENTSUPPORT
+[Create Openings in Roof]^C^C^PHSB_MAKEOPENINGROOF
+[Create Openings in Floor]^C^C^PHSB_MAKEOPENINGFLOOR
+[--]
+[Section from beside]^c^c^phsb_paneel_invoer_zij
+[Distribution of tilelath]^c^c^pHSB_DAKP5
+[--]
+[DSP open]^c^c^phsb_dspstartpage
+
+
+
+
+
+
+
+
+***POPPANEL
+ID_Hsb_Panel [hsbPanel]
+[Place Walls]^c^c^pHSB_WALLPANEL
+[--]
+[Attach Wall Definition]^c^cHSB_PANELADDWALLDATA
+[Attach Opening override]^c^cHSB_PANELADDOPENINGDATA
+[Attach roof definition]^c^cHSB_PANELADDROOFDATA
+[--]
+[Re-number Elements]^C^Chsb_wallnumber
+[--]
+[Edit wall Definition]^c^cHSB_PANELEDITWALL
+[Edit Opening Definition]^c^cHSB_PANELEDITOPENING
+[Edit roof definition]^c^cHSB_PANELEDITROOF
+[--]
+[Adjust Wall Intersections]^c^c^pHSB_ADJUSTWALLINTERSECTION
+[Split Wall Height]^c^cHSB_DIVIDEFLOORS
+[Set the Wall Roofline]^c^cHSB_WALLROOFLINE
+[ReSet the Wall Roofline]^c^c_HSB_WALLRESETROOFLINE
+[--]
+[Define split Location]^c^cHSB_PANELSPLITLOCATION
+[Define TSL split Location]^c^cHSB_PANELTSLSPLITLOCATION
+[--]
+[Create panel]^c^cHSB_PANEL
+[Delete Construction]^C^Chsb_sebv_erase
+[--]
+[Number panels]^c^cHSB_PANELNUMBERING
+[--]
+[Spline]^c^cHSB_PANELSPLINE
+[Panel stop]^c^cHSB_PANELSTOP
+[Roof perimeter lumber]^c^cHSB_PANELROOFPERIMETER
+[Roof lumber install]^c^cHSB_PANELROOFLI
+[Panel structural beam]^c^cHSB_PANELSTRUCTURALBEAM
+[Add wirechase]^c^cHSB_PANELWIRECHASE
+[Add Split segment]^C^CHSB_PANELADDSPLITSEGMENT
+[--]
+[Cut panel]^c^cHSB_PANELCUT
+[Stretch panel]^c^cHSB_PANELSTRETCH
+[Split]^c^cHSB_SPLITPANEL
+[[Join]^c^cHSB_JOINPANEL
+[Mitre edges]^c^cHSB_PANELMITREEDGES
+[Edit vertices and bevels]^c^cHSB_EDITPANEL
+[Add opening]^c^cHSB_PANELADDOPENING
+[Remove opening]^c^cHSB_PANELREMOVEOPENING
+[Switch axis]^c^cHSB_PANELSWITCHAXIS
+[--]
+[Shop Drawing]^c^cHSB_SHOPDRAWING
+[Plot Shop Drawing]^c^cHSB_SHOPDRAWINGPLOT
+[Panel element drawing]^c^cHSB_PANELELEMENTDRAWING
+[--]
+[Convert from solid]^c^cHSB_PANEL_SOLIDCONVERT
+
+
+
+
+***POPLOG
+ID_Hsb_Log [hsbLog]
+[Generate 3d Model]^c^cHSB_LOG_MAKEWALL
+[Delete Construction]^C^Chsb_sebv_erase
+[--]
+[Draw Wall]^c^cHSB_WALLLOG
+[Add hsbData]^c^c^pHSB_ADDHSBDATA
+[Log split Wall]^c^cHSB_LOG_SPLITWALL
+[Set Wall Number]^c^cHSB_WALLNUMBER
+[Adjust Wall Intersections]^c^c^pHSB_ADJUSTWALLINTERSECTION
+[Set Height of first Log]^c^cHSB_HEIGHTFIRSTLOG
+[--]
+[Log Wall Definitions]^c^chsb_logwalldefinitions
+[--]
+[Shed Wizard]^c^c^pHSB_LOGSHEDWIZARD
+[--]
+[Draw Opening]^c^chsb_openinglog
+[Add hsbData Opening]^c^c^pHSB_ADDHSBDATAOPENING
+[Cut out Opening]^c^cHSB_LOGOPENING
+[--]
+[Through Bolt]^c^c^pHSB_LOG_THROUGHBOLT
+[Lag Bolts]^c^c^pHSB_LOG_LAGBOLT
+[Standard Connection]^c^cHSB_WALLSTANDARDLOGCONNECTION
+[Housed notch]^c^cHSB_LOG_HOUSEDNOTCH
+[Dove Connection]^c^cHSB_WALLDOVELOGCONNECTION
+[Saddle Notch]^c^cHSB_SADDLENOTCH
+[Diagonal Notch]^c^cHSB_WALLDIAGONALLOGCONNECTION
+[Log spline Connection]^c^cHSB_LOG_SPLINE
+[Dove Connection Traditional]^c^cHsb_LogDovetailTraditional
+[--]
+[Log course based Numbering]^c^cHSB_LOG_NUMBERING
+[Wall Shop Drawing]^c^cHSB_LOG_SHOPDRAWING
+[Optimize log lengths]^c^cHSB_LOGOPTIMIZE
+[--]
+[Attach sweep profile]^c^cHSB_LOG_ATTACHSWEEPPROFILE
+[Define sweep profile]^c^cHSB_LOG_DEFINESWEEPPROFILE
+[--]
+[Set the Wall Roofline]^c^cHSB_WALLROOFLINE
+[ReSet the Wall Roofline]^c^c_HSB_WALLRESETROOFLINE
+
+
+
+
+
+
+***POPGLULAM
+ID_Hsb_Glulam [hsbGlulam]
+[Add curved Beam]^c^c^phsb_newspant
+[Convert to curved Beam]^c^c^phsb_makespant
+[--]
+[Curved Style Manager]^c^c^phsb_spantedit
+[--]
+[Add 2D Projection]^c^c^phsb_spantdesc
+[Add presses]^c^c^phsb_addpressb
+[Correct presses]^c^c^pHSB_PRESSBCORRECT
+[Number presses]^c^c^pHSB_PRESSBNUMBER
+[Adjust lams to presses]^c^c^pHSB_CORRECTLAMLENGTHSFORPRESSB
+[--]
+[Add Deformation Curves]^c^c^pHSB_DEFINELOADDEFORMATIONCURVES
+[Generate Deformed Glulam]^c^c^pHSB_GENERATELOADDEFORMATIONGLULAM
+[--]
+[Add Dimension]^c^c^phsb_spantdim1
+
+
+
+
+
+
+***POPTRUSS
+ID_Hsb_Truss [hsbTruss]
+[Collection add]^c^chsb_colent_add
+[Collection Style Manager]^c^chsb_colent_stylemanager
+[Collection Edit Style]^c^chsb_colent_editstyle
+[Add Ecs Marker]^c^chsb_colent_add_ecsmarker
+[--]
+[Add Truss]^c^chsb_truss2_add
+[Truss Style Manager]^c^chsb_truss2_stylemanager
+[--]
+[Generate Truss]^c^chsb_truss_make
+[Add break Point]^c^chsb_truss_breakpoint
+[Add Truss Beams]^c^chsb_truss_addbeams
+[Erase Truss Beams]^c^chsb_truss_erasebeams
+[Set Truss Relations]^c^cHSB_TRUSS_SETTRUSSRELATIONS
+[Append Beams to Truss]^c^cHSB_TRUSS_APPENDBEAMS
+[Insert Beams from Parent]^c^cHSB_TRUSS_COPYBEAMS
+[Set UCS in Truss]^c^cHSB_TRUSS_UCS
+[Truss Numbering]^c^cHSB_TRUSS_NUMBERING
+[Truss Elevation]^c^cHSB_TRUSS_ELEVATION
+[Truss CNC]^c^cHSB_TRUSS_EXPORT
+[--]
+[Help]^c^cHSB_TRUSS_HELP
+
+
+
+
+***POPSISMO
+ID_Hsb_Sismo [hsbSismo]
+[Attach data to wall/slab]^c^c^phsb_developableassembly_add
+[Renumber entities]^c^c^phsb_developableassembly_renumber
+[Modify corner layout]^c^c^phsb_developableassembly_setcornerlayout
+[System style manager]^c^c^phsb_developableassembly_stylemanager
+[Material style manager]^c^c^phsb_developableassembly_materialstylemanager
+[Edit material style]^c^c^phsb_developableassembly_editstyle
+[Recalculate]^c^c^phsb_developableassembly_recalc
+[--]
+[Insert shopdrawing]^c^c^phsb_developableassembly_addshopdraw
+[Focus shopdrawing]^c^c^phsb_shopdraw_plotviewport_focus
+[Auto Plot shopdrawing]^c^c^phsb_shopdraw_plotviewport_batchplot
+[--]
+[Insert slab-wall link]^c^c^phsb_developableassembly_addslabwalllink
+[Insert Wall-Wall link]^c^c^phsb_developableassembly_addwallwalllink
+[--]
+[Split Wall Length]^c^c^pHSB_WALLSPLIT
+[Split Wall Height]^c^cHSB_DIVIDEFLOORS
+[--]
+[Export to db]^c^c^phsb_developableassembly_exporttodb
+[Help]^c^c^phsb_helpsismo
+
+
+
+***TOOLBARS
+
+
+**TB_GENERAL
+**GENERAL
+**HSBGENERAL
+Id_TbGeneral    		[_Toolbar("hsbGeneral", _Top, _Show, 3, 2, 1)]
+ID_sebv_console 		[_Button("hsbConsole", "hsb_console", "hsb_console")]^C^Chsb_console
+ID_sebv_settings		[_Button("hsbSettings", "hsb_settings", "hsb_settings")]^C^Chsb_settings
+ID_hsb_filter  			[_Button("hsbFilter", "hsb_filter", "hsb_filter")]^C^CHSB_FILTER
+ID_hsb_toolmanager 		[_Button("hsbToolmanager", "hsb_toolmanager", "hsb_toolmanager")]^c^c^phsb_toolmanager
+ID_UserFlyout_1			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBGENERAL_TSL)]
+ID_UserFlyout_2			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBGENERAL_ELEMENTS)]
+ID_UserFlyout_3			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBGENERAL_PROFILES)]
+ID_UserFlyout_4			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBGENERAL_CURVEDTIM)]
+
+
+//begin Flyout GENERAL
+
+**HSBGENERAL_TSL
+Id_TbGeneral_flyout1		[_Toolbar("hsbGeneral_TSL", _Floating, _Hide, 400, 150, 1)]
+				[_Button("Tsl select", "hsb_macroselectonly", "hsb_macroselectonly")]^c^chsb_macroselectonly
+
+
+				[_Button("Tsl share", "hsb_tslShare", "hsb_tslShare")]^c^chsb_tslShare
+
+**HSBGENERAL_ELEMENTS
+Id_TbGeneral_flyout2		[_Toolbar("hsbGeneral_Elements", _Floating, _Hide, 400, 200, 1)]
+
+
+
+
+
+ID_hsb_conrepairdefine 	[_Button("Define Construction Repair","hsb_conrepairdefine","hsb_conrepairdefine")]^c^c^phsb_conRepairDefine
+ID_hsb_conrepairAddBeams	[_Button("Add Beams For Construction Repair","hsb_conRepairAddBeams","hsb_conRepairAddBeams")]^c^c^phsb_conRepairAddBeams
+ID_hsb_conRepairInsert	[_Button("Insert Construction Repair","hsb_conRepairInsert","hsb_conRepairInsert")]^c^c^phsb_conRepairInsert
+ID_sebv-Store 			[_Button("Update Element DXA Files", SEBV_STORE3D, SEBV_STORE3D)]^c^chsb_SEBV_STORE3D
+ID_hsb_SEBV_STORE3D_ByElement	[_Button("Store 3D By Element", hsb_SEBV_STORE3D_ByElement, hsb_SEBV_STORE3D_ByElement)]^c^chsb_SEBV_STORE3D_ByElement
+ID_hsb_STORE3D 			 [_Button("Store 3D New", hsb_STORE3D, hsb_STORE3D)]^c^chsb_STORE3D
+
+
+
+**HSBGENERAL_PROFILES
+Id_TbGeneral_flyout3 		[_Toolbar("hsbGeneral_Profiles", _Floating, _Hide, 400, 250, 1)]
+ID_hsb_extrusionprofiles 	[_Button("Extrusion Profiles", "hsb_extrusionprofiles", "hsb_extrusionprofiles")]^C^C^Phsb_extrusionprofiles
+ID_hsb_extrusionprofileframe 	[_Button("Create Extrusion Profile", "hsb_extrusionprofileframe", "hsb_extrusionprofileframe")]^C^C^Phsb_extrusionprofileframe
+
+
+**HSBGENERAL_CURVEDTIM
+Id_TbGeneral_flyout4 		[_Toolbar("hsbGeneral_CurvedTimber", _Floating, _Hide, 400, 250, 1)]
+ID_hsb_spantedit 		[_Button("Curved Style Manager", "hsb_spantedit", "hsb_spantedit")]^C^C^phsb_spantedit
+               				[--]
+
+
+               				[--]
+
+
+
+
+
+
+
+
+//end Flyout GENERAL
+
+
+
+
+
+**TB_hsbROOF
+**hsbROOF
+ID_TbRoof      			[_Toolbar("hsbPlanes", _Top, _Show, 5, 2, 1)]
+ID_UserFlyout_ 1		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBROOF_GENERATE)]
+ID_UserFlyout_ 2		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBROOF_AREA)]
+ID_UserFlyout_ 4		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBROOF_ADJUST)]
+ID_UserFlyout_ 5		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBROOF_DORMER)]
+ID_UserFlyout_6 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBROOF_SECTION)]
+
+
+//begin flyouts hsbROOF
+
+**HSBROOF_GENERATE
+ID_TbRoof_flyout1	 	[_Toolbar("hsbPlanes_Generate", _Floating, _Hide, 600, 370, 1)]
+ID_rooficon    			[_Button("Add Icon", "hsb_rooficon", "hsb_rooficon")]^C^Chsb_rooficon
+ID_roofgroup   			[_Button("Groups Icons", "hsb_roofgroupicons", "hsb_roofgroupicons")]^C^CHSB_ROOFGROUPICONS
+ID_roofmake    			[_Button("Generate Planes", "hsb_roof_dakmakeone", "hsb_roof_dakmakeone")]^C^Chsb_roof_dakmakeone
+ID_roofdraw    			[_Button("Draw Plane", "hsb_defineroofplane", "hsb_defineroofplane")]^C^Chsb_defineroofplane
+ID_roofcopydown 		[_Button("Copy Roof Plane Down", "hsb_roofcopydown", "hsb_roofcopydown")]^C^C^pHSB_ROOFCOPYDOWN
+
+
+**HSBROOF_AREA
+ID_TbRoof_flyout2	 	[_Toolbar("hsbPlanes_Area", _Floating, _Hide, 710, 370, 1)]
+ID_roofunion          		[_Button("Merge Roof Planes", hsb_roof_dakunion, hsb_roof_dakunion)]^c^cHSB_MERGEROOFS
+ID_roofpami    			[_Button("Subtract from Plane", "hsb_roofsubstractarea", "hsb_roofsubstractarea")]^C^Chsb_roofsubstractarea
+ID_roofpaun    			[_Button("Add to Plane", "hsb_roofaddarea", "hsb_roofaddarea")]^C^Chsb_roofaddarea
+ID_rooffloorslice    		[_Button("Create floor under roof", "hsb_rooffloorslice", "hsb_rooffloorslice")]^c^chsb_rooffloorslice
+
+
+**HSBROOF_ADJUST
+ID_TbRoof_flyout4 		[_Toolbar("hsbPlanes_Adjust", _Floating, _Hide, 865, 370, 1)]
+ID_roofassignprofile 		[_Button("Assign Profile", "hsb_roofassignprofile", "hsb_roofassignprofile")]^C^Chsb_roofassignprofile
+ID_rooficonSlope		[_Button("Adjust Icon Slope", "hsb_roof_adjusticonslope", "hsb_roof_adjusticonslope")]^C^CHSB_ROOF_ADJUSTICONSLOPE
+ID_roofRidgeLine		[_Button("Define Ridge Line", "hsb_roof_defineridgeline", "hsb_roof_defineridgeline")]^C^CHSB_ROOF_DEFINERIDGELINE
+ID_roof1Point			[_Button("Rooficon 1point", "hsb_rooficon1point", "hsb_rooficon1point")]^C^Chsb_rooficon1point
+ID_roof3Points			[_Button("Rooficon 3points", "hsb_rooficon3points", "hsb_rooficon3points")]^C^Chsb_rooficon3points
+ID_hsb_project 			[_Button("Project Polyline in Roof", "hsb_projectpolyline", "hsb_projectpolyline")]^C^C^pHSB_PROJECTPOLYLINE
+ID_roofsolid   			[_Button("Solid to Roof", "hsb_roof_daksolid2roof", "hsb_roof_daksolid2roof")]^C^CHSB_ROOFCONVERTSOLID
+ID_roofconvert 			[_Button("Convert from to ADT Roof", "hsb_convert2roofplanes", "hsb_convert2roofplanes")]^C^Chsb_convert2roofplanes
+
+
+**HSBROOF_DORMER
+ID_TbRoof_flyout5 		[_Toolbar("hsbPlanes_Dormer", _Floating, _Hide, 950, 370, 1)]
+ID_roofgaube   			[_Button("Dormer Roof", "hsb_dormer", "hsb_dormer")]^C^Chsb_dormer
+ID_wt_dormer   			[_Button("Create a Dormer Wall", "hsb_walldormer", "hsb_walldormer")]^C^CHSB_WALLDORMER
+
+
+**HSBROOF_SECTION
+ID_TbRoof_flyout6		[_Toolbar("hsbPlanes_Section", _Floating, _Hide, 1040, 370, 1)]
+ID_roofsectionwizard 		[_Button("Roof Section Wizard", "hsb_roof_wizard", "hsb_roof_wizard")]^C^Chsb_roof_wizard
+ID_roofsectionaddplate 		[_Button("Add Plate Beam from Section", "hsb_roof_plate", "hsb_roof_plate")]^C^Chsb_roof_plate
+ID_roofsectionaddwindow       	[_Button("Add section window", "hsb_roof_section_window", "hsb_roof_section_window")]^c^chsb_roof_section_window
+ID_roofsectionaddfixedlath 	[_Button("Add Section fixed Lath", "hsb_roof_fixedlath", "hsb_roof_fixedlath")]^C^Chsb_roof_fixedlath
+					[--]
+ID_roofsectionaddplatebeam 	[_Button("Add plate beam", "hsb_roof_addplatebeam", "hsb_roof_addplatebeam")]^c^chsb_roof_addplatebeam
+ID_roofsectionaddroofwindow	[_Button("Add Roof Window", "hsb_roof_window", "hsb_roof_window")]^C^Chsb_roof_window
+ID_roofsectionaddlaths		[_Button("Add laths", "hsb_laths", "hsb_laths")]^C^Chsb_laths
+ID_roofsectionlinkroof 		[_Button("Link Section with Roof Plane", "hsb_roof_linkroof", "hsb_roof_linkroof")]^C^Chsb_roof_linkroof
+
+//end flyouts hsbROOF
+
+
+
+**TB_TIMBER
+**TIMBER
+ID_TbTimber    			[_Toolbar("hsbTimber", _Top, _Show, 4, 2, 1)]
+ 				[_Button("Visual Timber", "hsb_visualtimber", "hsb_visualtimber")]^c^c^phsb_visualtimber
+   				[_Button("Use Construction Macros", "hsb_constructionmacro", "hsb_constructionmacro")]^C^C^phsb_smacro
+
+               				[--]
+ID_hsb_beamnew 			[_Button("Beam", "hsb_beamnew", "hsb_beamnew")]^c^c^phsb_beamnew
+					[--]
+ID_hsb_spartek 			[_Button("Rafter", "hsb_rafter", "hsb_rafter")]^c^c^pHSB_RAFTER
+ID_hsb_grketek 			[_Button("Valley-Hip Rafter", "hsb_grketek", "hsb_grketek")]^c^c^phsb_hipandvalley
+ID_hsb_valleyboard 		[_Button("Valleyboard", "hsb_valleyboard", "hsb_valleyboard")]^c^c^phsb_valleyboard
+ID_hsb_scsptek 			[_Button("Sloping Rafter", "hsb_scsptek", "hsb_scsptek")]^c^c^phsb_slopingrafter
+ID_hsb_blsptek 			[_Button("Hidden rafter", "hsb_blsptek", "hsb_blsptek")]^C^C^Phsb_hiddenrafter
+ID_hsb_kebotek 			[_Button("Dormer Plate", "hsb_kebotek", "hsb_kebotek")]^c^c^phsb_kebotek
+ID_hsb_topplate 		[_Button("Top Plate", "hsb_topplate", "hsb_topplate")]^C^C^Phsb_topplate
+ID_hsb_midplate 		[_Button("Mid Plate", "hsb_midplate", "hsb_midplate")]^c^c^phsb_midplate
+ID_hsb_ridge   			[_Button("Ridge", "hsb_ridge", "hsb_ridge")]^c^c^phsb_ridge
+ID_hsb_beamnewpost 		[_Button("Post", "hsb_beamnewpost", "hsb_beamnewpost")]^c^c^phsb_beamnewpost
+ID_hsb_streb   			[_Button("Brace", "hsb_streb", "hsb_streb")]^C^C^Phsb_brace
+ID_hsb_jointpurlin 		[_Button("Joint Purlin", "hsb_jointpurlin", "hsb_jointpurlin")]^C^C^Phsb_jointpurlin
+ID_hsb_zangtek 			[_Button("Tie beam", "hsb_zangtek", "hsb_zangtek")]^C^C^Phsb_zangtek
+		 		[_Button("Beams around opening", "hsb_auswechslung", "hsb_auswechslung")]^C^C^Phsb_auswechslung
+ID_hsb_sheeting 		[_Button("Draw Sheet", "hsb_sheeting", "hsb_sheeting")]^C^C^Phsb_sheeting
+ID_UserFlyout_1		        [_Flyout("Roof Utilities", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBTIMBER_ROOFUTIL)]
+ID_UserFlyout_2		        [_Flyout("Convert beam", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBTIMBER_CONVERT)]
+
+
+
+
+
+// begin Flyout HSB_TIMBER
+
+**HSBTIMBER_ROOFUTIL
+ID_TbTimber_flyout1		[_Toolbar("hsbTimber_Roofutil", _Floating, _Hide, 400, 100, 1)]
+ID_hsb_project 			[_Button("Project Polyline", "hsb_projectpolyline", "hsb_projectpolyline")]^c^c^pHSB_PROJECTPOLYLINE
+ID_hsb_roofplane		[_Button("Roofplane add and edit Beams", "hsb_roofplane", "hsb_roofplane")]^C^C^Phsb_roofplane
+ID_hsb_alignrafters 		[_Button("Align Rafters on different Roofplanes", "hsb_alignrafters", "hsb_alignrafters")]^C^C^Phsb_alignrafters
+ID_hsb_flushrafterswithhipandvalley [_Button("Flush Rafters with Hip or Valley Rafter", "hsb_flushrafterswithhipandvalley", "hsb_flushrafterswithhipandvalley")]^C^C^Phsb_flushrafterswithhipandvalley
+
+**HSBTIMBER_CONVERT
+ID_TbTimber_flyout2		[_Toolbar("hsbTimber_Convert", _Floating, _Hide, 400, 300, 1)]
+ID_hsb_convertacistobeam   	[_Button("Convert from 3D Solid", "hsb_convertacistobeam", "hsb_convertacistobeam")]^c^c^phsb_convertacistobeam
+ID_hsb_convertbeamtoacis 	[_Button("Convert to 3D Solid", "hsb_convertbeamtoacis", "hsb_convertbeamtoacis")]^c^c^phsb_convertbeamtoacis
+ID_hsb_importstructuralmember 	[_Button("Import structural member", "HSB_IMPORTSTRUCTURALMEMBER", "HSB_IMPORTSTRUCTURALMEMBER")]^C^C^pHSB_IMPORTSTRUCTURALMEMBER
+
+// end Flyout HSB_TIMBER
+
+
+
+
+
+
+**TB_EDIT
+**EDIT
+ID_TbEdit      			[_Toolbar("hsbEdit", _Floating, _Hide, 700, 650, 1)]
+ID_UserFlyout_1			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBEDIT_BEAMTOOLS)]
+ID_hsb_ucs    			[_Button("hsbUCS", hsb_ucs, hsb_ucs)]^c^chsb_ucs
+ID_HSB_MAPTEXTURE    		[_Button("Map Texture", "hsb_maptexture", "hsb_maptexture")]^C^C^PHSB_MAPTEXTURE
+ID_hsb_linktools		[_Button("Integrate Toolings", "hsb_linktools", "hsb_linktools")]^C^C^phsb_linktools
+ID_hsb_makesoliddynamic 	[_Button("ReCalc Beams/Items", "hsb_recalc", "hsb_recalc")]^C^C^phsb_recalc
+ID_hsb_multi   			[_Button("Visual Tools", "hsb_multi", "hsb_multi")]^C^C^phsb_multi
+ID_hsb_multilast		[_Button("Last Visual Tool", hsb_lasttoolfunction, hsb_lasttoolfunction)]^c^c^phsb_lasttoolfunction
+ID_UserFlyout_2			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBEDIT_SHEETINGS)]
+ID_hsb_refmachine		[_Button("Set reference for Machining", "hsb_refmachine", "hsb_refmachine")]^C^C^phsb_refmachine
+ID_hsb_setname	 		[_Button("Set beam name", "HSB_SETNAME", "HSB_SETNAME")]^c^c^pHSB_SETNAME
+ID_UserFlyout_Metalparts        [_Flyout("Metalparts", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBEDIT_METALPARTS)]
+
+
+
+//begin flyouts EDIT_TIMBERS
+**HSBEDIT_METALPARTS
+ID_TbEdit_flyoutMetalParts		[_Toolbar("hsbEdit_MetalParts", _Floating, _Hide, 700, 700, 1)]
+
+
+
+
+
+
+**HSBEDIT_BEAMTOOLS
+ID_TbEdit_flyout1		[_Toolbar("hsbEdit_BeamTools", _Floating, _Hide, 700, 700, 1)]
+ID_hsb_beamcut 			[_Button("Cut Beam", "hsb_beamcut", "hsb_beamcut")]^C^C^phsb_beamcut
+ID_hsb_beamstretch 		[_Button("Stretch Beam", "hsb_beamstretch", "hsb_beamstretch")]^C^C^phsb_beamstretch
+ID_hsb_contact			[_Button("Stretch to Beam", "hsb_contact", "hsb_contact")]^c^c^phsb_contact
+ID_hsb_corner			[_Button("Stretch to corner configuration", "hsb_corner", "hsb_corner")]^c^c^phsb_corner
+ID_hsb_multiplecontact		[_Button("Stretch to multiple beams", "hsb_multiplecontact", "hsb_multiplecontact")]^c^c^phsb_multiplecontact
+ID_hsb_beamsplit 		[_Button("Split", "hsb_beamsplit", "hsb_beamsplit")]^C^C^phsb_beamsplit
+ID_hsb_multisplit		[_Button("Numerous Split", "hsb_multisplit", "hsb_multisplit")]^C^C^phsb_multisplit
+ID_hsb_joinbeams 		[_Button("Join", "hsb_joinbeams", "hsb_joinbeams")]^C^C^Phsb_joinbeams
+ID_hsb_change_section 		[_Button("Change Beam Size", "hsb_change_section", "hsb_change_section")]^C^C^Phsb_change_section
+
+
+**HSBEDIT_SHEETINGS
+ID_TbEdit_flyout2		[_Toolbar("hsbEdit_Sheetings", _Floating, _Hide, 700, 750, 1)]
+ID_hsb_sheetingsplit 		[_Button("Split Sheeting", "hsb_sheetingsplit", "hsb_sheetingsplit")]^C^C^Phsb_sheetingsplit
+ID_hsb_sheetingsubstract	[_Button("Substract Sheeting", "hsb_sheetingsubtract", "hsb_sheetingsubtract")]^C^C^Phsb_sheetingsubtract
+ID_hsb_sheetingadd 		[_Button("Add Sheeting", "hsb_sheetingadd", "hsb_sheetingadd")]^C^C^Phsb_sheetingadd
+ID_hsb_sheetingsjoin		[_Button("Join Sheeting", "hsb_sheetingjoin", "hsb_sheetingjoin")]^C^C^Phsb_sheetingjoin
+
+//end flyouts EDIT_TIMBERS
+
+
+
+
+
+
+**TB_UTILS
+**UTILS
+ID_TbUtils 			[_Toolbar("hsbUtils", _Top, _Show, 6, 2, 1)]
+ID_HSB_CHECKCONSTRUCTION 	[_Button("Check Construction", "hsb_checkconstruction", "hsb_checkconstruction")]^c^c^pHSB_CHECKCONSTRUCTION
+ID_HSB_COMPAREBODIES 		[_Button("Compare Bodies", "HSB_COMPAREBODIES", "HSB_COMPAREBODIES")]^C^C^PHSB_COMPAREBODIES
+ID_HSB_diagnostics 		[_Button("Check and repair installation", "hsb_diagnostics", "hsb_diagnostics")]^C^C^Phsb_diagnostics
+ID_UserFlyout_4 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBUTILS_LAYERS)]
+ID_UserFlyout_1 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBUTILS_OBJEKTS)]
+ID_UserFlyout_3 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBUTILS_SECTION)]
+ID_UserFlyout_5 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBUTILS_DIMENSIONS)]
+ID_UserFlyout_6 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBUTILS_GRID)]
+
+
+//begin flyouts UTILITIES
+
+**HSBUTILS_OBJECTS
+ID_TbUtils_flyout1	 	[_Toolbar("hsbUtils_Objects", _Floating, _Hide, 1000, 400, 1)]
+ID_hsb_hideobjects 		[_Button("Object Off", "hsb_hideobjects", "hsb_hideobjects")]^C^C^phsb_hideobjects
+ID_hsb_showobjects 		[_Button("Object On", "hsb_showobjects", "hsb_showobjects")]^C^C^phsb_showobjects
+ID_hsb_hidetooling 		[_Button("Hide Toolings", "hsb_hidetooling", "hsb_hidetooling")]^C^C^Phsb_hidetooling
+ID_hsb_showtooling 		[_Button("Unhide Toolings", "hsb_showtooling", "hsb_showtooling")]^C^C^Phsb_showtooling
+ID_hsb_ahOnlySel 		[_Button("Show only selected Objects", "hsb_showonlyselected", "hsb_showonlyselected")]^C^C^pHSB_SHOWONLYSELECTED
+ID_hsb_unhideToolsFor		[_Button("Unhide tools for beam", "hsb_unhideToolsFor", "hsb_unhideToolsFor")]^c^c^phsb_unhideToolsFor
+ID_hsb_unhideBeamsFor		[_Button("Unhide beams for tool", "hsb_unhideBeamsFor", "hsb_unhideBeamsFor")]^c^c^phsb_unhideBeamsFor
+
+**HSBUTILS_STRUCTURAL
+ID_TbUtils_flyout2		[_Toolbar("hsbUtils_Structural", _Floating, _Hide, 1000, 450, 1)]
+
+
+
+
+
+**HSBUTILS_SECTION
+ID_TbUtils_flyout3		[_Toolbar("hsbUtils_Section", _Floating, _Hide, 1000, 500, 1)]
+ID_sebv_profile 		[_Button("Create Section Area", "hsb_sebv_profile", "hsb_sebv_profile")]^C^Chsb_sebv_profile
+ID_sebv_cut    			[_Button("Generate Section", "hsb_sebv_cut", "hsb_sebv_cut")]^C^Chsb_sebv_cut
+ID_sebv_cut_view 		[_Button("Generate Exploded Projection", "hsb_sebv_profview", "hsb_sebv_profview")]^C^Chsb_sebv_profview
+ID_sebv_3p_view 		[_Button("Generate 3 Projections", "hsb_sebv_3pview", "hsb_sebv_3pview")]^C^Chsb_sebv_3pview
+
+**HSBUTILS_LAYERS
+ID_TbUtils_flyout4		[_Toolbar("hsbUtils_Layers", _Floating, _Hide, 1000, 550, 1)]
+ID_sebv_layeroff 		[_Button("Layer off", "hsb_layeroff", "hsb_layeroff")]^C^Chsb_layeroff
+ID_sebv_layeron 		[_Button("Layer on", "hsb_layeron", "hsb_layeron")]^C^Chsb_layeron
+ID_sebv_layermove 		[_Button("Move Layer Elements", "hsb_layermove", "hsb_layermove")]^C^Chsb_layermove
+ID_sebv_layerdel 		[_Button("Delete Layer Elements", "hsb_layerdelete", "hsb_layerdelete")]^C^Chsb_layerdelete
+ID_sebv_layercopy 		[_Button("Copy Layer Elements", "hsb_layercopy", "hsb_layercopy")]^C^Chsb_layercopy
+
+
+**HSBUTiLS_DIMENSIONS
+ID_TbUtils_flyout5 		[_Toolbar("hsbUtils_Dimensions", _Floating, _Hide, 1000, 600, 1)]
+ID_sebv_dimfree       		[_Button("Dimension create", hsb_dimensioncreate, hsb_dimensioncreate)]^c^chsb_dimensioncreate
+ID_sebv_dimadd        		[_Button("Add Points", hsb_dimensionaddpoint, hsb_dimensionaddpoint)]^c^chsb_dimensionaddpoint
+ID_sebv_dimdel        		[_Button("Delete Points", hsb_dimensiondeletepoint, hsb_dimensiondeletepoint)]^c^chsb_dimensiondeletepoint
+ID_sebv_dimref        		[_Button("Reference Point", hsb_dimensionrefpoint, hsb_dimensionrefpoint)]^c^chsb_dimensionrefpoint
+ID_sebv_dimaddcurve     	[_Button("Add curve", hsb_dimensionaddcurve, hsb_dimensionaddcurve)]^c^chsb_dimensionaddcurve
+ID_sebv_dimremovecurve  	[_Button("Remove Curve", hsb_dimensionremovecurve, hsb_dimensionremovecurve)]^c^chsb_dimensionremovecurve
+ID_sebv_dimpolyline  		[_Button("Dimension polyline", hsb_dimensionpolyline, hsb_dimensionpolyline)]^c^chsb_dimensionpolyline
+
+**HSBUTILS_GRID
+ID_TbUtils_flyout6   		[_Toolbar("hsbUtils_Grid", _Floating, _Hide, 1000, 650, 1)]
+ID_hsb_grid_draw 		[_Button("Draw Cartesian Grid", "hsb_grid", "hsb_grid")]^C^Chsb_grid
+ID_hsb_grid_drawpolar 		[_Button("Draw Polar Grid", "hsb_gridpolar", "hsb_gridpolar")]^C^Chsb_gridpolar
+ID_hsb_grid_spacing 		[_Button("Edit Grid Spacing", "hsb_grideditspacing", "hsb_grideditspacing")]^c^chsb_grideditspacing
+
+ID_hsb_grid_lock 		[_Button("Lock Grid", "hsb_gridlock", "hsb_gridlock")]^C^Chsb_gridlock
+ID_hsb_grid_unlock 		[_Button("Unlock Grid", "hsb_gridunlock", "hsb_gridunlock")]^C^Chsb_gridunlock
+ID_hsb_grid_hide 		[_Button("Hide Grid", "hsb_gridhide", "hsb_gridhide")]^C^Chsb_gridhide
+ID_hsb_grid_view 		[_Button("View Grid", "hsb_gridview", "hsb_gridview")]^C^Chsb_gridview
+
+
+**TB_OUTPUT
+**OUTPUT
+ID_TbOutput      		[_Toolbar("hsbInOutput", _Top, _Hide, 1, 3, 1)]
+ID_UserFlyout_1			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBOUTPUT_NUMBER)]
+ID_UserFlyout_2			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBOUTPUT_MANAGER)]
+ID_UserFlyout_3			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBOUTPUT_SHOPDRAWING)]
+ID_UserFlyout_4			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBOUTPUT_EXPORT)]
+ID_UserFlyout_5			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBOUTPUT_IMPORT)]
+
+
+//begin flyouts OUTPUT
+
+**HSBOUTPUT_NUMBER
+ID_TbOutput_flyout1		[_Toolbar("hsbInOutput_Number", _Floating, _Hide, 250, 400, 1)]
+ID_hsb_assignposnum 		[_Button("Apply Numbering", "hsb_assignposnum", "hsb_assignposnum")]^C^C^Phsb_assignposnum
+ID_hsb_posnumvisible 		[_Button("Toggle Numbering on off", "hsb_posnumvisible", "hsb_posnumvisible")]^C^C^Phsb_posnumvisible
+ID_hsb_releaseposnum 		[_Button("Delete Numbers", "hsb_releaseposnum", "hsb_releaseposnum")]^C^C^Phsb_releaseposnum
+ID_hsb_searchposnum 		[_Button("Search Number Position", "hsb_searchposnum", "hsb_searchposnum")]^C^C^Phsb_searchposnum
+				[_Button("Position Number Viewer", "hsb_posnumviewer", "hsb_posnumviewer")]^C^C^Phsb_posnumviewer
+
+**HSBOUTPUT_MANAGER
+ID_TbOutput_flyout2		[_Toolbar("hsbInOutput_Manager", _Floating, _Hide, 250, 450, 1)]
+ID_hsb_setdeliverablecontainer 		[_Button("Deliverable Container Manager", "hsb_setdeliverablecontainer", "hsb_setdeliverablecontainer")]^C^Chsb_setdeliverablecontainer
+ID_sebv_viewportsettings	[_Button("Viewport-Settings", "hsb_viewportsettings", "hsb_viewportsettings")]^C^Chsb_viewportsettings
+ID_sebv_viewportautoplot	[_Button("Automatic Layout Plotting", "sebv_viewportautoplot", "sebv_viewportautoplot")]^C^Chsb_viewportautoplot
+
+**HSBOUTPUT_SHOPDRAWING
+ID_TbOutput_flyout3		[_Toolbar("hsbInOutput_Shopdrawing", _Floating, _Hide, 250, 500, 1)]
+				[_Button("Shop Drawing 2 Beam Panel", "hsb_shopdrawing", "hsb_shopdrawing")]^C^C^Phsb_shopdrawing
+				[_Button("Shop Drawing in Paper Space", "hsb_shopdrawinginpaperspace", "hsb_shopdrawinginpaperspace")]^C^C^Phsb_shopdrawinginpaperspace
+				[_Button("Shop Drawing of Metal Parts", "hsb_metaldim", "hsb_metaldim")]^C^C^Phsb_metaldim
+				[_Button("Batch plot Beam Shop Drawings with Title Block", "hsb_shopdrawingplotps", "hsb_shopdrawingplotps")]^C^C^PHSB_SHOPDRAWINGPLOTPS
+				[_Button("Batch plot Panel Shop Drawings with Title Block", "hsb_shopdrawingplot", "hsb_shopdrawingplot")]^C^C^PHSB_SHOPDRAWINGPLOT
+				[_Button("Shop drawing add multipage", "hsb_shopdraw_addmultipage", "hsb_shopdraw_addmultipage")]^C^C^phsb_shopdraw_addmultipage
+				[_Button("Batch plot plot-viewports", "HSB_SHOPDRAW_PLOTVIEWPORT_BATCHPLOT", "HSB_SHOPDRAW_PLOTVIEWPORT_BATCHPLOT")]^C^C^pHSB_SHOPDRAW_PLOTVIEWPORT_BATCHPLOT
+				[_Button("Shop drawing stylemanager", "hsb_shopdraw_stylemanager", "hsb_shopdraw_stylemanager")]^C^C^phsb_shopdraw_stylemanager
+				[_Button("Shop drawing add new view", "HSB_SHOPDRAW_ADDVIEWPLACEHOLDER", "HSB_SHOPDRAW_ADDVIEWPLACEHOLDER")]^C^C^pHSB_SHOPDRAW_ADDVIEWPLACEHOLDER
+
+**HSBOUTPUT_EXPORT
+ID_TbOutput_flyout4		[_Toolbar("hsbInOutput_Export", _Floating, _Hide, 250, 550, 1)]
+[Database export]^c^c^pHSB_EXPORTTODATABASE
+
+ID_hsb_exporttodatabase     	[_Button("Database export", "hsb_exporttodatabase", "hsb_exporttodatabase")]^C^C^pHSB_EXPORTTODATABASE
+ID_hsb_outexcel 		[_Button("Excel export", "hsb_exportdb", "hsb_exportdb")]^C^C^pHSB_EXPORTTOEXCEL
+ID_hsb_vrmlout 			[_Button("VRML Export", "hsb_vrmlout", "hsb_vrmlout")]^C^C^phsb_vrmlout
+ID_hsb_EXPORTSDS 		[_Button("SDS export", "HSB_EXPORTSDS", "HSB_EXPORTSDS")]^C^C^pHSB_EXPORTSDS
+
+
+**HSBOUTPUT_IMPORT
+ID_TbOutput_flyout5		[_Toolbar("hsbInOutput_Import", _Floating, _Hide, 250, 550, 1)]
+
+
+**HSBBOOKPLOTTER
+ID_TbHsb_BookPlotter		[_Toolbar("hsbBookPlotter", _Floating, _Hide, 250, 550, 1)]
+ID_hsb_Bp_Settings 		[_Button("Settings", "hsb_bp_settings_16", "hsb_bp_settings")]^C^C^pHsb_Bp_Settings
+ID_hsb_Bp_Publish 		[_Button("Publish", "hsb_bp_publish_16", "hsb_bp_publish")]^C^C^pHsb_Bp_Publish
+ID_hsb_Bp_InsertPage 		[_Button("Insert Page", "hsb_bp_insertpage_16", "hsb_bp_insertpage")]^C^C^pHsb_Bp_InsertPage
+ID_hsb_Bp_EditPage 		[_Button("Edit Page", "hsb_bp_editpage_16", "hsb_bp_editpage")]^C^C^pHsb_Bp_EditPage
+ID_hsb_Bp_Viewer 		[_Button("Viewer", "hsb_bp_viewer_16", "hsb_bp_viewer")]^C^C^pHsb_Bp_Viewer
+ID_hsb_Bp_DesignChapters 		[_Button("Design Chapters", "hsb_bp_designchapters_16", "hsb_bp_designchapters")]^C^C^pHsb_Bp_DesignChapters
+ID_hsb_Bp_DesignBooks 		[_Button("Design Books", "hsb_bp_designbooks_16", "hsb_bp_designbooks")]^C^C^pHsb_Bp_DesignBooks
+
+
+//end flyouts OUTPUT
+
+
+
+
+
+
+
+
+**TB_CAM
+**CAM
+ID_TbCam       			[_Toolbar("hsbCam", _Floating, _Hide, 1200, 300, 1)]
+ID_UserFlyout_1			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBCAM_ELEMENTTOOLS)]
+ID_UserFlyout_2			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBCAM_MODULE)]
+ID_UserFlyout_3			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBCAM_PANEL)]
+ID_UserFlyout_4			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBCAM_EXPORT)]
+ID_UserFlyout_5			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBCAM_CNC)]
+ID_UserFlyout_6			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBCAM_ELEMENTEXPORT)]
+
+
+//begin flyouts CAM
+
+**HSBCAM_ELEMENTTOOLS
+ID_TbCam_flyout1 		[_Toolbar("hsbCAM_Elementtools", _Floating, _Hide, 1200, 400, 1)]
+
+
+
+
+
+
+
+
+
+
+
+
+**HSBCAM_MODULE
+ID_TbCam_flyout2  		[_Toolbar("hsbCAM_Module", _Floating, _Hide, 1200, 450, 1)]
+
+
+
+
+
+
+**HSBCAM_EXPORT
+ID_TbCam_flyout3 		[_Toolbar("hsbCAM_Export", _Floating, _Hide, 1200, 550, 1)]
+
+				[_Button("Btl", "hsb_btl", "hsb_btl")]^c^c^phsb_btl
+				[_Button("Export Beams to Weinmann WUP File", "hsb_wbz", "hsb_wbz")]^C^C^pHSB_WBZ
+
+
+
+**HSBCAM_CNC
+ID_TbCam_flyout4		[_Toolbar("hsbCAM_CNC", _Floating, _Hide, 1200, 600, 1)]
+
+
+
+
+
+
+
+
+
+
+
+
+**HSBCAM_PANEL
+ID_TbCam_flyout5		[_Toolbar("hsbCAM_Panel", _Floating, _Hide, 1200, 650, 1)]
+
+
+
+
+				[_Button("Nest panels", HSB_PANELNEST_16, HSB_PANELNEST)]^c^cHSB_CALLNESTER
+
+
+
+
+
+
+**HSBCAM_ELEMENTEXPORT
+ID_TbCam_flyout6  		[_Toolbar("hsbCAM_ElementExport", _Floating, _Hide, 1200, 700, 1)]
+
+
+				[_Button("Cnc exporter", "hsb_CncExporter", "hsb_CncExporter")]^c^c^phsb_CncExporter
+
+
+
+//end flyouts CAM
+
+
+**TB_OPTIONS
+ID_Tb_options 		[_Toolbar("hsbOptions", _Floating, _Hide, 800, 425, 1)]
+ID_hsb_opt_definitions 		[_Button("Create option definition", "hsb_opt_definitions", "hsb_opt_definitions")]^C^C^phsb_opt_definitions
+ID_hsb_opt_rules 		[_Button("Create option rules", "hsb_opt_rules", "hsb_opt_rules")]^C^C^phsb_opt_rules
+ID_hsb_opt_setoptions 		[_Button("Set options", "hsb_opt_setoptions", "hsb_opt_setoptions")]^C^C^phsb_opt_setoptions
+ID_hsb_opt_del 		[_Button("Delete options", "hsb_opt_del", "hsb_opt_del")]^C^C^phsb_opt_del
+ID_hsb_opt_graph		[_Button("Show option graph", "hsb_opt_graph", "hsb_opt_graph")]^C^C^phsb_opt_graph
+ID_hsb_optionfloorplan  		[_Button("Create Floor Option Layout", "hsb_optionfloorplan", "hsb_optionfloorplan")]^C^Chsb_optionfloorplan
+ID_hsb_opt_makeconstruction 		[_Button("Lisp Read Construction", "hsb_opt_makeconstruction", "hsb_opt_makeconstruction")]^C^C^phsb_opt_makeconstruction
+ID_hsb_opt_storeconstruction 		[_Button("Store construction", "hsb_opt_storeconstruction", "hsb_opt_storeconstruction")]^C^C^phsb_store3dforoptions
+
+
+
+
+
+
+
+
+
+
+
+
+**TB_WALL
+**WALL
+ID_TbWall      			[_Toolbar("hsbWall", _Floating, _Hide, 400, 700, 1)]
+
+
+					[--]
+
+
+
+     					[--]
+
+
+ID_UserFlyout_1 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBWALL_SPLIT)]
+ID_UserFlyout_2 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBWALL_SET)]
+ID_UserFlyout_3 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBWALL_MODEL)]
+ID_wt_MAKEELGRFORELE   		[_Button("Create an Element Group", "HSB_MAKEELEMENTGROUPFORELEMENT", "HSB_MAKEELEMENTGROUPFORELEMENT")]^c^c_HSB_MAKEELEMENTGROUPFORELEMENT
+ID_UserFlyout_4			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBWALL_DETAILING)]
+ID_UserFlyout_5			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMENU.HSBWALL_CUSTOM)]
+
+
+//begin flyouts WALL
+
+**HSBWALL_SPLIT
+ID_TbWall_flyout1 		[_Toolbar("hsbWall_Split", _Floating, _Hide, 800, 425, 1)]
+
+
+
+**HSBWALL_SET
+ID_TbWall_flyout2 		[_Toolbar("hsbWall_Set", _Floating, _Hide, 800, 425, 1)]
+ID_wt_roofline 			[_Button("Set Roofline", "HSB_WALLROOFLINE", "HSB_WALLROOFLINE")]^C^CHSB_WALLROOFLINE
+ID_wt_wallresetroofline		[_Button("ReSet the Wall Roofline", "hsb_wallresetroofline", "hsb_wallresetroofline")]^c^c_HSB_WALLRESETROOFLINE
+
+
+**HSBWALL_MODEL
+ID_TbWall_flyout3 		[_Toolbar("hsbWall_Model", _Floating, _Hide, 800, 425, 1)]
+ID_wt_HIDEWALLMODEL   		[_Button("Hide the Wall Model", "HSB_HIDEWALLMODEL", "HSB_HIDEWALLMODEL")]^c^c_HSB_HIDEWALLMODEL
+ID_wt_SHOWWALLMODEL   		[_Button("Show the Wall Model", "HSB_SHOWWALLMODEL", "HSB_SHOWWALLMODEL")]^c^c_HSB_SHOWWALLMODEL
+
+**HSBWALL_DETAILING
+ID_TbWall_flyout4		[_Toolbar("hsbWALL_Details", _Floating, _Hide, 508, 263, 1)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**HSBWALL_CUSTOM
+ID_TbWall_flyout5		[_Toolbar("hsbWALL_Custom", _Floating, _Hide, 508, 263, 1)]
+
+
+ID_wt_HSB-HULP-infoitem		[_Button("Control Point for the Distribution of Studs", "hsb_hulp_infoitem", "hsb_hulp_infoitem")]^c^c^pHSB_HULP_insertelement
+
+//end flyouts WALL
+
+
+
+**TB_ELEMENT
+**ELEMENT
+ID_TbElement      		[_Toolbar("hsbElement", _Floating, _Hide, 400, 445, 1)]
+				[_Button("Define Floor Panel Area", "hsb_defineroofplane", "hsb_defineroofplane")]^c^chsb_defineroofplane
+					[--]
+
+
+
+					[--]
+
+
+
+
+					[--]
+
+
+
+               				[--]
+ID__dak-drsnzij			[_Button("Section from beside", HSB_paneel_invoer_zij, HSB_paneel_invoer_zij)]^C^C^Phsb_paneel_invoer_zij
+ID__dak-panlat  		[_Button("Distribution of tilelath", hsb_dakp5, hsb_dakp5)]^C^C^Phsb_dakp5
+					[--]
+
+
+
+
+[--]
+
+
+
+
+
+
+**TB_PANEL
+**PANEL
+ID_TbPanel     			[_Toolbar("hsbPanel", _Floating, _Hide, 400, 600, 1)]
+ID_UserFlyout_1			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBPANEL_PANELS)]
+ID_UserFlyout_2			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBPANEL_EDIT)]
+ID_UserFlyout_3			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBPANEL_SIPS)]
+ID_UserFlyout_4			[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBPANEL_ShopDrawing)]
+
+
+//begin flyouts panels
+
+
+**HSBPANEL_PANELS
+ID_TbPanel_Flyout1     		[_Toolbar("hsbPanel_Panels", _Floating, _Hide, 400, 600, 1)]
+
+
+
+
+
+
+
+
+
+
+
+
+**HSBPANEL_EDIT2
+ID_TbPanel_Flyout2     		[_Toolbar("hsbPanel_Edit", _Floating, _Hide, 400, 600, 1)]
+
+
+
+
+
+
+
+
+
+
+
+**HSBPANEL_EDIT3
+ID_TbPanel_Flyout3     		[_Toolbar("hsbPanel_Sips", _Floating, _Hide, 400, 600, 1)]
+ID_sipsAttachWallDef 		[_Button("Attach wall definition", HSB_PANELADDWALLDATA, HSB_PANELADDWALLDATA)]^c^cHSB_PANELADDWALLDATA
+ID_sipsAttachOpDef  		[_Button("Attach opening definition", HSB_PANELADDOPENINGDATA, HSB_PANELADDOPENINGDATA)]^c^cHSB_PANELADDOPENINGDATA
+ID_sipsAttachRoofDef  		[_Button("Attach roof definition", HSB_PANELADDROOFDATA, HSB_PANELADDROOFDATA)]^c^cHSB_PANELADDROOFDATA
+[--]
+
+[--]
+ID_sipsEditWallDef  		[_Button("Edit wall definition", HSB_PANELEDITWALL, HSB_PANELEDITWALL)]^c^cHSB_PANELEDITWALL
+ID_sipsEditOpDef  		[_Button("Edit opening definition", HSB_PANELEDITOPENING, HSB_PANELEDITOPENING)]^c^cHSB_PANELEDITOPENING
+ID_sipsEditRoofDef  		[_Button("Edit roof definition", HSB_PANELEDITROOF, HSB_PANELEDITROOF)]^c^cHSB_PANELEDITROOF
+[--]
+
+
+[--]
+
+
+
+ID_wt_roofline 			[_Button("Set Roofline", "HSB_WALLROOFLINE", "HSB_WALLROOFLINE")]^C^CHSB_WALLROOFLINE
+ID_wt_wallresetroofline		[_Button("ReSet the Wall Roofline", "hsb_wallresetroofline", "hsb_wallresetroofline")]^c^c_HSB_WALLRESETROOFLINE
+
+
+
+**HSBPANEL_EDIT4
+ID_TbPanel_Flyout4     		[_Toolbar("hsbPanel_ShopDrawing", _Floating, _Hide, 400, 600, 1)]
+ID_shopDrawing 			[_Button("Shop Drawing", "hsb_shopdrawing", "hsb_shopdrawing")]^C^CHSB_SHOPDRAWING
+ID_shopDrawingPlot 		[_Button("Plot Shop Drawing", "hsb_shopdrawingplot", "hsb_shopdrawingplot")]^C^CHSB_SHOPDRAWINGPLOT
+
+
+
+
+
+
+//end flyouts panels
+
+
+
+
+**TB_LOG
+**LOG
+ID_TbLog         		[_Toolbar("hsbLog", _Floating, _Hide, 400, 750, 1)]
+
+
+ 				[--]
+
+
+
+
+
+
+
+
+ID_logshedwizard 		[_Button("Shed Wizard", "hsb_logshedwizard", "hsb_logshedwizard")]^c^c^pHSB_LOGSHEDWIZARD
+ 				[--]
+
+
+
+
+ID_UserFlyout_1 		[_Flyout("User Defined Flyout", RCDATA_16_BLANK, RCDATA_16_BLANK, _OtherIcon, hsbMenu.HSBLOG_CONNECTION)]
+ 				[--]
+
+
+
+
+ID_logOPTIMIZE 			[_Button("Optimize log lengths", "HSB_LOGOPTIMIZE", "HSB_LOGOPTIMIZE")]^c^cHSB_LOGOPTIMIZE
+ 				[--]
+ID_log_roofline 		[_Button("Set Roofline", "HSB_WALLROOFLINE", "HSB_WALLROOFLINE")]^C^CHSB_WALLROOFLINE
+ID_log_wallresetroofline	[_Button("ReSet the Wall Roofline", "hsb_wallresetroofline", "hsb_wallresetroofline")]^c^c_HSB_WALLRESETROOFLINE
+
+
+//begin flyouts LOG
+
+**HSBLOG_CONNECTION
+ID_TbLog_flyout1	 	[_Toolbar("hsbLog_Connection", _Floating, _Hide, 800, 425, 1)]
+
+
+
+
+
+
+
+
+//end flyouts LOG
+
+
+
+
+
+**TB_GLULAM
+**GLULAM
+ID_TbGlulam    			[_Toolbar("hsbGlulam", _Floating, _Hide, 400, 650, 1)]
+
+
+               				[--]
+ID_hsb_spantedit 		[_Button("Curved Style Manager", "hsb_spantedit", "hsb_spantedit")]^C^C^phsb_spantedit
+               				[--]
+
+
+
+
+
+
+
+
+
+
+
+
+**TB_TRUSSES
+**TRUSSES
+ID_TbTruss    			[_Toolbar("hsbTruss", _Floating, _Hide, 400, 800, 1)]
+
+
+
+
+               				[--]
+
+
+               				[--]
+
+
+               				[--]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***popHSBDSP
+ID_Hsb_DSP [hsbDsp]
+[Open]^c^c^phsb_dspstartpage
+[Make]^c^c^phsb_dog_makelisp
+[Update/Check Detail]^c^c^phsb_dog_begin
+[Delete Details]^c^c^phsb_dsp_lijst
+[--]
+[Insertion point]^c^c^phsb_dog_insptn
+[Set Variable Values]^c^c^phsb_dog_var
+[Relative Variable]^c^c^phsb_dog_relvar
+[Place Points]^c^c^phsb_dog_cart
+[Polar]^c^c^phsb_dog_polar
+[Midpoint]^c^c^phsb_dog_mid
+[Intersection]^c^c^phsb_dog_inters
+[Perpendicular]^c^c^phsb_dog_perp
+[Dependency]^c^c^phsb_dog_dep
+[Rename]^c^c^phsb_dog_rename
+[--]
+[Edit]^c^c^phsb_dog_edit
+
+***popHSBDSPROOF
+ID_Hsb_DSPRoof [hsbDspRoof]
+[Section]^c^c^phsb_dog_object_normal
+[profiel-Hide]^c^c^phsb_dog_object_profielH
+[Set Blocking Pieces]^c^c^phsb_dog_object_profielo
+[Catalogue profiel]^c^c^phsb_dog_object_profielC
+[Set Stop for Joists/Rafters]^c^c^phsb_dog_object_edge
+[Ladders]^c^c^phsb_dog_object_klos
+[Extra Timber]^c^c^phsb_dog_object_extrabalk
+[Beam/Rafter]^c^c^phsb_dog_object_spant
+[Beam/Rafter(piece)]^c^c^phsb_dog_object_spantstuk
+[Set No Timber Area]^c^c^phsb_dog_object_nospant
+[Drilling in Timber]^c^c^phsb_dog_object_boring
+[Drilling next to timber]^c^c^phsb_dog_object_boringnaast
+[Place Text]^c^c^phsb_dog_object_text
+[Piece of sheetings]^c^c^phsb_dog_strook
+[extra Spoor]^c^c^pdog-object-extraSpoor
+[--]
+[Milling]^c^c^phsb_dog_blatt
+[--]
+[Set Edge Stop Type 0]^c^c^phsb_dog_object_c0
+[Set Edge Stop Type 1]^c^c^phsb_dog_object_c1
+[--]
+[Set Reference Point]^c^c^phsb_dog_object_ref
+[Distribution starting point]^c^c^phsb_dog_object_as
+[Measurement starting point]^c^c^phsb_dog_object_maat
+[--]
+[Cut sheeting ( zone)]^c^c^phsb_dog_object_plaatsnijden
+[Place Zone Stop]^c^c^phsb_dog_object_zone
+[Endpoint of Piece of sheetings]^c^c^phsb_dog_strookeinde
+[Endpoint of counterbattens]^c^c^phsb_dog_object_plaat2
+[Extra counterbatten]^c^c^phsb_dog_object_tengel
+[Endpoint of tilelaths]^c^c^phsb_dog_object_plaat3
+[Endpoint of insulation]^c^c^phsb_dog_object_isolatie
+[Position angled tilelath]^c^c^phsb_dog_object_schuin
+[--]
+[TSL]^c^c^pdog-object-TSL
+[--]
+[cnc]^c^c^phsb_dog_object_cnc
+[cnc-cutter]^c^c^phsb_dog_object_cnccutter
+[Position Perimeter]^c^c^phsb_dog_object_omtrek
+[Cut]^c^c^phsb_dog_object_cut
+[--]
+[Weinmann Saw]^c^c^phsb_dog_object_wmsage
+
+
+
+***toolbars
+
+ID_TbDSPMAIN	         [_Toolbar("hsbDsp", _Floating, _Hide, 500, 400, 1)]
+
+
+
+
+
+**TB_HSBDSPDefinition
+ID_TbDSPDEF                 [_Toolbar("hsbDsp_Definition", _Floating, _Hide, 500, 600, 2)]
+
+
+
+
+
+
+
+
+
+
+
+**TB_HSBDSPTekenen
+ID_TbDSPTEK                 [_Toolbar("hsbDsp_Draw", _Floating, _Hide, 500, 800, 3)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Ende Dsp-Toolbars
+**TB_HSBDISABLED
+**HSBDISABLED
+ID_TbHsbDisabled				[_Toolbar("hsbDisabled", _Floating, _Hide, 500, 800, 1)]
+				[_Button("Tsl manager", "hsb_macroselect", "hsb_macroselect")]^c^chsb_macroselect
+				[_Button("Graphical Tsl definition", "hsb_createmetalpart", "hsb_createmetalpart")]^c^chsb_createmetalpart
+               			[_Button("ReNumber", "sebv_RenumberElement", "sebv_RenumberElement")]^C^Chsb_wallnumber
+               			[_Button("Element Lock", "sebv_lock", "sebv_lock")]^C^Chsb_sebv_lock
+               			[_Button("Element Unlock", "sebv_unlock", "sebv_unlock")]^C^Chsb_sebv_unlock
+						[_Button("Generate Construction", "HSB_GENERATECONSTRUCTION", "HSB_GENERATECONSTRUCTION")]^C^CHSB_GENERATECONSTRUCTION
+               			[_Button("Delete Construction", "sebv_erase", "sebv_erase")]^C^Chsb_sebv_erase
+ID_hsb_readdxi  		[_Button("Import hsbCAD9 Layouts", "hsb_readdxi", "hsb_readdxi")]^C^Chsb_readdxi
+ID_hsb_newspant 		[_Button("Add curved Beam", "hsb_newspant", "hsb_newspant")]^C^C^phsb_newspant
+ID_hsb_makespant 		[_Button("Convert to curved Beam", "hsb_makespant", "hsb_makespant")]^C^C^phsb_makespant
+ID_hsb_spantdesc 		[_Button("Add 2D Projection", "hsb_spantdesc", "hsb_spantdesc")]^C^C^phsb_spantdesc
+ID_hsb_addpressb 		[_Button("Add presses", "hsb_addpressb", "hsb_addpressb")]^C^C^phsb_addpressb
+ID_HSB_PRESSBCORRECT 		[_Button("Correct presses", "HSB_PRESSBCORRECT", "HSB_PRESSBCORRECT")]^C^C^pHSB_PRESSBCORRECT
+ID_HSB_PRESSBNUMBER 		[_Button("Number presses", "HSB_PRESSBNUMBER", "HSB_PRESSBNUMBER")]^C^C^pHSB_PRESSBNUMBER
+ID_hsb_correctlamlengthsforpressb 		[_Button("Adjust lams to presses", "hsb_correctlamlengthsforpressb", "hsb_correctlamlengthsforpressb")]^C^C^pHSB_CORRECTLAMLENGTHSFORPRESSB
+ID_hsb_spantdim1 		[_Button("Add Dimension", "hsb_spantdim1", "hsb_spantdim1")]^C^C^Phsb_spantdim1
+   				[_Button("Post and Beam", "hsb_jpconstruct", "hsb_jpconstruct")]^c^c^phsb_jpconstruct
+ID_metalpartadd  			[_Button("Add Metalpart", "hsb_metalpart_add", "hsb_metalpart_add")]^C^Chsb_metalpart_add
+ID_metalpartstylemanager	[_Button("Metalpart Style Manager", "hsb_metalpart_stylemanager", "hsb_metalpart_stylemanager")]^C^Chsb_metalpart_stylemanager
+ID_colenteditstyle		[_Button("Collection Edit Style", "hsb_colent_editstyle", "hsb_colent_editstyle")]^C^Chsb_colent_editstyle
+ID_colentaddecsmarker	        [_Button("Add Ecs Marker", "hsb_colent_add_ecsmarker", "hsb_colent_add_ecsmarker")]^C^Chsb_colent_add_ecsmarker
+ID_HSB_ANMODEXPORT    	[_Button("Export", HSB_ANMODEXPORT, HSB_ANMODEXPORT)]^c^cHSB_ANMODEXPORT
+ID_structuremake        	[_Button("Generate 1D analysis", hsb_structure, hsb_structure)]^c^chsb_structure
+ID_structuresupport    		[_Button("Add suppport", hsb_structure_support, hsb_structure_support)]^c^chsb_structure_support
+ID_structureload      		[_Button("Add load", hsb_structure_load, hsb_structure_load)]^c^chsb_structure_load
+ID_hsb_exportcedxm		[_Button("CeDXM export", "hsb_exportcedxm", "hsb_exportcedxm")]^C^C^pHSB_EXPORTCEDXM
+ID_hsb_importcedxm		[_Button("CeDXM import", "hsb_importcedxm", "hsb_importcedxm")]^C^C^pHSB_IMPORTCEDXM
+				[_Button("Automatically Add Nails on Beams", "hsb_addnaillines", "hsb_addnaillines")]^C^Chsb_addnaillines
+				[_Button("Automatically Add Nails on Laths", "hsb_addnaillinesonlaths", "hsb_addnaillinesonlaths")]^C^Chsb_addnaillinesonlaths
+				[_Button("Add Nailing within Viewport", "hsb_addelementnailline", "hsb_addelementnailline")]^C^Chsb_addelementnailline
+				[_Button("Add No Nailing Zone", "hsb_addelementnonail", "hsb_addelementnonail")]^C^Chsb_addelementnonail
+				[_Button("Erase Nailing", "hsb_erasenaillines", "hsb_erasenaillines")]^C^CHSB_ERASENAILLINES
+				[_Button("Add Marker", "hsb_addelementmarker", "hsb_addelementmarker")]^C^Chsb_addelementmarker
+				[_Button("Add Drill", "hsb_addelementdrill", "hsb_addelementdrill")]^C^Chsb_addelementdrill
+				[_Button("Add Milling", "hsb_addelementmill", "hsb_addelementmill")]^C^Chsb_addelementmill
+				[_Button("Add Sawing", "hsb_addelementsaw", "hsb_addelementsaw")]^C^Chsb_addelementsaw
+ID_wt_multielementbuild		[_Button("Create MultiWall Manufacturing Drawing", "hsb_multielementbuild", "hsb_multielementbuild")]^C^Chsb_multielementbuild
+				[_Button("Create Module", "hsb_setmodule", "hsb_setmodule")]^c^cHSB_setmodule
+				[_Button("Remove Module", "hsb_clearmodule", "hsb_clearmodule")]^c^cHSB_clearmodule
+				[_Button("Define Subassembly", "hsb_subassemblydefine", "hsb_subassemblyDefine")]^c^c^phsb_SubAssemblydefine
+				[_Button("Insert Subassemblies", "hsb_subassemblyinsert", "hsb_subassemblyInsert")]^c^c^phsb_SubAssemblyinsert
+				[_Button("Remove Subassemblies", "hsb_subassemblyremove", "hsb_subassemblyRemove")]^c^c^phsb_SubAssemblyremove
+				[_Button("Hundegger", "hsb_hundegger", "hsb_hundegger")]^C^C^phsb_hundegger
+				[_Button("Machine", "hsb_cnc_machine", "hsb_cnc_machine")]^C^C_hsb_cnc_machine
+				[_Button("Place beam", "hsb_cnc_placebeam", "hsb_cnc_placebeam")]^c^c_hsb_cnc_placebeam
+				[_Button("Generate tool path", "hsb_cnc_generate", "hsb_cnc_generate")]^c^c_hsb_cnc_generate
+				[_Button("Simulation", "hsb_cnc_sim", "hsb_cnc_sim")]^C^C_hsb_cnc_sim
+				[_Button("Path", "hsb_cnc_path", "hsb_cnc_path")]^C^C_hsb_cnc_path
+				[_Button("Convert polyline", "hsb_cnc_convertpolytopath", "hsb_cnc_convertpolytopath")]^C^C_hsb_cnc_convertpolytopath
+				[_Button("Convert elementtools", "hsb_cnc_EC", "hsb_cnc_EC")]^C^C_hsb_cnc_EC
+				[_Button("Hundegger PBA", "hsb_cnc_pba", "hsb_cnc_pba")]^C^C_hsb_cnc_pba
+				[_Button("Grecon", "hsb_grecon", "hsb_grecon")]^C^C_hsb_grecon
+				[_Button("Ledinek", "hsb_ledinek", "hsb_ledinek")]^C^C_hsb_ledinek
+				[_Button("Create Blank panel", HSB_BLANKPANEL_16, HSB_BLANKPANEL)]^c^cHSB_BLANKPANEL
+				[_Button("Create child panel", HSB_PANELINSTANCE, HSB_PANELINSTANCE)]^c^cHSB_PANELINSTANCE
+				[_Button("Flip", HSB_FLIPPANEL_16, HSB_FLIPPANEL)]^c^cHSB_FLIPPANEL
+				[_Button("Number panels", HSB_PANELNUMBERING, HSB_PANELNUMBERING)]^c^cHSB_PANELNUMBERING
+				[_Button("Align child panels", HSB_PANELALIGNCHILD, HSB_PANELALIGNCHILD)]^c^cHSB_PANELALIGNCHILD
+				[_Button("Manual CNC operation", HSB_PANELCNCOPERATION,HSB_PANELCNCOPERATION)]^c^cHSB_PANELCNCOPERATION
+				[_Button("Hundegger PBA", HSB_PBAOUT, HSB_PBAOUT)]^c^cHSB_HUNDEGGERPBA
+				[_Button("Export Sips to Weinmann Wup-File", HSB_WEINMANNSIPS, HSB_WEINMANNSIPS)]^c^cHSB_WEINMANNSIPS
+				[_Button("OptiSaw HM", "hsb_ExportOptiSawHM", "hsb_ExportOptiSawHM")]^c^c^phsb_ExportOptiSawHM
+				[_Button("OptiMaster HM", "hsb_ExportOptiMasterHM", "hsb_ExportOptiMasterHM")]^c^c^phsb_ExportOptiMasterHM
+				[_Button("Multi element composer", "hsb_MultiElementComposer", "hsb_MultiElementComposer")]^c^c^phsb_MultiElementComposer
+ID_TbHSB-Wand           	[_Button("Place Walls", "hsb_newwall", "hsb_newwall")]^C^C^PHSB_WALLSF
+               			[_Button("Position Opening", "HSB_raamvrij", "HSB_raamvrij")]^C^C^PHSB_opening
+hsb_adt2hsb			[_Button("Apply ADT to HSB Update", "hsb_adt2hsb", "hsb_adt2hsb")]^c^c^pHSB_adt2hsb
+ID_hsb_addhsbdata       	[_Button("Add hsbData to ADT-wall", "hsb_addhsbdata", "hsb_addhsbdata")]^C^C^PHSB_ADDHSBDATA
+ID_hsb-adddataopening		[_Button("Add hsbData to ADT-opening", hsb_addhsbdataopening, hsb_addhsbdataopening)]^c^c^pHSB_ADDHSBDATAOPENING
+				[_Button("Adjust Wall Intersections", "hsb_adjustwallintersection", "hsb_adjustwallintersection")]^C^C^pHSB_ADJUSTWALLINTERSECTION
+ID_hsb_wallfliparrow		[_Button("Flip the Wall Arrow", "hsb_wallfliparrow", "hsb_wallfliparrow")]^c^cHSB_WALLFLIPARROW
+ID_hsb_wallsplit 		[_Button("Split Wall Length", "hsb_wallsplit", "hsb_wallsplit")]^C^C^PHSB_WALLSPLIT
+ID_wt_floordiv 			[_Button("Split Wall Height", "HSB_DIVIDEFLOORS", "HSB_DIVIDEFLOORS")]^c^cHSB_DIVIDEFLOORS
+ID_hsb_detailwizard    			[_Button("Wall Details Wizard", "HSB_DETAILWIZARD", "HSB_DETAILWIZARD")]^C^C^PHSB_DETAILWIZARD
+ID_hsb_walldetailbuilder   		[_Button("Wall Detail Builder", "hsb_walldetailbuilder", "hsb_walldetailbuilder")]^C^C^PHSB_WALLDETAILBUILDER
+ID_hsb_open    			[_Button("Open Wall Details Interface", "HSB_open", "HSB_open")]^C^C^PHSB_DET_OPEN
+ID_hsb_input   			[_Button("Create Wall Type", "HSB_INPUT", "HSB_INPUT")]^C^C^PHSB_DET_INPUT
+ID_hsb_WindowsSheeting		[_Button("Sheeting around Opening", "HSB_WindowsSheeting", "HSB_WindowsSheeting")]^C^C^PHSB_WindowsSheeting
+ID_hsb_DetailCodeExe		[_Button("Detail code table", "HSB_DetailCodeExe", "HSB_DetailCodeExe")]^C^C^PHSB_DetailCodeExe
+ID_hsb_plaatdef 		[_Button("Create Sheet", "HSB_plaat", "HSB_plaat")]^C^C^PHSB_PLDE_PLAAT_DEF
+ID_hsb_balk    			[_Button("Create Beam", "HSB_Balk", "HSB_Balk")]^C^C^PHSB_DET_BALK
+ID_hsb_profile 			[_Button("Extrusion profile", "HSB_Profiel", "HSB_Profiel")]^C^C^PHSB_DET_extprofile
+ID_hsb_extraplaat 		[_Button("Extra Sheet", "hsb_det_plaat", "hsb_det_plaat")]^C^C^PHSB_DET_plaat
+ID_hsb_det_tsl 			[_Button("TSL", "HSB_det_tsl", "HSB_det_tsl")]^C^C^PHSB_DET_TSL
+ID_hsb_mes     			[_Button("Set Limit", "HSB_Mes", "HSB_Mes")]^C^C^PHSB_DET_MES
+ID_hsb_zaag    			[_Button("Saw", "HSB_Zaag", "HSB_Zaag")]^C^C^PHSB_DET_SAGE
+ID_hsb_frees   			[_Button("Milling Element", "HSB_frees", "HSB_frees")]^C^C^PHSB_DET_FREES
+ID_hsb_boor    			[_Button("Drill", "HSB_Boor", "HSB_Boor")]^C^C^PHSB_DET_BOOR
+ID_hsb_blatt   			[_Button("Milling Beam", "HSB_blatt", "HSB_blatt")]^C^C^PHSB_DET_BLATT
+ID_hsb_cut     			[_Button("Cut", "HSB_det_cut", "HSB_det_cut")]^C^C^PHSB_DET_CUT
+ID_hsb_KLOS     		[_Button("Horz. Blocking", "HSB_DET_KLOS", "HSB_DET_KLOS")]^c^c^pHSB_DET_KLOS
+ID_hsb_link    			[_Button("Link Entities to Wall Outline", "HSB_Link", "HSB_Link")]^C^C^PHSB_DET_makelink
+ID_hsb_reset   			[_Button("Reset Wall Detail", "HSB_RESET", "HSB_RESET")]^C^C^PHSB_DET_RESET
+ID_hsb_make    			[_Button("Update Details in DWG", "HSB_make", "HSB_make")]^C^C^PHSB_DET_MAKE
+ID_hsb_uodatewalldescription    			[_Button("Update walls with new description", "HSB_WALLUPDATESFDESCRIPTION", "HSB_WALLUPDATESFDESCRIPTION")]^C^C^PHSB_WALLUPDATESFDESCRIPTION
+ID_hsb_save    			[_Button("Save Detail Changes", "HSB_save", "HSB_save")]^C^C^PHSB_DET_SAVE
+ID_wt_DET_test2			[_Button("Insert Custom Detail on Wall End", "HSB_DET_test2", "HSB_DET_test2")]^c^c^pHSB_DET_test2
+ID_wt_HSB_DET_locbo		[_Button("Insert Custom Detail on Wall Top Bottom", "HSB_DET_locbo", "HSB_DET_locbo")]^c^c^pHSB_DET_locbo
+               			[_Button("Divide Element", "hsb_dak_multi", "hsb_dak_multi")]^C^C^Phsb_dak_multi
+ID_DAK_roofpaun 		[_Button("Add to Element", "hsb_roof_dak_union", "hsb_roof_dak_union")]^c^c^pHSB_ROOFELEMADDAREA
+ID_DAK_roofpami 		[_Button("Subtract from Element", "hsb_roof_dak_min", "hsb_roof_dak_min")]^C^C^pHSB_ROOFELEMSUBTRACTAREA
+               			[_Button("Assign Roof Element Parameters", "hsb_setelementdescriptionroof", "hsb_setelementdescriptionroof")]^C^C^PHSB_SETELEMENTDESCRIPTIONROOF
+               			[_Button("Assign Floor Element Parameters", "hsb_setelementdescriptionfloor", "hsb_setelementdescriptionfloor")]^C^C^PHSB_SETELEMENTDESCRIPTIONFLOOR
+				[_Button("Assign edge detail", "hsb_setelementedgedetail", "hsb_setelementedgedetail")]^c^c^pHSB_SETELEMENTEDGEDETAIL
+				[_Button("Set Beam to Element", "hsb_wp_balk2pan", "hsb_wp_balk2pan")]^c^c^pHSB_SETBEAMSTOELEMENT
+ID__dak-steun			[_Button("Support", HSB_DAKP_STEUN, HSB_DAKP_STEUN)]^C^C^PHSB_MAKEELEMENTSUPPORT
+				[_Button("Create Openings in Roof", "hsb_dakp_opening", "hsb_dakp_opening")]^C^C^PHSB_MAKEOPENINGROOF
+				[_Button("Create Openings in Floor", "hsb_dakp_opening", "hsb_dakp_opening")]^C^C^PHSB_MAKEOPENINGFLOOR
+ID__splitroofelement		[_Button("Split edge", HSB_Splitroofelement, HSB_Splitroofelement)]^c^c^pHSB_Splitroofelement
+ID__splitelement		[_Button("Split element", hsb_splitelement, hsb_splitelement)]^c^c^phsb_splitelement
+ID__joinelement		[_Button("Join elements", hsb_joinelement, hsb_joinelement)]^c^c^phsb_joinelement
+ID_HSB_DSPSTARTPAGE             [_Button("Open", HSB_DSPSTARTPAGE, HSB_DSPSTARTPAGE)]^c^chsb_dspstartpage
+ID_panelCreate 			[_Button("Create Panel", "hsb_panel", "hsb_panel")]^C^CHSB_PANEL
+ID_panelErase     		[_Button("Delete Construction", "sebv_erase", "sebv_erase")]^C^Chsb_sebv_erase
+				[_Button("Number panels", HSB_PANELNUMBERING, HSB_PANELNUMBERING)]^c^cHSB_PANELNUMBERING
+ID_panelSpline 			[_Button("Spline", "hsb_panelspline", "hsb_panelspline")]^C^CHSB_PANELSPLINE
+ID_panelStop   			[_Button("Panel Stop", "hsb_panelstop", "hsb_panelstop")]^C^CHSB_PANELSTOP
+				[_Button("Roof perimeter lumber", "hsb_panelroofperimeter", "hsb_panelroofperimeter")]^C^cHSB_PANELROOFPERIMETER
+				[_Button("Roof lumber install", "HSB_PANELROOFLI", "HSB_PANELROOFLI")]^C^cHSB_PANELROOFLI
+ID_panelStructBeam 		[_Button("Panel structural Beam", "hsb_panelstructuralbeam", "hsb_panelstructuralbeam")]^C^CHSB_PANELSTRUCTURALBEAM
+ID_panelWirechase 		[_Button("Add Wirechase", "hsb_panelwirechase", "hsb_panelwirechase")]^C^CHSB_PANELWIRECHASE
+ID_panelSplitSegment 	[_Button("Add Split segment", "hsb_panelsplitsegment_16", "hsb_panelsplitsegment")]^C^CHSB_PANELADDSPLITSEGMENT
+ID_panelEditCut 		[_Button("Cut Panel", "hsb_panelcut", "hsb_panelcut")]^C^CHSB_PANELCUT
+ID_panelEditStretch 		[_Button("Stretch Panel", "hsb_panelstretch", "hsb_panelstretch")]^C^CHSB_PANELSTRETCH
+ID_panelEditSplit 		[_Button("Split", "hsb_splitpanel", "hsb_splitpanel")]^C^CHSB_SPLITPANEL
+ID_panelEditJoin 		[_Button("Join", "hsb_joinpanel", "hsb_joinpanel")]^C^CHSB_JOINPANEL
+ID_panelEditMitre 		[_Button("Mitre Edges", "hsb_panelmitreedges", "hsb_panelmitreedges")]^C^CHSB_PANELMITREEDGES
+ID_panelEditEdit 		[_Button("Edit Vertices and Bevels", "hsb_editpanel", "hsb_editpanel")]^C^CHSB_EDITPANEL
+ID_panelEditOpening 		[_Button("Add Opening", "hsb_paneladdopening", "hsb_paneladdopening")]^C^CHSB_PANELADDOPENING
+ID_panelEditRemoveOpening 	[_Button("Remove Opening", "hsb_panelremoveopening", "hsb_panelremoveopening")]^C^CHSB_PANELREMOVEOPENING
+ID_panelSwitchAxis 		[_Button("Switch Axis", "hsb_panelswitchaxis", "hsb_panelswitchaxis")]^C^CHSB_PANELSWITCHAXIS
+ID_sipsNumberWall  		[_Button("Number wall", hsb_wallnumber, hsb_wallnumber)]^c^cHSB_WALLNUMBER
+ID_sipsSplitLoc 		[_Button("Define split Location", "hsb_panelsplitlocation", "hsb_panelsplitlocation")]^C^CHSB_PANELSPLITLOCATION
+ID_sipsSplitTslLoc 		[_Button("Define TSL split Location", "HSB_PANELTSLSPLITLOCATION", "HSB_PANELTSLSPLITLOCATION")]^c^cHSB_PANELTSLSPLITLOCATION
+ID_wallpanel			[_Button("Place Walls", "hsb_newwall", "hsb_newwall")]^c^c^pHSB_WALLPANEL
+ID_adjustwallintersecion	[_Button("Adjust Wall Intersections", "hsb_adjustwallintersection", "hsb_adjustwallintersection")]^C^CHSB_ADJUSTWALLINTERSECTION
+ID_wt_floordiv 			[_Button("Split Wall Height", "HSB_DIVIDEFLOORS", "HSB_DIVIDEFLOORS")]^c^cHSB_DIVIDEFLOORS
+ID_panelElDrawing 		[_Button("Panel Element Drawing", "hsb_panelelementdrawing", "hsb_panelelementdrawing")]^C^CHSB_PANELELEMENTDRAWING
+ID_log_make3d  			[_Button("Generate 3d Model", "hsb_log_makewall", "hsb_log_makewall")]^C^CHSB_LOG_MAKEWALL
+ID_log_erase     		[_Button("Delete Construction", "sebv_erase", "sebv_erase")]^C^Chsb_sebv_erase
+ID_log_adddata 			[_Button("Add hsbData", "hsb_addhsbdata", "hsb_addhsbdata")]^C^C^PHSB_ADDHSBDATA
+ID_log_adddataopening 		[_Button("Add hsbData Opening", "hsb_addhsbdataopening", "hsb_addhsbdataopening")]^C^C^PHSB_ADDHSBDATAOPENING
+ID_logmuur     			[_Button("Draw Wall", "hsb_wall", "hsb_wall")]^C^CHSB_WALLLOG
+ID_logsplitwall 		[_Button("Log split Wall", "hsb_log_splitwall", "hsb_log_splitwall")]^C^CHSB_LOG_SPLITWALL
+ID_logWallNumber 		[_Button("Set Wall Number", "hsb_wallnumber", "hsb_wallnumber")]^C^CHSB_WALLNUMBER
+				[_Button("Adjust Wall Intersections", "hsb_adjustwallintersection", "hsb_adjustwallintersection")]^C^CHSB_ADJUSTWALLINTERSECTION
+ID_logeerstebalk 		[_Button("Set Height of first Log", "hsb_heightfirstlog", "hsb_heightfirstlog")]^C^CHSB_HEIGHTFIRSTLOG
+ID_lognewwandtype 		[_Button("Log Wall Definitions", "hsb_logwalldefinitions", "hsb_logwalldefinitions")]^C^Chsb_logwalldefinitions
+ID_lograamvrij 			[_Button("Draw Opening", "hsb_opening", "hsb_opening")]^C^Chsb_openinglog
+ID_logopening  			[_Button("Cut out Opening", "hsb_logopening", "hsb_logopening")]^C^CHSB_LOGOPENING
+ID_log_throughbolt 		[_Button("Through Bolt", "hsb_log_throughbolt", "hsb_log_throughbolt")]^C^C^PHSB_LOG_THROUGHBOLT
+ID_log_lagbolt 			[_Button("Lag Bolts", "hsb_log_lagbolt", "hsb_log_lagbolt")]^C^C^PHSB_LOG_LAGBOLT
+ID_lognumbering 		[_Button("Log course based Numbering", "hsb_log_numbering", "hsb_log_numbering")]^C^CHSB_LOG_NUMBERING
+ID_logshopdrawing 		[_Button("Wall Shop Drawing", "hsb_log_shopdrawing", "hsb_log_shopdrawing")]^C^CHSB_LOG_SHOPDRAWING
+ID_logattachsweepprofile 	[_Button("Attach sweep profile", "HSB_LOG_ATTACHSWEEPPROFILE", "HSB_LOG_ATTACHSWEEPPROFILE")]^c^cHSB_LOG_ATTACHSWEEPPROFILE
+ID_logdefinesweepprofile 	[_Button("Define sweep profile", "HSB_LOG_DEFINESWEEPPROFILE", "HSB_LOG_DEFINESWEEPPROFILE")]^c^cHSB_LOG_DEFINESWEEPPROFILE
+ID_logstandardconnection	[_Button("Standard Connection", "hsb_wallstandardlogconnection", "hsb_wallstandardlogconnection")]^C^CHSB_WALLSTANDARDLOGCONNECTION
+ID_logdhousednotch      	[_Button("Housed notch", HSB_HOUSEDNOTCH, HSB_HOUSEDNOTCH)]^c^cHSB_LOG_HOUSEDNOTCH
+ID_logdoveconnection 		[_Button("Dove Connection", "hsb_walldovelogconnection", "hsb_walldovelogconnection")]^C^CHSB_WALLDOVELOGCONNECTION
+ID_logsaddlenotch 		[_Button("Saddle Notch", "hsb_saddlenotch", "hsb_saddlenotch")]^C^CHSB_SADDLENOTCH
+ID_logdiagonalnotch 		[_Button("Diagonal Notch", "hsb_walldiagonallogconnection", "hsb_walldiagonallogconnection")]^C^CHSB_WALLDIAGONALLOGCONNECTION
+ID_logspline   			[_Button("Log spline Connection", "hsb_log_spline", "hsb_log_spline")]^C^CHSB_LOG_SPLINE
+ID_logDovetailTraditional   	[_Button("Dove Connection Traditional", "Hsb_LogDovetailTraditional", "Hsb_LogDovetailTraditional")]^c^cHsb_LogDovetailTraditional
+ID_hsb_newspant 		[_Button("Add curved Beam", "hsb_newspant", "hsb_newspant")]^C^C^phsb_newspant
+ID_hsb_makespant 		[_Button("Convert to curved Beam", "hsb_makespant", "hsb_makespant")]^C^C^phsb_makespant
+ID_hsb_spantdesc 		[_Button("Add 2D Projection", "hsb_spantdesc", "hsb_spantdesc")]^C^C^phsb_spantdesc
+ID_hsb_addpressb 		[_Button("Add presses", "hsb_addpressb", "hsb_addpressb")]^C^C^phsb_addpressb
+ID_HSB_PRESSBCORRECT 		[_Button("Correct presses", "HSB_PRESSBCORRECT", "HSB_PRESSBCORRECT")]^C^C^pHSB_PRESSBCORRECT
+ID_HSB_PRESSBNUMBER 		[_Button("Number presses", "HSB_PRESSBNUMBER", "HSB_PRESSBNUMBER")]^C^C^pHSB_PRESSBNUMBER
+ID_hsb_correctlamlengthsforpressb 		[_Button("Adjust lams to presses", "hsb_correctlamlengthsforpressb", "hsb_correctlamlengthsforpressb")]^C^C^pHSB_CORRECTLAMLENGTHSFORPRESSB
+ID_hsb_spantdim1 		[_Button("Add Dimension", "hsb_spantdim1", "hsb_spantdim1")]^C^C^Phsb_spantdim1
+ID_colentadd   			[_Button("Collection add", "hsb_colent_add", "hsb_colent_add")]^C^Chsb_colent_add
+ID_colentstyleman		[_Button("Collection Style Manager", "hsb_colent_stylemanager", "hsb_colent_stylemanager")]^C^Chsb_colent_stylemanager
+ID_colenteditstyle		[_Button("Collection Edit Style", "hsb_colent_editstyle", "hsb_colent_editstyle")]^C^Chsb_colent_editstyle
+ID_colentaddecsmarker	[_Button("Add Ecs Marker", "hsb_colent_add_ecsmarker", "hsb_colent_add_ecsmarker")]^C^Chsb_colent_add_ecsmarker
+ID_truss2add   			[_Button("Add Truss", "hsb_truss2_add", "hsb_truss2_add")]^C^Chsb_truss2_add
+ID_truss2stylemanager	[_Button("Truss Style Manager", "hsb_truss2_stylemanager", "hsb_truss2_stylemanager")]^C^Chsb_truss2_stylemanager
+ID_metalpartadd   			[_Button("Add Metalpart", "hsb_metalpart_add", "hsb_metalpart_add")]^C^Chsb_metalpart_add
+ID_metalpartstylemanager	[_Button("Metalpart Style Manager", "hsb_metalpart_stylemanager", "hsb_metalpart_stylemanager")]^C^Chsb_metalpart_stylemanager
+ID_trussmake   			[_Button("Generate Truss", "hsb_truss_make", "hsb_truss_make")]^C^Chsb_truss_make
+ID_trussbreakpoint 		[_Button("Add break Point", "hsb_truss_breakpoint", "hsb_truss_breakpoint")]^C^Chsb_truss_breakpoint
+ID_addbeams    			[_Button("Add Truss Beams", "hsb_truss_addbeams", "hsb_truss_addbeams")]^C^Chsb_truss_addbeams
+ID_erasebeams 	 		[_Button("Erase Truss Beams", "hsb_truss_erasebeams", "hsb_truss_erasebeams")]^C^Chsb_truss_erasebeams
+ID_trussrelations 		[_Button("Set Truss Relations", "hsb_truss_settrussrelation", "hsb_truss_settrussrelation")]^C^Chsb_truss_settrussrelations
+ID_appendbeams 			[_Button("Append Beams to Truss", "hsb_truss_appendbeams", "hsb_truss_appendbeams")]^C^Chsb_truss_appendbeams
+ID_copybeams   			[_Button("Insert Beams from Parent", "hsb_truss_copybeams", "hsb_truss_copybeams")]^C^Chsb_truss_copybeams
+ID_trussucs    			[_Button("Set UCS in Truss", "hsb_truss_ucs", "hsb_truss_ucs")]^C^Chsb_truss_ucs
+ID_trussnumbering 		[_Button("Truss Numbering", "hsb_truss_number", "hsb_truss_number")]^C^Chsb_truss_numbering
+ID_trusselevation 		[_Button("Truss Elevation", "hsb_truss_elevation", "hsb_truss_elevation")]^C^Chsb_truss_elevation
+ID_trussexport 			[_Button("Truss CNC", "hsb_truss_export", "hsb_truss_export")]^C^Chsb_truss_export
+ID_trusshelp   			[_Button("Help", "hsb_truss_help", "hsb_truss_help")]^C^Chsb_truss_help
+ID_HSB_DSPSTARTPAGE             [_Button("Open", HSB_DSPSTARTPAGE_16, HSB_DSPSTARTPAGE)]^c^chsb_dspstartpage
+ID_HSB_DSP-Make		 [_Button("Make", DSP-MAKELISP_16, DSP-MAKELISP)]^c^c^phsb_dog_makelisp
+ID_HSB_DSP-Init              [_Button("Update/Check Detail", DSP-BEGIN_16, DSP-BEGIN)]^c^c^phsb_dog_begin
+ID_HSB_DSP-Delete            [_Button("Delete", DSP-DELETE_16, DSP-DELETE)]^c^c^phsb_dsp_lijst
+ID_HSB_DSP-Insertpoint       [_Button("Insert point", DSP-newpoint_16, DSP-newpoint)]^c^c^phsb_dog_insptn
+ID_HSB_DSP-var               [_Button("Set Variable Values", DSP-var_16, DSP-var)]^c^c^phsb_dog_var
+ID_HSB_DSP-CART              [_Button("Place Points", DSP-CART_16, DSP-CART)]^c^c^phsb_dog_cart
+ID_HSB_DSP-POLAR             [_Button("Polar", DSP-POLAR_16, DSP-POLAR)]^c^c^phsb_dog_POLAR
+ID_HSB_DSP-mid               [_Button("Midpoint", DSP-mid_16, DSP-mid)]^c^c^phsb_dog_mid
+ID_HSB_DSP-inters            [_Button("Intersection", DSP-inters_16, DSP-inters)]^c^c^phsb_dog_inters
+ID_HSB_DSP-perp              [_Button("Perpendicular", DSP-perp_16, DSP-perp)]^c^c^phsb_dog_perp
+ID_HSB_DSP-dep               [_Button("Dependency", DSP-dep_16, DSP-dep)]^c^c^phsb_dog_dep
+ID_HSB_DSP-rename            [_Button("Rename", DSP-rename_16, DSP-rename)]^c^c^phsb_dog_rename
+ID_HSB_DSP-edit		 [_Button("Edit", DSP-edit_16, DSP-edit)]^c^c^phsb_dog_edit
+ID_HSB_DSP-Profiel           [_Button("Section", DSP-Profiel_16, DSP-Profiel)]^c^c^phsb_dog_object_normal
+ID_HSB_DSP-Profielhide       [_Button("Profile Hide", DSP-Profielhide_16, DSP-Profielhide)]^c^c^phsb_dog_object_profielH
+ID_HSB_DSP-Onderbr. profiel  [_Button("Set Blocking Pieces", DSP-Profielonder_16, DSP-Profielonder)]^c^c^phsb_dog_object_profielo
+ID_HSB_DSP-Cataloge		[_Button("Catalogue profiel", DSP-profielcataloge_16, DSP-profielcataloge)]^c^c^phsb_dog_object_profielC
+ID_HSB_DSP-Spooreinde        [_Button("Set Stop for Joists/Rafters", DSP-Spooreinde_16, DSP-Spooreinde)]^c^c^phsb_dog_object_edge
+ID_HSB_DSP-Klossen           [_Button("Ladders", DSP-Klossen_16, DSP-Klossen)]^c^c^phsb_dog_object_klos
+ID_HSB_DSP-Extrabalk         [_Button("Extra Timber", DSP-Extrabalk_16, DSP-Extrabalk)]^c^c^phsb_dog_object_extrabalk
+ID_HSB_DSP-Spoor             [_Button("Beam", DSP-Spoor_16, DSP-Spoor)]^c^c^phsb_dog_object_spant
+ID_HSB_DSP-Spoorstuk         [_Button("Beam/Rafter(piece)", DSP-Spoorstuk_16, DSP-Spoorstuk)]^c^c^phsb_dog_object_spantstuk
+ID_HSB_DSP-Geen spoor        [_Button("Set No Timber Area", DSP-Geenspoor_16, DSP-Geenspoor)]^c^c^phsb_dog_object_nospant
+ID_HSB_DSP-Boring in         [_Button("Drilling in Timber", DSP-Boring_16, DSP-Boring)]^c^c^phsb_dog_object_boring
+ID_HSB_DSP-Boring naast      [_Button("Drilling next to timber", DSP-Boringnaast_16, DSP-Boringnaast)]^c^c^phsb_dog_object_boringnaast
+ID_HSB_DSP-Tekst             [_Button("Place tekst", DSP-Text_16, DSP-Text)]^c^c^phsb_dog_object_text
+ID_HSB_DSP-Strook            [_Button("Piece of sheetings", DSP-Strook_16, DSP-Strook)]^c^c^phsb_dog_strook
+ID_HSB_DSP-Blatt             [_Button("Milling", DSP-Blatt_16, DSP-Blatt)]^c^c^phsb_dog_blatt
+ID_HSB_DSP-Snijlijn0         [_Button("Set Edge Stop Type 1", DSP-Snijlijn0_16, DSP-Snijlijn0)]^c^c^phsb_dog_object_c0
+ID_HSB_DSP-Snijlijn1         [_Button("Set Edge Stop Type 2", DSP-Snijlijn1_16, DSP-Snijlijn1)]^c^c^phsb_dog_object_c1
+ID_HSB_DSP-Pos. Referentie   [_Button("Set Dimension Reference Point", DSP-Posreferentie_16, DSP-Posreferentie)]^c^c^phsb_dog_object_ref
+ID_HSB_DSP-Pos. As           [_Button("Distribution starting point", DSP-Aspositie_16, DSP-Aspositie)]^c^c^phsb_dog_object_as
+ID_HSB_DSP-Pos. Maat         [_Button("Measurement starting point", DSP-Posmat_16, DSP-Posmat)]^c^c^phsb_dog_object_maat
+ID_HSB_DSP-Plaatsnijden      [_Button("Cut sheeting ( zone)", DSP-Plaatsnijden_16, DSP-Plaatsnijden)]^c^c^phsb_dog_object_plaatsnijden
+ID_HSB_DSP-Pos. Zone         [_Button("Place Zone Stop", DSP-Poszone_16, DSP-Poszone)]^c^c^phsb_dog_object_zone
+ID_HSB_DSP-Pos. Strookeinde  [_Button("Endpoint of Piece of sheetings", DSP-Posstrook_16, DSP-Posstrook)]^c^c^phsb_dog_strookeinde
+ID_HSB_DSP-Pos. Tengel       [_Button("Endpoint of counterbattens", DSP-Postengel_16, DSP-Postengel)]^c^c^phsb_dog_object_plaat2
+ID_HSB_DSP-Extra Tengel      [_Button("Extra counterbatten", DSP-Extratengel_16, DSP-Extratengel)]^c^c^phsb_dog_object_tengel
+ID_HSB_DSP-Pos. Panlat       [_Button("Endpoint of tilelaths", DSP-Pospanlat_16, DSP-Pospanlat)]^c^c^phsb_dog_object_plaat3
+ID_HSB_DSP-Pos. Isolatie     [_Button("Endpoint of insulation", DSP-Posisolatie_16, DSP-Posisolatie)]^c^c^phsb_dog_object_isolatie
+ID_HSB_DSP-Pos. Panlatschuin [_Button("Position angled tilelath", DSP-Pospanlatschuin_16, DSP-Pospanlatschuin)]^c^c^phsb_dog_object_schuin
+ID_HSB_DSP-CNC               [_Button("cnc", DSP-CNC_16, DSP-CNC)]^c^c^phsb_dog_object_cnc
+ID_HSB_DSP-CNC-Cutter        [_Button("cnc-cutter", DSP-Cnccutter_16, DSP-Cnccutter)]^c^c^phsb_dog_object_cnccutter
+ID_HSB_DSP-Pos. Omtrek       [_Button("Position Perimeter", DSP-Posomtrek_16, DSP-Posomtrek)]^c^c^phsb_dog_object_omtrek
+ID_HSB_DSP-TSL               [_Button("TSL", DSP-TSL_16, DSP-TSL)]^c^c^phsb_dog_object_TSL
+ID_HSB_DSP-CUT               [_Button("Cut", HSB_det_cut, HSB_det_cut)]^c^c^phsb_dog_object_cut
