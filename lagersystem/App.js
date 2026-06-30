@@ -5,7 +5,7 @@ import {
   useWindowDimensions, Animated
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { SEED_PRODUKTER } from './seedData';
+import { SEED_PRODUKTER, SEED_AWS70HI, SEED_AOC50 } from './seedData';
 import * as Sharing from 'expo-sharing';
 import * as FileSystem from 'expo-file-system';
 import { utils, write } from 'xlsx';
@@ -23,8 +23,13 @@ function urlBase64ToUint8Array(base64String) {
 const STORAGE_KEY = 'lagersystem_produkter';
 const TOKEN_KEY = 'lagersystem_token';
 const TEMA_KEY = 'lagersystem_tema';
-const FLIKAR = ['Alla produkter', 'Schueco ASE 60', 'Schueco ASS 32', 'Osorterat'];
-const RITNINGAR = [{ id: 'ase60', label: 'ASE 60 Ritningar', fil: 'ritningar_ase60.pdf' }];
+const FLIKAR = ['Alla produkter', 'Schueco ASE 60', 'Schueco ASS 32', 'Schueco AWS/ADS 70 HI', 'Schueco AOC 50', 'Osorterat'];
+const FORINSTALLDA_FARGER = ['Svart/RAL9005', 'Vit/NCS-0502-Y', 'Antracitgrå/RAL7016'];
+const RITNINGAR = [
+  { id: 'ase60', label: 'ASE 60 Ritningar', fil: 'ritningar_ase60.pdf' },
+  { id: 'aws70hi', label: 'AWS/ADS 70 HI Ritningar', fil: 'ritningar_aws70hi.pdf' },
+  { id: 'aoc50', label: 'AOC 50 Ritningar', fil: 'ritningar_aoc50.pdf' },
+];
 
 const TemaContext = React.createContext(null);
 
@@ -762,8 +767,18 @@ export default function App() {
   const laddaProdukter = async () => {
     try {
       const data = await AsyncStorage.getItem(STORAGE_KEY);
-      setProdukter(data ? JSON.parse(data) : SEED_PRODUKTER);
+      let lista = data ? JSON.parse(data) : SEED_PRODUKTER;
       if (!data) await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(SEED_PRODUKTER));
+      const befintligaIds = new Set(lista.map(p => p.id));
+      const nya = [
+        ...SEED_AWS70HI.filter(p => !befintligaIds.has(p.id)),
+        ...SEED_AOC50.filter(p => !befintligaIds.has(p.id)),
+      ];
+      if (nya.length > 0) {
+        lista = [...lista, ...nya];
+        await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(lista));
+      }
+      setProdukter(lista);
     } catch {}
   };
 
@@ -813,17 +828,21 @@ export default function App() {
     setFormMinAntal(String(produkt.minAntal));
     setFormEnhet(produkt.enhet || 'st');
     setFormBild(produkt.bild || null);
-    setFormFarger((produkt.farger || []).map(f => ({ ...f, antal: String(f.antal) })));
+    setFormFarger((produkt.farger || []).map(f => ({ farg: f.farg, langd: String(f.langd || ''), antal: String(f.antal) })));
     setFormLangder((produkt.langder || []).map(l => ({ langd: String(l.langd), antal: String(l.antal) })));
     setModalVisible(true);
   };
 
   const sparaProdukt = () => {
     if (!formNamn.trim()) { Alert.alert('Fel', 'Namn krävs'); return; }
-    const antal = parseInt(formAntal) || 0;
+    const fargerMedAntal = formFarger.filter(f => f.farg.trim() && parseInt(f.antal) > 0);
+    const antalFranFarger = fargerMedAntal.length > 0
+      ? fargerMedAntal.reduce((s, f) => s + (parseInt(f.antal) || 0), 0)
+      : null;
+    const antal = antalFranFarger !== null ? antalFranFarger : (parseInt(formAntal) || 0);
     const minAntal = parseInt(formMinAntal) || 5;
     const genomfor = () => {
-      const farger = formFarger.filter(f => f.farg.trim()).map(f => ({ farg: f.farg.trim(), antal: parseInt(f.antal) || 0 }));
+      const farger = formFarger.filter(f => f.farg.trim()).map(f => ({ farg: f.farg.trim(), langd: parseFloat(f.langd) || 0, antal: parseInt(f.antal) || 0 }));
       const langder = formLangder.filter(l => l.langd).map(l => ({ langd: parseFloat(l.langd) || 0, antal: parseInt(l.antal) || 0 }));
       let nyLista;
       if (redigeraProdukt) {
@@ -858,10 +877,14 @@ export default function App() {
       setModalVisible(false);
     };
     if (redigeraProdukt) {
-      Alert.alert('Spara ändring?', '', [
-        { text: 'Avbryt', style: 'cancel' },
-        { text: 'Spara', onPress: genomfor },
-      ]);
+      if (Platform.OS === 'web') {
+        if (window.confirm('Spara ändring?')) genomfor();
+      } else {
+        Alert.alert('Spara ändring?', '', [
+          { text: 'Avbryt', style: 'cancel' },
+          { text: 'Spara', onPress: genomfor },
+        ]);
+      }
     } else {
       genomfor();
     }
@@ -986,7 +1009,7 @@ export default function App() {
             <TouchableOpacity
               key={flik}
               style={[styles.sidebarFlik, aktivFlik === flik && styles.sidebarFlikAktiv]}
-              onPress={() => { setAktivFlik(flik); setSok(''); }}
+              onPress={() => { setAktivFlik(flik); setSok(''); setValdProdukt(null); }}
             >
               <Text style={[styles.sidebarFlikText, { color: c.sidebarText }, aktivFlik === flik && styles.sidebarFlikTextAktiv]}>
                 {flik}
@@ -1006,7 +1029,7 @@ export default function App() {
             <TouchableOpacity
               key={r.id}
               style={[styles.sidebarFlik, aktivFlik === r.id && styles.sidebarFlikAktiv]}
-              onPress={() => { setAktivFlik(r.id); setSok(''); }}
+              onPress={() => { setAktivFlik(r.id); setSok(''); setValdProdukt(null); }}
             >
               <Text style={[styles.sidebarFlikText, aktivFlik === r.id && styles.sidebarFlikTextAktiv]}>
                 📄 {r.label}
@@ -1018,7 +1041,7 @@ export default function App() {
             <View style={styles.sidebarDivider} />
             <TouchableOpacity
               style={[styles.sidebarFlik, aktivFlik === '__andringar__' && styles.sidebarFlikAktiv]}
-              onPress={() => { setAktivFlik('__andringar__'); setSok(''); setVisaSidebar(false); }}>
+              onPress={() => { setAktivFlik('__andringar__'); setSok(''); setVisaSidebar(false); setValdProdukt(null); }}>
               <Text style={[styles.sidebarFlikText, { color: c.sidebarText }, aktivFlik === '__andringar__' && styles.sidebarFlikTextAktiv]}>
                 🕐 Ändringslogg
               </Text>
@@ -1242,19 +1265,32 @@ export default function App() {
             </View>
 
             <Text style={[styles.inputLabel, { color: c.textMuted }]}>Antal i lager</Text>
-            <View style={{ flexDirection: 'row', gap: 8, marginBottom: 12 }}>
-              <TextInput style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]} placeholder="Antal" placeholderTextColor={c.textMuted}
-                value={formAntal} onChangeText={setFormAntal} keyboardType="numeric" />
-              <View style={{ flexDirection: 'row', gap: 6 }}>
-                {['st', 'm'].map(e => (
-                  <TouchableOpacity key={e}
-                    style={[styles.kategoriKnapp, { backgroundColor: c.input, paddingHorizontal: 18 }, formEnhet === e && styles.kategoriKnappAktiv]}
-                    onPress={() => setFormEnhet(e)}>
-                    <Text style={[styles.kategoriText, { color: c.text }, formEnhet === e && styles.kategoriTextAktiv]}>{e}</Text>
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </View>
+            {(() => {
+              const fargSumma = formFarger.filter(f => f.farg.trim() && parseInt(f.antal) > 0).reduce((s, f) => s + (parseInt(f.antal) || 0), 0);
+              const harFargAntal = formFarger.some(f => f.farg.trim() && parseInt(f.antal) > 0);
+              return (
+                <View style={{ flexDirection: 'row', gap: 8, marginBottom: 12 }}>
+                  {harFargAntal
+                    ? <View style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.tabellHuvud, borderColor: c.inputBorder, justifyContent: 'center' }]}>
+                        <Text style={{ color: c.textMuted, fontSize: 15 }}>
+                          {fargSumma} <Text style={{ fontSize: 12 }}>(summa färger)</Text>
+                        </Text>
+                      </View>
+                    : <TextInput style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]} placeholder="Antal" placeholderTextColor={c.textMuted}
+                        value={formAntal} onChangeText={setFormAntal} keyboardType="numeric" />
+                  }
+                  <View style={{ flexDirection: 'row', gap: 6 }}>
+                    {['st', 'm'].map(e => (
+                      <TouchableOpacity key={e}
+                        style={[styles.kategoriKnapp, { backgroundColor: c.input, paddingHorizontal: 18 }, formEnhet === e && styles.kategoriKnappAktiv]}
+                        onPress={() => setFormEnhet(e)}>
+                        <Text style={[styles.kategoriText, { color: c.text }, formEnhet === e && styles.kategoriTextAktiv]}>{e}</Text>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
+                </View>
+              );
+            })()}
 
             {inloggad.roll === 'admin' && (
               <TextInput style={[styles.input, { backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]} placeholder="Varning vid antal (standard 5)" placeholderTextColor={c.textMuted}
@@ -1276,48 +1312,51 @@ export default function App() {
               {formBild && <TouchableOpacity onPress={() => setFormBild(null)}><Text style={{ color: '#ef4444' }}>✕ Ta bort</Text></TouchableOpacity>}
             </View>
 
-            {/* Längder (bara för meter) */}
-            {formEnhet === 'm' && (
-              <View style={{ marginBottom: 14 }}>
-                <Text style={[styles.inputLabel, { color: c.textMuted }]}>Längder</Text>
-                {formLangder.map((l, i) => (
-                  <View key={i} style={{ flexDirection: 'row', gap: 6, marginBottom: 6, alignItems: 'center' }}>
-                    <TextInput style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]}
-                      placeholder="Längd (m)" placeholderTextColor={c.textMuted} keyboardType="numeric"
-                      value={l.langd} onChangeText={v => setFormLangder(prev => prev.map((x, j) => j === i ? { ...x, langd: v } : x))} />
-                    <TextInput style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]}
-                      placeholder="Antal st" placeholderTextColor={c.textMuted} keyboardType="numeric"
-                      value={l.antal} onChangeText={v => setFormLangder(prev => prev.map((x, j) => j === i ? { ...x, antal: v } : x))} />
-                    <TouchableOpacity onPress={() => setFormLangder(prev => prev.filter((_, j) => j !== i))}>
-                      <Text style={{ color: '#ef4444', fontSize: 18, paddingHorizontal: 4 }}>✕</Text>
-                    </TouchableOpacity>
-                  </View>
-                ))}
-                <TouchableOpacity style={[styles.kategoriKnapp, { backgroundColor: c.input, alignSelf: 'flex-start' }]}
-                  onPress={() => setFormLangder(prev => [...prev, { langd: '', antal: '' }])}>
-                  <Text style={{ color: '#2563eb', fontWeight: '600' }}>+ Lägg till längd</Text>
-                </TouchableOpacity>
-              </View>
-            )}
-
             {/* Färger */}
             <View style={{ marginBottom: 14 }}>
               <Text style={[styles.inputLabel, { color: c.textMuted }]}>Färger</Text>
+              {/* Förinställda färgknappar */}
+              <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginBottom: 10 }}>
+                {FORINSTALLDA_FARGER.map(farg => {
+                  const finns = formFarger.some(f => f.farg === farg);
+                  return (
+                    <TouchableOpacity key={farg}
+                      style={{ paddingHorizontal: 10, paddingVertical: 5, borderRadius: 6, borderWidth: 1,
+                        backgroundColor: finns ? '#2563eb' : c.input,
+                        borderColor: finns ? '#2563eb' : c.inputBorder }}
+                      onPress={() => {
+                        if (finns) {
+                          setFormFarger(prev => prev.filter(f => f.farg !== farg));
+                        } else {
+                          setFormFarger(prev => [...prev, { farg, langd: '', antal: '' }]);
+                        }
+                      }}>
+                      <Text style={{ color: finns ? '#fff' : c.textMuted, fontSize: 12 }}>{farg}</Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </View>
+              {/* Färgrader: Färg | Längd (m) | Antal st | × */}
               {formFarger.map((f, i) => (
-                <View key={i} style={{ flexDirection: 'row', gap: 6, marginBottom: 6, alignItems: 'center' }}>
-                  <TextInput style={[styles.input, { flex: 2, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]}
+                <View key={i} style={{ marginBottom: 8 }}>
+                  <TextInput style={[styles.input, { marginBottom: 4, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]}
                     placeholder="Färg" placeholderTextColor={c.textMuted}
                     value={f.farg} onChangeText={v => setFormFarger(prev => prev.map((x, j) => j === i ? { ...x, farg: v } : x))} />
-                  <TextInput style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]}
-                    placeholder="Antal" placeholderTextColor={c.textMuted} keyboardType="numeric"
-                    value={f.antal} onChangeText={v => setFormFarger(prev => prev.map((x, j) => j === i ? { ...x, antal: v } : x))} />
-                  <TouchableOpacity onPress={() => setFormFarger(prev => prev.filter((_, j) => j !== i))}>
-                    <Text style={{ color: '#ef4444', fontSize: 18, paddingHorizontal: 4 }}>✕</Text>
-                  </TouchableOpacity>
+                  <View style={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
+                    <TextInput style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]}
+                      placeholder="Längd (m)" placeholderTextColor={c.textMuted} keyboardType="numeric"
+                      value={f.langd} onChangeText={v => setFormFarger(prev => prev.map((x, j) => j === i ? { ...x, langd: v } : x))} />
+                    <TextInput style={[styles.input, { flex: 1, marginBottom: 0, backgroundColor: c.input, borderColor: c.inputBorder, color: c.inputText }]}
+                      placeholder="Antal st" placeholderTextColor={c.textMuted} keyboardType="numeric"
+                      value={f.antal} onChangeText={v => setFormFarger(prev => prev.map((x, j) => j === i ? { ...x, antal: v } : x))} />
+                    <TouchableOpacity onPress={() => setFormFarger(prev => prev.filter((_, j) => j !== i))}>
+                      <Text style={{ color: '#ef4444', fontSize: 18, paddingHorizontal: 4 }}>✕</Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
               ))}
               <TouchableOpacity style={[styles.kategoriKnapp, { backgroundColor: c.input, alignSelf: 'flex-start' }]}
-                onPress={() => setFormFarger(prev => [...prev, { farg: '', antal: '' }])}>
+                onPress={() => setFormFarger(prev => [...prev, { farg: '', langd: '', antal: '' }])}>
                 <Text style={{ color: '#2563eb', fontWeight: '600' }}>+ Lägg till färg</Text>
               </TouchableOpacity>
             </View>

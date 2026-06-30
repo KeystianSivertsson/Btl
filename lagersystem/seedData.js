@@ -127,3 +127,44 @@ export const SEED_PRODUKTER = [
   { id: '3007', namn: 'PA insul. bar 350kg 56', artikel: '278363', antal: 4, minAntal: 5, kategori: 'Schueco ASE 60', dimension: '6500 mm' },
   { id: '3008', namn: 'C/s screw ST4,8x90 ISR25', artikel: '286970', antal: 2, minAntal: 5, kategori: 'Schueco ASE 60', dimension: '' },
 ];
+
+// === Schueco AOC 50 ===
+export const SEED_AOC50 = [
+  // Profiler
+  { id: '5001', namn: 'Add-on prof. 50', artikel: '536950', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '6000 mm' },
+  { id: '5002', namn: 'Add-on prof. Pchd 50', artikel: '536960', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '6000 mm' },
+  { id: '5003', namn: 'Pressure plate 50', artikel: '477590', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '6000 mm' },
+  { id: '5004', namn: 'Pressure plate P-p', artikel: '477720', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '6000 mm' },
+  { id: '5005', namn: 'Cover cap 25', artikel: '493740', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '6000 mm' },
+  { id: '5006', namn: 'Cover cap', artikel: '161460', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '6000 mm' },
+  // Tätningar (meter)
+  { id: '5007', namn: 'Glazg rebate gaskt 50 Bk', artikel: '245572', antal: 0, minAntal: 10, kategori: 'Schueco AOC 50', enhet: 'm', dimension: '' },
+  { id: '5008', namn: 'Glazg rebate gaskt 5', artikel: '246476', antal: 0, minAntal: 10, kategori: 'Schueco AOC 50', enhet: 'm', dimension: '' },
+  { id: '5009', namn: 'Seal plate 50', artikel: '230757', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5010', namn: 'Joint seal pc 50', artikel: '230771', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5011', namn: 'Seal Transm', artikel: '230780', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5012', namn: 'Seal Transm v2', artikel: '288538', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  // Isolator & beslag
+  { id: '5013', namn: 'Isolator C2C 22x33,5', artikel: '230727', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5014', namn: 'End cap 50x25', artikel: '288723', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5015', namn: 'Glass carrier 38-40', artikel: '268421', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5016', namn: 'Glazing block 100x39x3', artikel: '298209', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5017', namn: 'Washer', artikel: '244396', antal: 0, minAntal: 10, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  // Skruvar
+  { id: '5018', namn: 'Screw ST3,9x9,5 ISR15', artikel: '205436', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5019', namn: 'Screw ST5,5x58 ISR25', artikel: '205893', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5020', namn: 'Screw ST5,5x60 ISR25', artikel: '205894', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+  { id: '5021', namn: 'C/s screw ST4,6x40 ISR20', artikel: '225217', antal: 0, minAntal: 5, kategori: 'Schueco AOC 50', enhet: 'st', dimension: '' },
+];
+
+// === Schueco AWS/ADS 70 HI ===
+export const SEED_AWS70HI = [
+  { id: '4001', namn: 'Outer frame 44/69', artikel: '358170', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '6000 mm' },
+  { id: '4002', namn: 'Glazing bead 2232', artikel: '184070', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '6000 mm' },
+  { id: '4003', namn: 'Corner cleats, crimped', artikel: '236199', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '' },
+  { id: '4004', namn: 'Corner seal', artikel: '226943', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '' },
+  { id: '4005', namn: 'Glazing gasket outside', artikel: '284351', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '' },
+  { id: '4006', namn: 'Glazing gasket inside', artikel: '284839', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '' },
+  { id: '4007', namn: 'Glass support', artikel: '288163', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '' },
+  { id: '4008', namn: 'Glazing bead clip', artikel: '203102', antal: 0, minAntal: 5, kategori: 'Schueco AWS/ADS 70 HI', enhet: 'st', dimension: '' },
+];
