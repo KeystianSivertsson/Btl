@@ -703,23 +703,33 @@ export default function App() {
     if (!formNamn.trim()) { Alert.alert('Fel', 'Namn krävs'); return; }
     const antal = parseInt(formAntal) || 0;
     const minAntal = parseInt(formMinAntal) || 5;
-    let nyLista;
+    const genomfor = () => {
+      let nyLista;
+      if (redigeraProdukt) {
+        nyLista = produkter.map(p =>
+          p.id === redigeraProdukt.id
+            ? { ...p, namn: formNamn.trim(), antal, kategori: formKategori.trim(), minAntal, enhet: formEnhet }
+            : p
+        );
+      } else {
+        nyLista = [...produkter, {
+          id: Date.now().toString(),
+          namn: formNamn.trim(), antal,
+          kategori: formKategori.trim(), minAntal, enhet: formEnhet,
+        }];
+      }
+      setProdukter(nyLista);
+      sparaProdukter(nyLista);
+      setModalVisible(false);
+    };
     if (redigeraProdukt) {
-      nyLista = produkter.map(p =>
-        p.id === redigeraProdukt.id
-          ? { ...p, namn: formNamn.trim(), antal, kategori: formKategori.trim(), minAntal, enhet: formEnhet }
-          : p
-      );
+      Alert.alert('Bekräfta ändring', `Spara ändringar på "${formNamn.trim()}"?`, [
+        { text: 'Avbryt', style: 'cancel' },
+        { text: 'Spara', onPress: genomfor },
+      ]);
     } else {
-      nyLista = [...produkter, {
-        id: Date.now().toString(),
-        namn: formNamn.trim(), antal,
-        kategori: formKategori.trim(), minAntal, enhet: formEnhet,
-      }];
+      genomfor();
     }
-    setProdukter(nyLista);
-    sparaProdukter(nyLista);
-    setModalVisible(false);
   };
 
   const taBortProdukt = (id) => {
